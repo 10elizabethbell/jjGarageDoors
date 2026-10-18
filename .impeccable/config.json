@@ -1,0 +1,32 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T13:36:35.300Z",
+        "reason": "agent: the stripes are the corrugated slats of a roll-up steel door, the brand's own product (Steel Rolling Doors on the flyer)"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "<ul> \"rows\": children flush against border-top on top (no inset)",
+        "createdAt": "2026-10-18T13:36:35.372Z",
+        "reason": "agent: full-bleed ruled list; rows carry their own vertical padding"
+      },
+      {
+        "rule": "overused-font",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T13:36:35.441Z",
+        "reason": "agent: pitch-site house style (Ellie) mandates the system font stack"
+      }
+    ]
+  }
+}
