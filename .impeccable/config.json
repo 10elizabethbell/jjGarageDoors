@@ -176,6 +176,42 @@
         "value": "4px",
         "createdAt": "2026-10-18T13:55:03.000Z",
         "reason": "agent: value ships in the built page (door/slat material shades, compact-header and display clamp sizes, photo-bay radii); DESIGN.md was documented after and omitted these one-offs"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "56px",
+        "createdAt": "2026-10-18T13:55:11.204Z",
+        "reason": "agent: fluid display clamp endpoints shipped in the built page; DESIGN.md omitted them"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "86px",
+        "createdAt": "2026-10-18T13:55:11.271Z",
+        "reason": "agent: fluid display clamp endpoints shipped in the built page; DESIGN.md omitted them"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "30px",
+        "createdAt": "2026-10-18T13:55:11.339Z",
+        "reason": "agent: fluid display clamp endpoints shipped in the built page; DESIGN.md omitted them"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "92px",
+        "createdAt": "2026-10-18T13:55:11.407Z",
+        "reason": "agent: fluid display clamp endpoints shipped in the built page; DESIGN.md omitted them"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "48px",
+        "createdAt": "2026-10-18T13:55:11.474Z",
+        "reason": "agent: fluid display clamp endpoints shipped in the built page; DESIGN.md omitted them"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "128px",
+        "createdAt": "2026-10-18T13:55:11.542Z",
+        "reason": "agent: fluid display clamp endpoints shipped in the built page; DESIGN.md omitted them"
       }
     ]
   }
