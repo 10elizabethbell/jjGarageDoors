@@ -1,0 +1,490 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-18T13:50:31.505761+00:00",
+  "title": "Design System: J&J Garage Doors LLC",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Slate Night",
+        "tonalRamp": [
+          "oklch(15% 0.03 255)",
+          "oklch(25% 0.03 255)",
+          "oklch(35% 0.03 255)",
+          "oklch(47% 0.03 255)",
+          "oklch(59% 0.03 255)",
+          "oklch(71% 0.03 255)",
+          "oklch(83% 0.03 255)",
+          "oklch(95% 0.03 255)"
+        ]
+      },
+      "ground-2": {
+        "role": "neutral",
+        "displayName": "Slate Lift",
+        "tonalRamp": [
+          "oklch(15% 0.03 255)",
+          "oklch(25% 0.03 255)",
+          "oklch(35% 0.03 255)",
+          "oklch(47% 0.03 255)",
+          "oklch(59% 0.03 255)",
+          "oklch(71% 0.03 255)",
+          "oklch(83% 0.03 255)",
+          "oklch(95% 0.03 255)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Panel Slate",
+        "tonalRamp": [
+          "oklch(15% 0.035 255)",
+          "oklch(25% 0.035 255)",
+          "oklch(35% 0.035 255)",
+          "oklch(47% 0.035 255)",
+          "oklch(59% 0.035 255)",
+          "oklch(71% 0.035 255)",
+          "oklch(83% 0.035 255)",
+          "oklch(95% 0.035 255)"
+        ]
+      },
+      "panel-hover": {
+        "role": "neutral",
+        "displayName": "Panel Slate Hover",
+        "tonalRamp": [
+          "oklch(15% 0.045 258)",
+          "oklch(25% 0.045 258)",
+          "oklch(35% 0.045 258)",
+          "oklch(47% 0.045 258)",
+          "oklch(59% 0.045 258)",
+          "oklch(71% 0.045 258)",
+          "oklch(83% 0.045 258)",
+          "oklch(95% 0.045 258)"
+        ]
+      },
+      "field-well": {
+        "role": "neutral",
+        "displayName": "Field Well",
+        "tonalRamp": [
+          "oklch(15% 0.025 255)",
+          "oklch(25% 0.025 255)",
+          "oklch(35% 0.025 255)",
+          "oklch(47% 0.025 255)",
+          "oklch(59% 0.025 255)",
+          "oklch(71% 0.025 255)",
+          "oklch(83% 0.025 255)",
+          "oklch(95% 0.025 255)"
+        ]
+      },
+      "field-stroke": {
+        "role": "neutral",
+        "displayName": "Field Stroke",
+        "tonalRamp": [
+          "oklch(15% 0.04 255)",
+          "oklch(25% 0.04 255)",
+          "oklch(35% 0.04 255)",
+          "oklch(47% 0.04 255)",
+          "oklch(59% 0.04 255)",
+          "oklch(71% 0.04 255)",
+          "oklch(83% 0.04 255)",
+          "oklch(95% 0.04 255)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "tonalRamp": [
+          "oklch(15% 0.01 90)",
+          "oklch(25% 0.01 90)",
+          "oklch(35% 0.01 90)",
+          "oklch(47% 0.01 90)",
+          "oklch(59% 0.01 90)",
+          "oklch(71% 0.01 90)",
+          "oklch(83% 0.01 90)",
+          "oklch(95% 0.01 90)"
+        ],
+        "canonical": "rgba(242,239,230,.14)"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Warm White",
+        "tonalRamp": [
+          "oklch(15% 0.015 90)",
+          "oklch(25% 0.015 90)",
+          "oklch(35% 0.015 90)",
+          "oklch(47% 0.015 90)",
+          "oklch(59% 0.015 90)",
+          "oklch(71% 0.015 90)",
+          "oklch(83% 0.015 90)",
+          "oklch(95% 0.015 90)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Cool Mist",
+        "tonalRamp": [
+          "oklch(15% 0.02 255)",
+          "oklch(25% 0.02 255)",
+          "oklch(35% 0.02 255)",
+          "oklch(47% 0.02 255)",
+          "oklch(59% 0.02 255)",
+          "oklch(71% 0.02 255)",
+          "oklch(83% 0.02 255)",
+          "oklch(95% 0.02 255)"
+        ]
+      },
+      "placeholder": {
+        "role": "neutral",
+        "displayName": "Placeholder Gray",
+        "tonalRamp": [
+          "oklch(15% 0.03 255)",
+          "oklch(25% 0.03 255)",
+          "oklch(35% 0.03 255)",
+          "oklch(47% 0.03 255)",
+          "oklch(59% 0.03 255)",
+          "oklch(71% 0.03 255)",
+          "oklch(83% 0.03 255)",
+          "oklch(95% 0.03 255)"
+        ]
+      },
+      "gold": {
+        "role": "primary",
+        "displayName": "Logo Gold",
+        "tonalRamp": [
+          "oklch(15% 0.16 78)",
+          "oklch(25% 0.16 78)",
+          "oklch(35% 0.16 78)",
+          "oklch(47% 0.16 78)",
+          "oklch(59% 0.16 78)",
+          "oklch(71% 0.16 78)",
+          "oklch(83% 0.16 78)",
+          "oklch(95% 0.16 78)"
+        ]
+      },
+      "gold-hover": {
+        "role": "primary",
+        "displayName": "Hot Gold",
+        "tonalRamp": [
+          "oklch(15% 0.15 82)",
+          "oklch(25% 0.15 82)",
+          "oklch(35% 0.15 82)",
+          "oklch(47% 0.15 82)",
+          "oklch(59% 0.15 82)",
+          "oklch(71% 0.15 82)",
+          "oklch(83% 0.15 82)",
+          "oklch(95% 0.15 82)"
+        ]
+      },
+      "on-gold": {
+        "role": "neutral",
+        "displayName": "Slate on Gold",
+        "tonalRamp": [
+          "oklch(15% 0.03 255)",
+          "oklch(25% 0.03 255)",
+          "oklch(35% 0.03 255)",
+          "oklch(47% 0.03 255)",
+          "oklch(59% 0.03 255)",
+          "oklch(71% 0.03 255)",
+          "oklch(83% 0.03 255)",
+          "oklch(95% 0.03 255)"
+        ]
+      },
+      "focus": {
+        "role": "secondary",
+        "displayName": "Porch-Light Blue",
+        "tonalRamp": [
+          "oklch(15% 0.1 235)",
+          "oklch(25% 0.1 235)",
+          "oklch(35% 0.1 235)",
+          "oklch(47% 0.1 235)",
+          "oklch(59% 0.1 235)",
+          "oklch(71% 0.1 235)",
+          "oklch(83% 0.1 235)",
+          "oklch(95% 0.1 235)"
+        ]
+      },
+      "err": {
+        "role": "error",
+        "displayName": "Soft Coral",
+        "tonalRamp": [
+          "oklch(15% 0.09 35)",
+          "oklch(25% 0.09 35)",
+          "oklch(35% 0.09 35)",
+          "oklch(47% 0.09 35)",
+          "oklch(59% 0.09 35)",
+          "oklch(71% 0.09 35)",
+          "oklch(83% 0.09 35)",
+          "oklch(95% 0.09 35)"
+        ]
+      },
+      "slat-steel": {
+        "role": "material",
+        "displayName": "Slat Steel",
+        "tonalRamp": [
+          "oklch(15% 0.035 255)",
+          "oklch(25% 0.035 255)",
+          "oklch(35% 0.035 255)",
+          "oklch(47% 0.035 255)",
+          "oklch(59% 0.035 255)",
+          "oklch(71% 0.035 255)",
+          "oklch(83% 0.035 255)",
+          "oklch(95% 0.035 255)"
+        ]
+      },
+      "hem-black": {
+        "role": "material",
+        "displayName": "Hem Black",
+        "tonalRamp": [
+          "oklch(15% 0.03 255)",
+          "oklch(25% 0.03 255)",
+          "oklch(35% 0.03 255)",
+          "oklch(47% 0.03 255)",
+          "oklch(59% 0.03 255)",
+          "oklch(71% 0.03 255)",
+          "oklch(83% 0.03 255)",
+          "oklch(95% 0.03 255)"
+        ]
+      },
+      "frame-white": {
+        "role": "material",
+        "displayName": "Frame White",
+        "tonalRamp": [
+          "oklch(15% 0.01 255)",
+          "oklch(25% 0.01 255)",
+          "oklch(35% 0.01 255)",
+          "oklch(47% 0.01 255)",
+          "oklch(59% 0.01 255)",
+          "oklch(71% 0.01 255)",
+          "oklch(83% 0.01 255)",
+          "oklch(95% 0.01 255)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display Slab",
+        "purpose": "Hero slab, closing line, language slab; 900 uppercase, tight."
+      },
+      "headline": {
+        "displayName": "Section Headline",
+        "purpose": "Section headings; 900 uppercase."
+      },
+      "title": {
+        "displayName": "Row Title",
+        "purpose": "Service rows; siblings are step titles and the family statement."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Hero promise and section sub-lines in ink-2."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running copy, ~34em measure."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, form labels, contact names."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Hints, notes, errors, footer."
+      }
+    },
+    "shadows": [
+      {
+        "name": "hem-drop",
+        "value": "0 10px 18px -6px rgba(0,0,0,.55)",
+        "purpose": "Only under the roll-up door hem divider."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-color",
+        "value": "0.18s",
+        "purpose": "Button and row-arrow background/color transitions (chips and fields use 0.15s)."
+      },
+      {
+        "name": "press",
+        "value": "transform 0.12s; translateY(1px)",
+        "purpose": "Button press."
+      },
+      {
+        "name": "chip-pick",
+        "value": "0.7s ease-out, blue border + scale(1.04)",
+        "purpose": "Pulse when a service row pre-selects a chip."
+      },
+      {
+        "name": "door-spring",
+        "value": "spring k=9, d=5.2",
+        "purpose": "Hero door chasing its target openness."
+      },
+      {
+        "name": "photo-roll",
+        "value": "spring k=16, d=6; trigger at 45% visible",
+        "purpose": "Roll-up reveal of the work photo."
+      },
+      {
+        "name": "hem-rise",
+        "value": "scroll-linked translateY up to -56px",
+        "purpose": "Door hem dividers rising as they scroll in."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "end state, no animation",
+        "purpose": "Every motion falls back to its end state."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xs",
+        "value": "max-width: 359px"
+      },
+      {
+        "name": "sm",
+        "value": "max-width: 374px"
+      },
+      {
+        "name": "phone",
+        "value": "max-width: 429px"
+      },
+      {
+        "name": "short-landscape",
+        "value": "orientation: landscape and max-height: 500px"
+      },
+      {
+        "name": "desktop",
+        "value": "min-width: 1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-fill",
+      "description": "Gold fill, slate text; the main call to action (Get a quote, Text this to Jimmy).",
+      "html": "<a class=\"ds-btn ds-btn-fill\" href=\"#\">Get a quote</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:0 26px;border-radius:10px;border:2px solid #f3b324;font:800 16px/1.1 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;text-decoration:none;cursor:pointer;transition:background .18s,color .18s,transform .12s}.ds-btn:active{transform:translateY(1px)}.ds-btn:focus-visible{outline:3px solid #f3b324;outline-offset:3px}.ds-btn-fill{background:#f3b324;color:#1a2330}.ds-btn-fill:hover{background:#ffc845;border-color:#ffc845}"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Transparent with gold border; the secondary action beside the primary (Text a photo).",
+      "html": "<a class=\"ds-btn-line\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linejoin=\"round\" d=\"M4 5h16v11H9l-5 4V5Z\"/></svg>Text a photo</a>",
+      "css": ".ds-btn-line{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:0 26px;border-radius:10px;border:2px solid #f3b324;background:transparent;color:#f4f1e8;font:800 16px/1.1 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Arial,sans-serif;text-decoration:none;transition:background .18s,transform .12s}.ds-btn-line:hover{background:rgba(243,179,36,.12)}.ds-btn-line:active{transform:translateY(1px)}.ds-btn-line:focus-visible{outline:3px solid #f3b324;outline-offset:3px}"
+    },
+    {
+      "name": "Choice Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Quote-form checkbox/radio chip; gold when selected, blue border on hover/focus.",
+      "html": "<div class=\"ds-chips\"><label class=\"ds-chip\"><input type=\"checkbox\" checked><span>Broken spring</span></label><label class=\"ds-chip\"><input type=\"checkbox\"><span>Noisy</span></label></div>",
+      "css": ".ds-chips{display:flex;flex-wrap:wrap;gap:8px;background:#1a2330;padding:16px}.ds-chip{position:relative}.ds-chip input{position:absolute;opacity:0;width:1px;height:1px}.ds-chip>span{display:flex;align-items:center;min-height:46px;padding:8px 15px;border-radius:8px;background:#273447;color:#f4f1e8;border:2px solid transparent;font:700 16px -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Arial,sans-serif;cursor:pointer;transition:background .15s,border-color .15s}.ds-chip input:checked+span{background:#f3b324;color:#1a2330}.ds-chip:hover>span,.ds-chip input:focus-visible+span{border-color:#8fd0ff}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Recessed field well with 2px stroke; blue border on hover and focus.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-label\" for=\"ds-town\">Town</label><input class=\"ds-input\" id=\"ds-town\" type=\"text\" placeholder=\"e.g. Elizabeth, NJ\"></div>",
+      "css": ".ds-field{display:grid;gap:8px;background:#202b3a;padding:16px;color:#f4f1e8;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Arial,sans-serif}.ds-label{font-weight:800;font-size:17px}.ds-input{width:100%;min-height:52px;padding:12px 14px;border-radius:8px;border:2px solid #3a4a60;background:#151d28;color:#f4f1e8;font:500 17px/1.4 inherit;transition:border-color .15s}.ds-input::placeholder{color:#8794a6}.ds-input:hover,.ds-input:focus{border-color:#8fd0ff;outline:none}"
+    },
+    {
+      "name": "Header",
+      "kind": "nav",
+      "refersTo": "header",
+      "description": "Gold house mark and name, language toggle, phone number; one row, 44px targets.",
+      "html": "<header class=\"ds-top\"><a class=\"ds-brand\" href=\"#\"><svg viewBox=\"0 0 64 64\" width=\"40\" height=\"40\" aria-hidden=\"true\"><path d=\"M4 31 32 8l28 23\" fill=\"none\" stroke=\"#f3b324\" stroke-width=\"5\" stroke-linecap=\"square\"/><path d=\"M12 26v31h40V26\" fill=\"none\" stroke=\"#f3b324\" stroke-width=\"4\"/><g fill=\"#f3b324\"><rect x=\"18\" y=\"33\" width=\"28\" height=\"4.5\"/><rect x=\"18\" y=\"39.5\" width=\"28\" height=\"4.5\"/><rect x=\"18\" y=\"46\" width=\"28\" height=\"4.5\"/><rect x=\"18\" y=\"52.5\" width=\"28\" height=\"4.5\"/></g></svg><span><b>J&amp;J</b><small>GARAGE DOORS</small></span></a><button class=\"ds-lang\" type=\"button\">Español</button><a class=\"ds-phone\" href=\"#\">(908) 374-8196</a></header>",
+      "css": ".ds-top{display:flex;align-items:center;gap:8px;min-height:68px;padding:0 18px;background:#1a2330;color:#f4f1e8;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Arial,sans-serif}.ds-brand{display:flex;align-items:center;gap:9px;color:inherit;text-decoration:none;min-height:44px}.ds-brand b{display:block;font-weight:900;font-size:21px;line-height:1}.ds-brand small{display:block;font-size:11px;font-weight:800;letter-spacing:.05em;color:#f3b324;margin-top:3px}.ds-lang{margin-left:auto;min-height:44px;padding:0 8px;border:0;background:none;color:#bcc5d2;font:700 15px inherit;cursor:pointer;text-decoration:underline;text-underline-offset:4px}.ds-lang:hover{color:#f4f1e8}.ds-phone{min-height:44px;display:flex;align-items:center;font-weight:800;font-size:16px;color:inherit;text-decoration:none;font-variant-numeric:tabular-nums}.ds-phone:hover{color:#f3b324}.ds-top :focus-visible{outline:3px solid #f3b324;outline-offset:3px}"
+    },
+    {
+      "name": "Service Row",
+      "kind": "custom",
+      "refersTo": "row-arrow",
+      "description": "Full-bleed hairline-ruled list row; arrow disc fills gold on hover/focus.",
+      "html": "<ul class=\"ds-rows\"><li><a class=\"ds-row\" href=\"#\"><span>Broken springs</span><i class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 12h13M13 6l6 6-6 6\"/></svg></i></a></li><li><a class=\"ds-row\" href=\"#\"><span>Off-track doors</span><i class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 12h13M13 6l6 6-6 6\"/></svg></i></a></li></ul>",
+      "css": ".ds-rows{list-style:none;margin:0;padding:0 18px;background:#1a2330;border-top:1px solid rgba(242,239,230,.14)}.ds-row{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:62px;padding:8px 0;border-bottom:1px solid rgba(242,239,230,.14);color:#f4f1e8;text-decoration:none;font:800 clamp(20px,5.6vw,26px) -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Arial,sans-serif;letter-spacing:-.01em;outline:none}.ds-arrow{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#273447;color:#f4f1e8;transition:background .18s,color .18s}.ds-row:hover .ds-arrow,.ds-row:focus-visible .ds-arrow{background:#f3b324;color:#1a2330}.ds-row:focus-visible .ds-arrow{outline:3px solid #f3b324;outline-offset:3px}"
+    },
+    {
+      "name": "Contact Tile",
+      "kind": "card",
+      "refersTo": "contact-tile",
+      "description": "Panel-slate call tile: name left, gold tabular number right.",
+      "html": "<a class=\"ds-tile\" href=\"#\">Jimmy <span>(908) 374-8196</span></a>",
+      "css": ".ds-tile{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px;padding:0 16px;border-radius:10px;background:#273447;color:#f4f1e8;text-decoration:none;font:800 18px -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Arial,sans-serif}.ds-tile span{font-variant-numeric:tabular-nums;color:#f3b324}.ds-tile:hover{background:#30405a}.ds-tile:focus-visible{outline:3px solid #f3b324;outline-offset:3px}"
+    },
+    {
+      "name": "Roll-Up Door Hem",
+      "kind": "custom",
+      "refersTo": "hem",
+      "description": "Section divider: bottom of a corrugated steel door with gold strip, seal, and handle notch.",
+      "html": "<div class=\"ds-hem\"><i></i></div>",
+      "css": ".ds-hem{position:relative;height:64px;overflow:hidden;background:#1a2330}.ds-hem i{position:absolute;left:0;right:0;bottom:0;height:120px;box-shadow:0 10px 18px -6px rgba(0,0,0,.55);background:linear-gradient(90deg,#0f151e 0,#0f151e 10px,rgba(0,0,0,.45) 10px,rgba(0,0,0,0) 22%,rgba(255,255,255,.07) 50%,rgba(0,0,0,0) 78%,rgba(0,0,0,.45) calc(100% - 10px),#0f151e calc(100% - 10px)),linear-gradient(#1b2431,#1b2431) bottom/100% 9px no-repeat,linear-gradient(#f3b324,#f3b324) bottom 9px left 0/100% 4px no-repeat,repeating-linear-gradient(180deg,#5d6b7e 0,#8e9bad 3px,#6f7d90 6px,#4a5768 10px,#3a4555 11px,#5d6b7e 12px)}.ds-hem i::after{content:\"\";position:absolute;left:50%;bottom:9px;width:56px;height:8px;margin-left:-28px;background:#141b26;border-radius:0 0 4px 4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Flyer on the Driveway at Night",
+    "overview": "The page is J&J's own black-and-gold job flyer turned into a physical object: a stack of heavy uppercase slabs set on a slate-night ground, lit by one color, the logo gold. The material of the trade is the ornament. Section breaks are the bottom hem of a corrugated roll-up door (steel slats, a gold weather strip, a dark rubber seal, a center handle notch), the work photo is revealed by that same door rolling up, and the hero is a canvas garage door the visitor lifts with a finger, spilling warm light onto the driveway.\n\nDensity is phone-first and generous with touch: every interactive target clears 44px, primary actions are 56px tall, lists are full-bleed ruled rows rather than cards. Type does the heavy lifting; there are no illustrations beyond the door itself, no stock imagery, no icon cards. The page is bilingual English/Spanish, with both languages present in the markup and one shown at a time, so every component must hold either language's length.\n\nThe system font stack is a deliberate house rule set by the site's builder (Ellie) for pitch sites, not an oversight. The flyer voice comes from weight (900), caps, and tight negative tracking, never from a loaded face.",
+    "keyCharacteristics": [
+      "Slate-night ground, never pure black; warm-white ink; logo gold as the only accent fill.",
+      "Heavy system caps (900, uppercase, negative tracking, line-height under 1) stacked like flyer type.",
+      "Roll-up door material (corrugated slats + gold hem) as dividers and reveals.",
+      "Full-bleed hairline-ruled lists instead of cards.",
+      "Phone-first single column; desktop adapts at 1024px into two-column splits.",
+      "Bilingual EN/ES throughout, toggled at the document root."
+    ],
+    "rules": [
+      {
+        "name": "The One Gold Rule",
+        "body": "Gold is the only accent fill. Any new emphasis, state, or badge uses gold or nothing; no second warm or saturated hue enters the page.",
+        "section": "colors"
+      },
+      {
+        "name": "The Never-Black Rule",
+        "body": "The darkest page surface is slate night (`ground`). Pure #000 is not a surface color; near-black values appear only inside the door material (seals, handle notch, lanterns).",
+        "section": "colors"
+      },
+      {
+        "name": "The Slate-on-Gold Rule",
+        "body": "Text and icons on a gold fill are always `on-gold` slate.",
+        "section": "colors"
+      },
+      {
+        "name": "The Weight-Not-Face Rule",
+        "body": "The system stack is a house rule. Hierarchy comes from weight (400 / 800 / 900), caps, and size; never introduce a webfont to get \"character\".",
+        "section": "typography"
+      },
+      {
+        "name": "The Tight Caps Rule",
+        "body": "Structural headings are uppercase with negative tracking (-0.02em to -0.03em) and line-height at or below 0.95. Positive tracking is reserved for small gold group labels and the logo lockup.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Phone Rule",
+        "body": "Phone numbers use tabular numerals and gold (or inherit gold on hover).",
+        "section": "typography"
+      },
+      {
+        "name": "The Only-the-Door-Casts Rule",
+        "body": "UI controls, tiles, and panels carry no shadow. Shadow belongs to the door object.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep gold the only accent fill, with slate text on it.",
+      "Do set structural headings in 900-weight uppercase with negative tracking and sub-1 line-height.",
+      "Do use the system font stack; it is a house rule.",
+      "Do keep every tap target at 44px or more and primary actions at 56px.",
+      "Do write both `.en` and `.es` content for every visible string, and size components for the longer Spanish text.",
+      "Do use the roll-up door hem between major sections and alternate `ground` / `ground-2` bands for rhythm.",
+      "Do separate surfaces by tone; reserve shadow for the door material.",
+      "Do give every motion a reduced-motion fallback that shows the end state."
+    ],
+    "donts": [
+      "Don't use pure black as a page or section surface.",
+      "Don't add a second accent hue or use porch-light blue as a fill; it is an outline color for form controls only.",
+      "Don't put white text on gold.",
+      "Don't turn service lists into icon cards, or add hero photos or testimonial carousels; the flyer world is type plus door material.",
+      "Don't add drop shadows to buttons, chips, tiles, or panels."
+    ]
+  }
+}

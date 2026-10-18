@@ -26,6 +26,24 @@
         ],
         "createdAt": "2026-10-18T13:36:35.441Z",
         "reason": "agent: pitch-site house style (Ellie) mandates the system font stack"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T13:46:11.608Z",
+        "reason": "agent: detector reads only 14-22px UI sizes; display type runs 34-128px via clamp, so the hierarchy is steep"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T13:46:11.685Z",
+        "reason": "agent: remaining hits are the full-bleed ruled service lists (rows carry 8px vertical padding + 62px min height); chip padding fixed"
       }
     ]
   }

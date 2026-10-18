@@ -128,7 +128,7 @@ section{padding:56px 0}
 .row:hover .arrow,.row:focus-visible .arrow{background:var(--gold);color:var(--on-gold)}
 .row:focus-visible .arrow{outline:3px solid var(--gold);outline-offset:3px}
 .both{margin:22px 0 0;color:var(--ink-2);font-size:18px}
-@media (min-width:1024px){.svc-groups{grid-template-columns:1fr 1fr;gap:64px}.both{font-size:24px;font-weight:800;color:var(--ink);margin-top:30px}}
+@media (min-width:1024px){.svc-groups{gap:48px}.rows{display:grid;grid-template-columns:1fr 1fr;column-gap:56px;border-top:0}.rows li:nth-child(-n+2){border-top:1px solid var(--line)}.both{font-size:24px;font-weight:800;color:var(--ink);margin-top:26px}}
 
 /* work */
 .work-grid{display:grid;gap:22px}
@@ -329,8 +329,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       </div>
       <ol class="steps">
         <li><b><span class="en">Tell us what it's doing</span><span class="es" lang="es">Dinos qué le pasa</span></b><span><span class="en">Call or text. A photo or short video of the door helps a lot.</span><span class="es" lang="es">Llama o escribe. Una foto o un video corto de la puerta ayuda mucho.</span></span></li>
-        <li><b><span class="en">We come take a look</span><span class="es" lang="es">Vamos a verla</span></b><span><span class="en">Honest answer, fair price.</span><span class="es" lang="es">Respuesta honesta, precio justo.</span></span></li>
-        <li><b><span class="en">Fixed and running</span><span class="es" lang="es">Arreglada y funcionando</span></b><span><span class="en">Homes and businesses, all over NJ, PA and NY.</span><span class="es" lang="es">Casas y negocios, en todo NJ, PA y NY.</span></span></li>
+        <li><b><span class="en">We give you a price</span><span class="es" lang="es">Te damos un precio</span></b><span><span class="en">Honest answer, fair price.</span><span class="es" lang="es">Respuesta honesta, precio justo.</span></span></li>
+        <li><b><span class="en">We fix it</span><span class="es" lang="es">La arreglamos</span></b><span><span class="en">Or install your new door.</span><span class="es" lang="es">O instalamos tu puerta nueva.</span></span></li>
       </ol>
     </div>
   </section>
@@ -472,7 +472,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     if(y>=openTop&&y<=G.floor&&x>=G.ox&&x<=G.ox+G.ow) return 1;
     if(y>G.floor){ /* spill on the driveway, fanning out */
       var k=(y-G.floor)/(H-G.floor+1), spread=G.ow*0.5*(1+k*0.9)*Math.min(1,o*1.6);
-      var cx=W/2; if(Math.abs(x-cx)<spread) return (1-k*0.7)*Math.min(1,o*1.4)*(1-Math.abs(x-cx)/spread*0.6);
+      var cx=W/2; if(Math.abs(x-cx)<spread) return o<0.15?0:(1-k*0.8)*Math.min(1,(o-0.15)*2)*(1-Math.abs(x-cx)/spread*0.8);
     }
     return 0;
   }
@@ -513,7 +513,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   function drawDriveway(){
     /* light spill */
     if(o>0.01){
-      var a=Math.min(1,o*1.5), top=G.floor, spread0=G.ow/2, spread1=G.ow*0.95;
+      var a=Math.min(1,o*2.5), top=G.floor, spread0=G.ow/2, spread1=G.ow*0.95;
       ctx.save();ctx.beginPath();
       ctx.moveTo(W/2-spread0,top);ctx.lineTo(W/2+spread0,top);ctx.lineTo(W/2+spread1,H);ctx.lineTo(W/2-spread1,H);ctx.closePath();
       var sg=ctx.createLinearGradient(0,top,0,H);
@@ -558,7 +558,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       if(sy+sh<y) continue;
       var g=ctx.createLinearGradient(0,sy,0,sy+sh);
       g.addColorStop(0,'#eef1f4');g.addColorStop(1,'#c9cfd7');
-      ctx.fillStyle=g;ctx.fillRect(x,sy,w,sh-1.5);
+      ctx.fillStyle=g;ctx.fillRect(x,sy,w,sh+0.5);
       /* hinge line shadow */
       ctx.fillStyle='rgba(20,28,40,.35)';ctx.fillRect(x,sy+sh-2.5,w,1.5);
       /* raised panels */
@@ -670,7 +670,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     var pct=Math.round(Math.max(0,Math.min(1,o))*10)*10;
     if(pct!==lastAria){lastAria=pct; var es=document.documentElement.getAttribute('data-lang')==='es'; cv.setAttribute('aria-valuenow',pct); cv.setAttribute('aria-valuetext',es?('Puerta '+pct+'% abierta'):('Door '+pct+'% open'));}
     var acc=(ov-prevV);
-    for(var i=0;i<4;i++){ seamV[i]+=(-SEAM_K*seams[i]-SEAM_D*seamV[i])*dt - acc*SEAM_KICK*G.oh*(4-i)*0.25; seams[i]+=seamV[i]*dt; seams[i]=Math.max(-6,Math.min(6,seams[i])); }
+    for(var i=0;i<4;i++){ seamV[i]+=(-SEAM_K*seams[i]-SEAM_D*seamV[i])*dt - acc*SEAM_KICK*G.oh*(4-i)*0.25; seams[i]+=seamV[i]*dt; seams[i]=Math.max(-1.5,Math.min(1.5,seams[i])); }
     ptr.vx*=0.85;ptr.vy*=0.85;
 
     ctx.setTransform(dpr,0,0,dpr,0,0);
