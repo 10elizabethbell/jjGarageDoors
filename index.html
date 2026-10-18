@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-lang="en">
+<html lang="en" data-lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -15,7 +15,7 @@
 <meta property="og:image:height" content="630">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<script>(function(){var l=null;try{l=localStorage.getItem("jj-lang")}catch(e){}if(!l)l=(navigator.language||"").toLowerCase().indexOf("es")===0?"es":"en";document.documentElement.lang=l;document.documentElement.setAttribute("data-lang",l)})();</script>
+<script>(function(){var l=null;try{l=localStorage.getItem("jj-lang")}catch(e){}if(!l)l=(navigator.language||"").toLowerCase().indexOf("es")===0?"es":"en";var d=document.documentElement;d.className=d.className.replace("no-js","js");d.lang=l;d.setAttribute("data-lang",l)})();</script>
 <style>
 /* ---------- tokens ---------- */
 :root{
@@ -42,7 +42,7 @@ img{max-width:100%;display:block}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 html[data-lang="es"] .en, html:not([data-lang="es"]) .es{display:none !important}
-.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 18px}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left))}
 h1,h2,h3{font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:.95;margin:0;text-wrap:balance}
 h2{font-size:clamp(34px,9.5vw,64px)}
 .gold{color:var(--gold)}
@@ -55,17 +55,18 @@ h2{font-size:clamp(34px,9.5vw,64px)}
 .brand svg{width:40px;height:40px;flex:none}
 .brand b{display:block;font-weight:900;font-size:21px;line-height:1;letter-spacing:-.01em}
 .brand small{display:block;font-size:11px;font-weight:800;letter-spacing:.05em;color:var(--gold);margin-top:3px;white-space:nowrap}
-.lang{margin-left:auto;min-height:44px;min-width:44px;padding:0 8px;border:0;background:none;color:var(--ink-2);font:inherit;font-size:15px;font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(188,197,210,.45)}
+.lang{flex:none;margin-left:auto;min-height:44px;min-width:44px;padding:0 8px;border:0;background:none;color:var(--ink-2);font:inherit;font-size:15px;font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(188,197,210,.45)}
 .lang:hover{color:var(--ink)}
 .phone{display:flex;align-items:center;gap:6px;min-height:44px;padding:0 2px;font-weight:800;font-size:16px;text-decoration:none;white-space:nowrap;font-variant-numeric:tabular-nums}
 .phone svg{width:16px;height:16px;color:var(--gold);flex:none}
 .phone:hover{color:var(--gold)}
-@media (max-width:409px){
+@media (max-width:429px){
   .top .wrap{gap:2px;padding:0 12px}
   .brand svg{width:34px;height:34px}.brand b{font-size:18px}.brand small{font-size:11px;letter-spacing:.02em}
-  .lang{font-size:14px;padding:0 6px}
-  .phone{font-size:15px;gap:4px}.phone svg{width:14px;height:14px}
+  .lang{font-size:14px;padding:0 4px}
+  .phone{font-size:15px;gap:4px}.phone svg{display:none}
 }
+@media (max-width:374px){.brand b{font-size:16px}.brand svg{width:30px;height:30px}.brand{gap:6px}.phone{font-size:14px}}
 
 /* ---------- buttons ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:0 14px;border-radius:var(--r);border:2px solid var(--gold);font:800 16px/1.1 var(--font);text-decoration:none;text-align:center;cursor:pointer;transition:background .18s,color .18s,transform .12s}
@@ -78,28 +79,34 @@ h2{font-size:clamp(34px,9.5vw,64px)}
 
 /* ---------- hero ---------- */
 .hero{padding:6px 0 0}
-.hero h1{font-size:clamp(40px,11.4vw,96px);line-height:.9;letter-spacing:-.03em}
+.hero h1{font-size:clamp(40px,11.4vw,96px);font-size:clamp(40px,min(11.4vw,17svh),96px);line-height:.9;letter-spacing:-.03em}
 .hero h1 span{display:block}
 .promise{margin:16px 0 0;font-size:clamp(17px,4.6vw,20px);line-height:1.45;color:var(--ink-2);max-width:34em}
 .actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
 @media (max-width:359px){.actions{grid-template-columns:1fr}}
-.scene{position:relative;margin:22px -18px 0;height:clamp(250px,calc(100svh - 470px),420px);
+.scene{position:relative;margin:22px -18px 0;height:300px;height:clamp(250px,calc(100svh - 470px),420px);
   background:linear-gradient(#222d3c,#1d2734 74%,#28323f 74%,#1f2833);overflow:hidden}
 .scene canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:grab;-webkit-user-select:none;user-select:none}
 .scene canvas.drag{cursor:grabbing}
 .hint{display:flex;align-items:center;justify-content:center;gap:8px;margin:0;padding:10px 0 2px;font-size:15px;font-weight:700;color:var(--ink-2)}
 .hint svg{width:16px;height:16px;color:var(--gold)}
+#door:focus-visible{outline:3px solid var(--gold);outline-offset:-4px}
+.no-js .scene-wrap{display:none}
+@media (orientation:landscape) and (max-height:500px){.scene{margin:22px auto 0;max-width:62%;border-radius:12px}}
 @media (min-width:1024px){
   .hero{padding:40px 0 10px}
   .hero .wrap{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:56px;align-items:center}
   .actions{display:flex;gap:12px}.actions .btn{padding:0 26px;min-width:200px}
   .scene{margin:0;height:540px;border-radius:14px}
+  .hero h1{font-size:clamp(56px,6vw,86px)}.hero h1 .gold{white-space:nowrap}
 }
 
 /* ---------- divider: the bottom hem of a roll-up door ---------- */
 .hem{position:relative;height:64px;overflow:hidden;margin-top:34px;pointer-events:none}
 .hem i{position:absolute;left:0;right:0;bottom:0;height:120px;will-change:transform;
+  box-shadow:0 10px 18px -6px rgba(0,0,0,.55);
   background:
+    linear-gradient(90deg,#0f151e 0,#0f151e 10px,rgba(0,0,0,.45) 10px,rgba(0,0,0,0) 22%,rgba(255,255,255,.07) 50%,rgba(0,0,0,0) 78%,rgba(0,0,0,.45) calc(100% - 10px),#0f151e calc(100% - 10px)),
     linear-gradient(#1b2431,#1b2431) bottom/100% 9px no-repeat,
     linear-gradient(var(--gold),var(--gold)) bottom 9px left 0/100% 4px no-repeat,
     repeating-linear-gradient(180deg,#5d6b7e 0,#8e9bad 3px,#6f7d90 6px,#4a5768 10px,#3a4555 11px,#5d6b7e 12px)}
@@ -121,24 +128,26 @@ section{padding:56px 0}
 .row:hover .arrow,.row:focus-visible .arrow{background:var(--gold);color:var(--on-gold)}
 .row:focus-visible .arrow{outline:3px solid var(--gold);outline-offset:3px}
 .both{margin:22px 0 0;color:var(--ink-2);font-size:18px}
-@media (min-width:1024px){.svc-groups{grid-template-columns:1.25fr 1fr;gap:64px}}
+@media (min-width:1024px){.svc-groups{grid-template-columns:1fr 1fr;gap:64px}.both{font-size:24px;font-weight:800;color:var(--ink);margin-top:30px}}
 
 /* work */
 .work-grid{display:grid;gap:22px}
 .bay{position:relative;margin:0;border-radius:6px 6px 0 0;overflow:hidden;background:#11171f;border:6px solid #d9dde3;border-bottom:0;aspect-ratio:4/3}
 .bay img{width:100%;height:100%;object-fit:cover;-webkit-user-drag:none;user-select:none}
-.roll{position:absolute;left:0;right:0;top:0;height:100%;will-change:transform;
+.roll{position:absolute;left:0;right:0;top:0;height:100%;will-change:transform;transform:translateY(-100%);
   background:
+    radial-gradient(120% 90% at 50% 40%,rgba(255,255,255,.08),rgba(0,0,0,0) 55%,rgba(0,0,0,.4)),
     linear-gradient(#1b2431,#1b2431) bottom/100% 10px no-repeat,
     linear-gradient(var(--gold),var(--gold)) bottom 10px left 0/100% 4px no-repeat,
     repeating-linear-gradient(180deg,#5d6b7e 0,#8e9bad 3px,#6f7d90 7px,#4a5768 12px,#384354 13px,#5d6b7e 14px)}
+.js .roll{transform:none}
 .roll::after{content:"";position:absolute;left:50%;bottom:10px;width:64px;height:9px;margin-left:-32px;background:#141b26;border-radius:0 0 4px 4px}
 .fb{display:flex;align-items:center;gap:14px;padding:18px 18px;min-height:76px;border-radius:var(--r);background:var(--gold);color:var(--on-gold);text-decoration:none;font-weight:900;font-size:19px;line-height:1.2}
 .fb svg{width:30px;height:30px;flex:none}
 .fb .go{margin-left:auto;width:22px;height:22px}
 .fb:hover{background:#ffc845}
 @media (min-width:1024px){.work-grid{grid-template-columns:1.6fr 1fr;align-items:stretch;gap:28px}
-  .fb{flex-direction:column;align-items:flex-start;justify-content:space-between;padding:34px;font-size:clamp(30px,2.6vw,40px);line-height:1.05;letter-spacing:-.02em;text-transform:uppercase}
+  .fb{flex-direction:column;align-items:flex-start;justify-content:space-between;padding:34px;font-size:clamp(30px,2.6vw,40px);line-height:1.1;letter-spacing:-.02em}
   .fb svg{width:52px;height:52px}.fb .go{margin-left:0;width:40px;height:40px}}
 
 /* languages + family */
@@ -154,8 +163,8 @@ section{padding:56px 0}
 
 /* how */
 .steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
-.steps li{display:grid;grid-template-columns:48px 1fr;gap:4px 14px;padding:18px 0;border-top:1px solid var(--line)}
-.steps li::before{counter-increment:s;content:counter(s);grid-row:span 2;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--gold);color:var(--on-gold);font-weight:900;font-size:22px}
+.steps li{display:grid;grid-template-columns:40px 1fr;gap:4px 14px;padding:18px 0;border-top:1px solid var(--line)}
+.steps li::before{counter-increment:s;content:counter(s);grid-row:span 2;color:var(--gold);font-weight:900;font-size:36px;line-height:1}
 .steps b{font-size:21px;font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:1.1;align-self:end}
 .steps li>span{color:var(--ink-2)}
 @media (min-width:1024px){.steps{grid-template-columns:repeat(3,1fr);gap:32px}}
@@ -171,6 +180,9 @@ section{padding:56px 0}
 .chip input{position:absolute;opacity:0;width:1px;height:1px}
 .chip>span{display:flex;align-items:center;min-height:46px;padding:8px 15px;border-radius:8px;background:var(--panel);border:2px solid transparent;font-weight:700;font-size:16px;cursor:pointer;transition:background .15s,border-color .15s}
 .chip input:checked + span{background:var(--gold);color:var(--on-gold)}
+@keyframes pick{0%,60%{border-color:var(--focus);transform:scale(1.04)}}
+.chip>span.picked{animation:pick .7s ease-out}
+@media (prefers-reduced-motion:reduce){.chip>span.picked{animation:none}}
 .chip:hover>span,.chip input:focus-visible + span{border-color:var(--focus)}
 input[type=text],textarea{width:100%;min-height:52px;padding:12px 14px;border-radius:8px;border:2px solid #3a4a60;background:#151d28;color:var(--ink);font:500 17px/1.4 var(--font);transition:border-color .15s}
 textarea{min-height:110px;resize:vertical}
@@ -181,7 +193,7 @@ input[type=text]:hover,textarea:hover,input[type=text]:focus,textarea:focus{bord
 .form .btn{width:100%}
 .form .btn:hover,.form .btn:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 .note{margin:-8px 0 0;color:var(--ink-2);font-size:15px}
-@media (min-width:1024px){.form .btn{width:auto;min-width:280px;justify-self:start}}
+@media (min-width:1024px){.form{max-width:none;grid-template-columns:1fr 1fr;column-gap:28px}.form>.field:nth-child(-n+2),.form>.field:nth-child(5),.form .btn,.form .note{grid-column:1/-1}.form .btn{width:auto;min-width:280px;justify-self:start}}
 
 /* close + footer */
 .close{padding:50px 0 40px}
@@ -202,7 +214,7 @@ input[type=text]:hover,textarea:hover,input[type=text]:focus,textarea:focus{bord
 <body>
 <!--
 THESIS: J&J's own black-and-gold job flyer, made physical: the page is a stack of heavy caps slabs, and the hero is a real garage door you lift with your finger. Refuses the stock contractor template (hero photo, icon cards, testimonials carousel).
-OWN-WORLD: slate-night ground (#1a2330, never black), logo gold #f3b324 as the only accent fill, warm-white ink; condensed-weight system caps stacked like flyer type; corrugated roll-up-door slats with a gold hem as dividers and photo reveals.
+OWN-WORLD: slate-night ground (#1a2330, never black), logo gold #f3b324 as the only accent fill, warm-white ink; heavy system caps stacked like flyer type; corrugated roll-up-door slats with a gold hem as dividers and photo reveals.
 STORY: a homeowner or business with a stuck, noisy or broken door sees a family crew that does it all, in their language, and texts or calls Jimmy.
 FIRST VIEWPORT (phone): header (gold house mark, name, Español, number top-right), "GARAGE DOORS? / WE DO IT ALL." slab, promise, two buttons (Get a quote / Text a photo), then the lit garage door scene filling the rest.
 FORM: candidate 3 of 7 (the trade flyer), raised by the manifesto page's total type commitment. Seed 8815d4a1.
@@ -223,7 +235,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <svg aria-hidden="true"><use href="#i-mark"/></svg>
       <span><b>J&amp;J</b><small>GARAGE DOORS</small></span>
     </a>
-    <button class="lang" id="langBtn" type="button"><span class="en" lang="es">Español</span><span class="es" lang="en">English</span></button>
+    <button class="lang" id="langBtn" type="button" data-en="Ver en español" data-es="View in English" aria-label="Ver en español"><span class="en" lang="es">Español</span><span class="es" lang="en">English</span></button>
     <a class="phone" href="tel:+19083748196"><svg aria-hidden="true"><use href="#i-phone"/></svg>(908) 374-8196</a>
   </div>
 </header>
@@ -233,15 +245,15 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="wrap">
       <div class="hero-copy">
         <h1 id="hero-h"><span class="en"><span>Garage doors?</span><span class="gold">We do it all.</span></span><span class="es" lang="es"><span>¿Puertas de garaje?</span><span class="gold">Lo hacemos todo.</span></span></h1>
-        <p class="promise"><span class="en">A family crew from Elizabeth, New Jersey. We fix your door like it's on our own house, at a fair price, in English, Spanish or Portuguese.</span><span class="es" lang="es">Somos una familia de Elizabeth, New Jersey. Arreglamos tu puerta como si fuera de nuestra propia casa, a un precio justo, en inglés, español o portugués.</span></p>
+        <p class="promise"><span class="en">A family crew from Elizabeth, New Jersey. We fix your door like it's on our own house, at a fair price.</span><span class="es" lang="es">Somos una familia de Elizabeth, New Jersey. Arreglamos tu puerta como si fuera de nuestra propia casa, a un precio justo.</span></p>
         <div class="actions">
-          <a class="btn btn-fill" href="#quote"><span class="en">Get a quote</span><span class="es" lang="es">Pide un precio</span></a>
+          <a class="btn btn-fill" href="#quote"><span class="en">Get a quote</span><span class="es" lang="es">Pide un estimado</span></a>
           <a class="btn btn-line" id="heroSms" href="sms:+19083748196?&amp;body=Hi%20J%26J!%20Here's%20a%20photo%20of%20my%20garage%20door%3A"><svg aria-hidden="true"><use href="#i-sms"/></svg><span class="en">Text a photo</span><span class="es" lang="es">Manda foto</span></a>
         </div>
       </div>
       <div class="scene-wrap">
         <div class="scene" id="scene">
-          <canvas id="door" role="img" data-en="A garage door at night. Drag it up or down." data-es="Una puerta de garaje de noche. Súbela o bájala con el dedo." aria-label="A garage door at night. Drag it up or down."></canvas>
+          <canvas id="door" role="slider" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-en="A garage door at night. Drag it up or down." data-es="Una puerta de garaje de noche. Súbela o bájala con el dedo." aria-label="A garage door at night. Drag it up or down."></canvas>
         </div>
         <p class="hint"><svg aria-hidden="true"><use href="#i-up"/></svg><span class="en">Lift the door</span><span class="es" lang="es">Sube la puerta</span></p>
       </div>
@@ -265,7 +277,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             <li><a class="row" href="#quote" data-pick="noisy"><span><span class="en">Noisy doors</span><span class="es" lang="es">Puertas ruidosas</span></span><i class="arrow"><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a></li>
             <li><a class="row" href="#quote" data-pick="cable"><span><span class="en">Cables &amp; pulleys</span><span class="es" lang="es">Cables y poleas</span></span><i class="arrow"><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a></li>
             <li><a class="row" href="#quote" data-pick="sensor"><span><span class="en">Child safety sensors</span><span class="es" lang="es">Sensores de seguridad</span></span><i class="arrow"><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a></li>
-            <li><a class="row" href="#quote" data-pick="opener"><span><span class="en">Openers</span><span class="es" lang="es">Abridores (motores)</span></span><i class="arrow"><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a></li>
+            <li><a class="row" href="#quote" data-pick="opener"><span><span class="en">Openers</span><span class="es" lang="es">Motores (abridores)</span></span><i class="arrow"><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a></li>
           </ul>
         </div>
         <div>
@@ -303,7 +315,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <div class="family">
         <h2 id="fam-h" class="who"><span class="en">Jimmy, Jimmy Jr and Nancy. Family owned, out of Elizabeth, New Jersey.</span><span class="es" lang="es">Jimmy, Jimmy Jr y Nancy. Un negocio familiar de Elizabeth, New Jersey.</span></h2>
         <div>
-          <p><span class="en">We've been doing residential and commercial doors for over 15 years. Your garage door is the heaviest thing in your house that moves, and most families use it more than the front door. We treat it that way: we tell you honestly what's wrong, we charge a fair price, and we don't leave until it runs right.</span><span class="es" lang="es">Llevamos más de 15 años trabajando puertas residenciales y comerciales. La puerta del garaje es lo más pesado que se mueve en tu casa, y muchas familias la usan más que la puerta principal. Así la tratamos: te decimos con honestidad qué tiene, te cobramos un precio justo y no nos vamos hasta que funcione bien.</span></p>
+          <p><span class="en">We've been doing residential and commercial doors for over 15 years. We tell you honestly what's wrong with your door, and we charge a fair price to fix it.</span><span class="es" lang="es">Llevamos más de 15 años trabajando con puertas residenciales y comerciales. Te decimos con honestidad qué tiene tu puerta, y te cobramos un precio justo por arreglarla.</span></p>
           <p style="margin-top:14px;color:var(--ink-2)"><span class="en">We work all over New Jersey, Pennsylvania and New York.</span><span class="es" lang="es">Trabajamos en todo New Jersey, Pennsylvania y New York.</span></p>
         </div>
       </div>
@@ -317,8 +329,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       </div>
       <ol class="steps">
         <li><b><span class="en">Tell us what it's doing</span><span class="es" lang="es">Dinos qué le pasa</span></b><span><span class="en">Call or text. A photo or short video of the door helps a lot.</span><span class="es" lang="es">Llama o escribe. Una foto o un video corto de la puerta ayuda mucho.</span></span></li>
-        <li><b><span class="en">We come take a look</span><span class="es" lang="es">Vamos a verla</span></b><span><span class="en">You get the price before we start.</span><span class="es" lang="es">Te damos el precio antes de empezar.</span></span></li>
-        <li><b><span class="en">Fixed and running</span><span class="es" lang="es">Arreglada y funcionando</span></b><span><span class="en">We test it with you before we go.</span><span class="es" lang="es">La probamos contigo antes de irnos.</span></span></li>
+        <li><b><span class="en">We come take a look</span><span class="es" lang="es">Vamos a verla</span></b><span><span class="en">Honest answer, fair price.</span><span class="es" lang="es">Respuesta honesta, precio justo.</span></span></li>
+        <li><b><span class="en">Fixed and running</span><span class="es" lang="es">Arreglada y funcionando</span></b><span><span class="en">Homes and businesses, all over NJ, PA and NY.</span><span class="es" lang="es">Casas y negocios, en todo NJ, PA y NY.</span></span></li>
       </ol>
     </div>
   </section>
@@ -326,7 +338,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <section class="quote" id="quote" aria-labelledby="q-h">
     <div class="wrap">
       <div class="sec-head">
-        <h2 id="q-h"><span class="en">Get a quote</span><span class="es" lang="es">Pide un precio</span></h2>
+        <h2 id="q-h"><span class="en">Get a quote</span><span class="es" lang="es">Pide un estimado</span></h2>
       </div>
       <form class="form" id="qform" novalidate>
         <div class="field" id="f-need">
@@ -338,11 +350,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             <label class="chip"><input type="checkbox" name="need" value="noisy"><span><span class="en">Noisy</span><span class="es" lang="es">Hace ruido</span></span></label>
             <label class="chip"><input type="checkbox" name="need" value="cable"><span><span class="en">Cables / pulleys</span><span class="es" lang="es">Cables / poleas</span></span></label>
             <label class="chip"><input type="checkbox" name="need" value="sensor"><span><span class="en">Safety sensors</span><span class="es" lang="es">Sensores</span></span></label>
-            <label class="chip"><input type="checkbox" name="need" value="opener"><span><span class="en">Opener</span><span class="es" lang="es">Abridor</span></span></label>
+            <label class="chip"><input type="checkbox" name="need" value="opener"><span><span class="en">Opener</span><span class="es" lang="es">Motor</span></span></label>
             <label class="chip"><input type="checkbox" name="need" value="new"><span><span class="en">New door</span><span class="es" lang="es">Puerta nueva</span></span></label>
             <label class="chip"><input type="checkbox" name="need" value="rolling"><span><span class="en">Steel rolling door</span><span class="es" lang="es">Cortina de acero</span></span></label>
           </div>
-          <span class="err" id="need-e"><span class="en">Pick at least one, or describe it below.</span><span class="es" lang="es">Escoge al menos una, o descríbelo abajo.</span></span>
+          <span class="err" id="need-e" role="alert"><span class="en">Pick at least one, or describe it below.</span><span class="es" lang="es">Escoge al menos una, o descríbelo abajo.</span></span>
         </div>
         <div class="field">
           <span class="label" id="prop-l"><span class="en">Where is the door?</span><span class="es" lang="es">¿Dónde está la puerta?</span></span>
@@ -353,20 +365,21 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         </div>
         <div class="field" id="f-town">
           <label class="label" for="town"><span class="en">Town</span><span class="es" lang="es">Ciudad o pueblo</span></label>
-          <input type="text" id="town" name="town" autocomplete="address-level2" data-en-ph="e.g. Elizabeth, NJ" data-es-ph="ej. Elizabeth, NJ" placeholder="e.g. Elizabeth, NJ">
-          <span class="err"><span class="en">Tell us the town so we know how far it is.</span><span class="es" lang="es">Dinos la ciudad para saber qué tan lejos queda.</span></span>
+          <input type="text" id="town" name="town" autocomplete="address-level2" aria-describedby="town-e" data-en-ph="e.g. Elizabeth, NJ" data-es-ph="ej. Elizabeth, NJ" placeholder="e.g. Elizabeth, NJ">
+          <span class="err" id="town-e" role="alert"><span class="en">Tell us the town so we know how far it is.</span><span class="es" lang="es">Dinos la ciudad para saber qué tan lejos queda.</span></span>
         </div>
         <div class="field" id="f-name">
           <label class="label" for="name"><span class="en">Your name</span><span class="es" lang="es">Tu nombre</span></label>
-          <input type="text" id="name" name="name" autocomplete="name">
-          <span class="err"><span class="en">Add your name so we know who's texting.</span><span class="es" lang="es">Pon tu nombre para saber quién escribe.</span></span>
+          <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-e">
+          <span class="err" id="name-e" role="alert"><span class="en">Add your name so we know who's texting.</span><span class="es" lang="es">Pon tu nombre para saber quién escribe.</span></span>
         </div>
         <div class="field">
           <label class="label" for="det"><span class="en">Anything else? <em>(optional)</em></span><span class="es" lang="es">¿Algo más? <em>(opcional)</em></span></label>
           <textarea id="det" name="det"></textarea>
         </div>
-        <button class="btn btn-fill" type="submit"><svg aria-hidden="true"><use href="#i-sms"/></svg><span class="en">Text this to Jimmy</span><span class="es" lang="es">Mandar a Jimmy por texto</span></button>
+        <button class="btn btn-fill" type="submit"><svg aria-hidden="true"><use href="#i-sms"/></svg><span class="en">Text this to Jimmy</span><span class="es" lang="es">Mándaselo a Jimmy por texto</span></button>
         <p class="note"><span class="en">Opens your messages with everything filled in. You can add a photo before you send.</span><span class="es" lang="es">Abre tus mensajes con todo escrito. Puedes agregar una foto antes de enviar.</span></p>
+        <p class="note" id="deskNote" hidden><span class="en">Nothing opened? Texting needs a phone. Call us at the numbers at the bottom of the page.</span><span class="es" lang="es">¿No se abrió nada? Para mandar texto necesitas un teléfono. Llámanos a los números al final de la página.</span></p>
       </form>
     </div>
   </section>
@@ -430,7 +443,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   var seams=[0,0,0,0], seamV=[0,0,0,0];
   var dragging=false, grabO=0, grabY=0, lastY=0, lastT=0, dragV=0, lastTouch=-99, t0=performance.now();
   var ptr={x:-999,y:-999,vx:0,vy:0,cx:null,cy:null,on:false};
-  var reversing=0, ledBlink=0;
+  var reversing=0, ledBlink=0, keyMove=0, lastAria=-1, bg=document.createElement('canvas');
 
   function size(){
     var r=cv.getBoundingClientRect(), w=Math.round(r.width), h=Math.round(r.height);
@@ -442,6 +455,9 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     G={ow:ow,oh:oh,ox:(W-ow)/2,oy:floor-oh,floor:floor,trim:Math.max(5,ow*0.022)};
     var n=W<600?MOTES_PHONE:MOTES_DESK; motes=[];
     for(var i=0;i<n;i++) motes.push(newMote(true));
+    /* the wall and driveway never change: paint them once per size */
+    bg.width=cv.width;bg.height=cv.height;
+    var real=ctx; ctx=bg.getContext('2d'); ctx.setTransform(dpr,0,0,dpr,0,0); drawWall(); drawDrivewayBase(); ctx=real;
     return true;
   }
   function newMote(any){
@@ -477,45 +493,62 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       var rg=ctx.createRadialGradient(sx[i],sy,2,sx[i],sy,G.oh*0.7);
       rg.addColorStop(0,'rgba(255,196,84,.42)');rg.addColorStop(.35,'rgba(255,180,60,.12)');rg.addColorStop(1,'rgba(255,180,60,0)');
       ctx.fillStyle=rg;ctx.fillRect(sx[i]-G.oh*0.7,sy-G.oh*0.7,G.oh*1.4,G.oh*1.4);
-      var lw=Math.max(8,G.ow*0.035), lh=lw*1.7;
-      ctx.fillStyle='#10161f';ctx.fillRect(sx[i]-lw/2-2,sy-lh/2-4,lw+4,4);ctx.fillRect(sx[i]-lw/2-2,sy+lh/2,lw+4,4);
-      ctx.fillStyle='#ffd27a';ctx.fillRect(sx[i]-lw/2,sy-lh/2,lw,lh);
-      ctx.fillStyle='rgba(16,22,31,.85)';ctx.fillRect(sx[i]-0.75,sy-lh/2,1.5,lh);
+      /* lantern: wall plate, roof cap, lit glass with mullions, base */
+      var lw=Math.max(10,G.ow*0.042), lh=lw*1.55, cx=sx[i], top=sy-lh/2;
+      ctx.fillStyle='#0d131b';ctx.fillRect(cx-lw*0.22,top-lw*0.5,lw*0.44,lh+lw*0.9);
+      ctx.beginPath();ctx.moveTo(cx-lw*0.72,top);ctx.lineTo(cx,top-lw*0.55);ctx.lineTo(cx+lw*0.72,top);ctx.closePath();ctx.fill();
+      var gl=ctx.createLinearGradient(0,top,0,top+lh);
+      gl.addColorStop(0,'#fff1c4');gl.addColorStop(.6,'#ffcf6a');gl.addColorStop(1,'#e9a640');
+      ctx.fillStyle=gl;ctx.beginPath();ctx.moveTo(cx-lw/2,top);ctx.lineTo(cx+lw/2,top);ctx.lineTo(cx+lw*0.4,top+lh);ctx.lineTo(cx-lw*0.4,top+lh);ctx.closePath();ctx.fill();
+      ctx.fillStyle='rgba(13,19,27,.8)';ctx.fillRect(cx-0.7,top,1.4,lh);ctx.fillRect(cx-lw/2,top+lh*0.48,lw,1.2);
+      ctx.fillStyle='#0d131b';ctx.fillRect(cx-lw*0.5,top+lh,lw,Math.max(2.5,lw*0.18));
     }
   }
-  function drawDriveway(){
+  function drawDrivewayBase(){
     var g=ctx.createLinearGradient(0,G.floor,0,H);
     g.addColorStop(0,'#2d3746');g.addColorStop(1,'#1c2430');
     ctx.fillStyle=g;ctx.fillRect(0,G.floor,W,H-G.floor);
     ctx.fillStyle='rgba(0,0,0,.25)';ctx.fillRect(0,G.floor,W,2);
+  }
+  function drawDriveway(){
     /* light spill */
     if(o>0.01){
       var a=Math.min(1,o*1.5), top=G.floor, spread0=G.ow/2, spread1=G.ow*0.95;
       ctx.save();ctx.beginPath();
       ctx.moveTo(W/2-spread0,top);ctx.lineTo(W/2+spread0,top);ctx.lineTo(W/2+spread1,H);ctx.lineTo(W/2-spread1,H);ctx.closePath();
       var sg=ctx.createLinearGradient(0,top,0,H);
-      sg.addColorStop(0,'rgba(255,190,80,'+(0.42*a)+')');sg.addColorStop(1,'rgba(255,190,80,0)');
+      sg.addColorStop(0,'rgba(255,196,96,'+(0.62*a)+')');sg.addColorStop(.55,'rgba(255,190,80,'+(0.22*a)+')');sg.addColorStop(1,'rgba(255,190,80,0)');
       ctx.fillStyle=sg;ctx.fill();ctx.restore();
     }
   }
   function drawInside(){
-    var x=G.ox,y=G.oy,w=G.ow,h=G.oh;
-    var g=ctx.createLinearGradient(0,y,0,y+h);
-    g.addColorStop(0,'#ffcf6e');g.addColorStop(.55,'#d9963a');g.addColorStop(1,'#7a4f1d');
-    ctx.fillStyle=g;ctx.fillRect(x,y,w,h);
-    /* back wall shelf + floor line */
-    ctx.fillStyle='rgba(90,55,18,.35)';
-    ctx.fillRect(x+w*0.06,y+h*0.42,w*0.3,h*0.035);ctx.fillRect(x+w*0.06,y+h*0.6,w*0.3,h*0.035);
-    ctx.fillRect(x+w*0.08,y+h*0.42,w*0.02,h*0.4);ctx.fillRect(x+w*0.33,y+h*0.42,w*0.02,h*0.4);
-    ctx.fillStyle='rgba(90,55,18,.28)';
-    ctx.fillRect(x+w*0.1,y+h*0.47,w*0.07,h*0.13);ctx.fillRect(x+w*0.2,y+h*0.5,w*0.1,h*0.1);
-    ctx.fillStyle='rgba(60,36,10,.35)';ctx.fillRect(x,y+h*0.83,w,h*0.17);
-    /* opener rail + bulb */
-    ctx.fillStyle='rgba(60,36,10,.55)';ctx.fillRect(x+w*0.49,y,w*0.02,h*0.12);
-    ctx.fillRect(x+w*0.42,y+h*0.1,w*0.16,h*0.06);
-    var bg=ctx.createRadialGradient(x+w/2,y+h*0.2,1,x+w/2,y+h*0.2,h*0.5);
-    bg.addColorStop(0,'rgba(255,248,220,.75)');bg.addColorStop(1,'rgba(255,248,220,0)');
-    ctx.fillStyle=bg;ctx.fillRect(x,y,w,h);
+    var x=G.ox,y=G.oy,w=G.ow,h=G.oh,fy=y+h*0.7;
+    /* back wall, lit from the ceiling bulb */
+    var g=ctx.createLinearGradient(0,y,0,fy);
+    g.addColorStop(0,'#f6c25e');g.addColorStop(1,'#c7863a');
+    ctx.fillStyle=g;ctx.fillRect(x,y,w,fy-y);
+    /* floor plane: concrete coming toward you, brighter at the front */
+    var fg=ctx.createLinearGradient(0,fy,0,y+h);
+    fg.addColorStop(0,'#9a6a35');fg.addColorStop(1,'#d9a35a');
+    ctx.fillStyle=fg;ctx.fillRect(x,fy,w,y+h-fy);
+    ctx.fillStyle='rgba(70,40,12,.45)';ctx.fillRect(x,fy-1,w,2);
+    /* side walls in perspective */
+    ctx.fillStyle='rgba(120,70,20,.38)';
+    ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+w*0.1,y+h*0.08);ctx.lineTo(x+w*0.1,fy);ctx.lineTo(x,y+h);ctx.closePath();ctx.fill();
+    ctx.beginPath();ctx.moveTo(x+w,y);ctx.lineTo(x+w*0.9,y+h*0.08);ctx.lineTo(x+w*0.9,fy);ctx.lineTo(x+w,y+h);ctx.closePath();ctx.fill();
+    /* workbench and shelf on the back wall */
+    ctx.fillStyle='rgba(92,54,16,.5)';
+    ctx.fillRect(x+w*0.14,fy-h*0.2,w*0.24,h*0.03);ctx.fillRect(x+w*0.15,fy-h*0.17,w*0.015,h*0.17);ctx.fillRect(x+w*0.36,fy-h*0.17,w*0.015,h*0.17);
+    ctx.fillRect(x+w*0.62,y+h*0.3,w*0.22,h*0.025);
+    ctx.fillStyle='rgba(92,54,16,.32)';
+    ctx.fillRect(x+w*0.64,y+h*0.22,w*0.06,h*0.08);ctx.fillRect(x+w*0.72,y+h*0.245,w*0.09,h*0.055);
+    /* opener rail and motor */
+    ctx.fillStyle='rgba(60,36,10,.6)';ctx.fillRect(x+w*0.495,y,w*0.01,h*0.1);
+    ctx.fillRect(x+w*0.44,y+h*0.09,w*0.12,h*0.06);
+    /* bulb glow and corner falloff */
+    var bg2=ctx.createRadialGradient(x+w/2,y+h*0.16,1,x+w/2,y+h*0.16,h*0.75);
+    bg2.addColorStop(0,'rgba(255,250,225,.8)');bg2.addColorStop(.4,'rgba(255,240,200,.18)');bg2.addColorStop(1,'rgba(80,40,0,.25)');
+    ctx.fillStyle=bg2;ctx.fillRect(x,y,w,h);
   }
   function drawDoor(){
     var x=G.ox,y=G.oy,w=G.ow,h=G.oh,n=4,sh=h/n,lift=h*o;
@@ -623,7 +656,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       var idle=(t-lastTouch)>RESUME_AFTER;
       if(idle&&!reduce){autoClock+=dt; target=autoTarget(autoClock);}
       if(reversing>0){reversing-=dt; target=Math.max(target,0.55);}
-      if(idle||reversing>0){ov+=(SPRING_K*(target-o)-SPRING_D*ov)*dt;}
+      if(keyMove>0) keyMove-=dt;
+      if(idle||reversing>0||keyMove>0){ov+=(SPRING_K*(target-o)-SPRING_D*ov)*dt;}
       else{ov*=Math.pow(0.04,dt);} /* a balanced door stays where you leave it */
       o+=ov*dt;
       if(o<0){o=0;ov=-ov*0.25;} if(o>1){o=1;ov=-ov*0.25;}
@@ -633,13 +667,16 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       }
     }
     ledBlink+=dt;
+    var pct=Math.round(Math.max(0,Math.min(1,o))*10)*10;
+    if(pct!==lastAria){lastAria=pct; var es=document.documentElement.getAttribute('data-lang')==='es'; cv.setAttribute('aria-valuenow',pct); cv.setAttribute('aria-valuetext',es?('Puerta '+pct+'% abierta'):('Door '+pct+'% open'));}
     var acc=(ov-prevV);
     for(var i=0;i<4;i++){ seamV[i]+=(-SEAM_K*seams[i]-SEAM_D*seamV[i])*dt - acc*SEAM_KICK*G.oh*(4-i)*0.25; seams[i]+=seamV[i]*dt; seams[i]=Math.max(-6,Math.min(6,seams[i])); }
     ptr.vx*=0.85;ptr.vy*=0.85;
 
     ctx.setTransform(dpr,0,0,dpr,0,0);
     ctx.clearRect(0,0,W,H);
-    drawWall();drawDriveway();drawInside();drawMotes(dt,t);drawDoor();drawTrimAndSensors();
+    ctx.drawImage(bg,0,0,W,H);drawDriveway();drawInside();drawMotes(dt,t);drawDoor();drawTrimAndSensors();
+    if(reduce&&!dragging&&keyMove<=0&&Math.abs(ov)<0.002) running=false;
     if(running) requestAnimationFrame(frame);
   }
   function start(){ if(!running&&visible){running=true;lastNow=performance.now();requestAnimationFrame(frame);} }
@@ -659,14 +696,16 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     start();
   });
   cv.addEventListener('pointermove',function(e){ setPtr(e.clientX,e.clientY); if(dragging) lastTouch=(performance.now()-t0)/1000; });
-  function up(){ if(dragging){dragging=false;cv.classList.remove('drag');lastTouch=(performance.now()-t0)/1000;} if(event&&event.pointerType!=='mouse'){ptr.on=false;ptr.cx=null;} }
+  function up(e){ if(dragging){dragging=false;cv.classList.remove('drag');lastTouch=(performance.now()-t0)/1000;} if(e&&e.pointerType!=='mouse'){ptr.on=false;ptr.cx=null;} }
   cv.addEventListener('pointerup',up);cv.addEventListener('pointercancel',up);
   cv.addEventListener('pointerleave',function(e){ if(!dragging&&e.pointerType==='mouse'){ptr.on=false;ptr.cx=null;} });
   cv.addEventListener('touchmove',function(){},{passive:true});
   /* keyboard: arrows lift and lower */
   cv.tabIndex=0;
   cv.addEventListener('keydown',function(e){
-    if(e.key==='ArrowUp'||e.key==='ArrowDown'){e.preventDefault(); lastTouch=(performance.now()-t0)/1000; target=Math.max(0,Math.min(1,o+(e.key==='ArrowUp'?0.2:-0.2))); ov=(target-o)*4; start();}
+    var k={ArrowUp:0.2,ArrowRight:0.2,ArrowDown:-0.2,ArrowLeft:-0.2,PageUp:0.5,PageDown:-0.5}[e.key];
+    if(e.key==='Home') k=-1; if(e.key==='End') k=1;
+    if(k){e.preventDefault(); lastTouch=(performance.now()-t0)/1000; target=Math.max(0,Math.min(1,o+k)); keyMove=1.2; start();}
   });
 
   if('IntersectionObserver' in window){
@@ -686,22 +725,28 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   if(roll&&'IntersectionObserver' in window){
     new IntersectionObserver(function(es){ if(es[0].intersectionRatio>0.45) opened=true; },{threshold:[0,0.45,1]}).observe(roll.parentNode);
   }else if(roll) opened=true;
-  var last=performance.now();
+  /* run only while a divider or the photo bay is on screen */
+  var onScreen=0, raf=0, last=0;
+  function go(){ if(!raf){ last=performance.now(); raf=requestAnimationFrame(tick); } }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ var was=e.target._on; e.target._on=e.isIntersecting; onScreen+=(e.isIntersecting?1:0)-(was?1:0); }); if(onScreen>0) go(); });
+    hems.forEach(function(h){io.observe(h.parentNode)}); if(roll) io.observe(roll.parentNode);
+  } else onScreen=1;
   function tick(now){
+    raf=0;
     var dt=Math.min(0.05,(now-last)/1000); last=now;
-    var vh=innerHeight;
-    hems.forEach(function(h){
-      var r=h.parentNode.getBoundingClientRect(), p=Math.max(0,Math.min(1,(vh-r.top)/(vh*0.9)));
-      h.style.transform='translateY('+(-56*p).toFixed(1)+'px)';
-    });
+    var vh=innerHeight, tops=hems.map(function(h){return h.parentNode.getBoundingClientRect().top});
+    hems.forEach(function(h,i){ var p=Math.max(0,Math.min(1,(vh-tops[i])/(vh*0.9))); h.style.transform='translateY('+(-56*p).toFixed(1)+'px)'; });
+    var settling=false;
     if(roll){
       var tgt=opened?1:0;
       rollV+=(16*(tgt-rollP)-6*rollV)*dt; rollP+=rollV*dt;
+      settling=Math.abs(tgt-rollP)>0.002||Math.abs(rollV)>0.002;
       roll.style.transform='translateY('+(-100*Math.max(0,Math.min(1.02,rollP))).toFixed(2)+'%)';
     }
-    requestAnimationFrame(tick);
+    if(onScreen>0||settling) go();
   }
-  requestAnimationFrame(tick);
+  go();
 })();
 
 /* ---------- services pick + quote form ---------- */
@@ -709,7 +754,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   var form=document.getElementById('qform');
   document.querySelectorAll('[data-pick]').forEach(function(a){
     a.addEventListener('click',function(){
-      var box=form.querySelector('input[name=need][value="'+a.dataset.pick+'"]'); if(box) box.checked=true;
+      var box=form.querySelector('input[name=need][value="'+a.dataset.pick+'"]'); if(box){ box.checked=true; var sp=box.nextElementSibling; sp.classList.remove('picked'); setTimeout(function(){sp.classList.add('picked')},450); setTimeout(function(){sp.classList.remove('picked')},1300); }
       document.getElementById('f-need').classList.remove('bad');
     });
   });
@@ -717,7 +762,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     en:{hi:"Hi J&J! I need help with a garage door.",need:"Problem",prop:"Where",home:"My home",biz:"My business",town:"Town",name:"Name",det:"Details",
       v:{spring:"Broken spring",track:"Off track",bent:"Bent track",noisy:"Noisy",cable:"Cables / pulleys",sensor:"Safety sensors",opener:"Opener",new:"New door",rolling:"Steel rolling door"}},
     es:{hi:"¡Hola J&J! Necesito ayuda con una puerta de garaje.",need:"Problema",prop:"Dónde",home:"Mi casa",biz:"Mi negocio",town:"Ciudad",name:"Nombre",det:"Detalles",
-      v:{spring:"Resorte roto",track:"Fuera del riel",bent:"Riel doblado",noisy:"Hace ruido",cable:"Cables / poleas",sensor:"Sensores",opener:"Abridor",new:"Puerta nueva",rolling:"Cortina de acero"}}
+      v:{spring:"Resorte roto",track:"Fuera del riel",bent:"Riel doblado",noisy:"Hace ruido",cable:"Cables / poleas",sensor:"Sensores",opener:"Motor",new:"Puerta nueva",rolling:"Cortina de acero"}}
   };
   form.addEventListener('change',function(e){ if(e.target.name==='need') document.getElementById('f-need').classList.remove('bad'); });
   form.addEventListener('input',function(e){ var f=e.target.closest('.field'); if(f&&e.target.value.trim()) f.classList.remove('bad'); if(e.target.id==='det'&&e.target.value.trim()) document.getElementById('f-need').classList.remove('bad'); });
@@ -731,10 +776,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     if(!needs.length&&!det) bad.push('f-need');
     if(!town) bad.push('f-town');
     if(!name) bad.push('f-name');
-    ['f-need','f-town','f-name'].forEach(function(id){document.getElementById(id).classList.toggle('bad',bad.indexOf(id)>-1)});
+    ['f-need','f-town','f-name'].forEach(function(id){var f=document.getElementById(id),b=bad.indexOf(id)>-1;f.classList.toggle('bad',b);var i=f.querySelector('input[type=text]');if(i)i.setAttribute('aria-invalid',b?'true':'false')});
     if(bad.length){ var first=document.getElementById(bad[0]); first.scrollIntoView({block:'center'}); var inp=first.querySelector('input'); if(inp) inp.focus({preventScroll:true}); return; }
     var msg=t.hi+"\n"+(needs.length?t.need+": "+needs.join(", ")+"\n":"")+t.prop+": "+t[prop]+"\n"+t.town+": "+town+"\n"+t.name+": "+name+(det?"\n"+t.det+": "+det:"");
     location.href='sms:+19083748196?&body='+encodeURIComponent(msg);
+    if(matchMedia('(hover:hover) and (pointer:fine)').matches) setTimeout(function(){document.getElementById('deskNote').hidden=false},900);
   });
 })();
 </script>
