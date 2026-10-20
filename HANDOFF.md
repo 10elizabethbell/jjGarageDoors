@@ -1,58 +1,61 @@
-# J&J Garage Doors LLC — handoff at ~60%
+# J&J Garage Doors LLC — handoff at ~60% (calm revamp)
 
-**Live:** https://10elizabethbell.github.io/jjGarageDoors/ · **Repo:** https://github.com/10elizabethbell/jjGarageDoors · **Built:** 2026-10-18 from Muse brief (run 2026-10-18, found via the "CONTRACTORS NJ/PA Conncted" Facebook group post)
+**Live:** https://10elizabethbell.github.io/jjGarageDoors/ · **Repo:** https://github.com/10elizabethbell/jjGarageDoors · **Built:** 2026-10-18 from Muse brief (run 2026-10-18, "CONTRACTORS NJ/PA Conncted" Facebook group post) · **Revamped:** 2026-10-19 to the calm band style
+
+## What changed in the revamp (2026-10-19)
+The business hasn't been contacted yet, so the whole page was rebuilt under the new house default (`calm-photo-style.md`, copied from DPG's `index.html`). Facts, the photo, both languages and the text-message wiring carried over.
+- **Gone:** the slate-night liftable garage-door canvas hero, the roll-up-door dividers and photo reveal, hinge wobble, dust, sensor beam, heavy system-font caps. (All in git history up to `b527e9f` if you ever want the drag-to-lift door back as an opt-in signature.)
+- **Look:** paper (#f4f6fb), night navy (#183a63) and deep navy (#0d2138, faint diagonal lines) bands, J&J's logo gold (#f3b324) as the only accent, used as a fill; gold as text on light is the darker #7a5400. Cal Sans headings, system body at 16/1.7, pill buttons, 24px cards.
+- **Hero:** J&J's own two-black-door photo under a navy overlay (phone: full-bleed, cropped to the right door; desktop: the photo sits on the right at near its real size and fades into navy on the left, so it never gets blown up soft). White text measured at 7:1 on phones and 9.7:1 on desktop by pixel sampling; the soft promise text is 4.7:1 at its worst spot.
+- **H1:** "Garage doors in New Jersey? We do it all." / "¿Puertas de garaje en New Jersey? Lo hacemos todo." The place is in the H1 and "We do it all" is their own flyer slogan. It bounces in letter by letter (only the language on screen), then the plain heading is restored. Reduced motion and no-JS show it at once.
+- **Motion:** the H1 bounce-in, one 12px fade-up for things below the first screen, and the floating gold text circle (hidden on the hero and while the quote form is on screen; it texts Jimmy in the visitor's language).
+- **New order:** hero → family (Jimmy, Jimmy Jr and Nancy; homes and businesses, over 15 years, three languages) → services as nine rows on navy (tap pre-picks the problem in the form) → our work (photo + big Facebook link) → how it works (3 steps) → quote form → close (name, Jimmy's number big, Jimmy Jr and Nancy) → footer.
+- **Icons:** favicon, iPhone icon and og image redone in the new navy (og image is the hero photo + headline).
+- Old `DESIGN.md` retired (it described the old build); old detector ignores cleared. **A new DESIGN.md was not written yet** (usage limit).
 
 ## What's built
-- One page, `index.html`, bilingual EN/ES (toggle top right; follows the browser's language on first visit and remembers the choice). Phone-first.
-- World: J&J's own black-and-gold flyer, made physical. Slate-night ground (#1a2330, not black), logo gold #f3b324, heavy stacked caps.
-- Signature: the hero is a lit garage at night. The door lifts and lowers by itself until you touch it, then follows your finger or mouse up and down. Like a balanced door, it stays where you leave it. Sections hinge-wobble and light leaks through the seams. Dust drifts in the light and gets pushed by the pointer. If you put a finger in the safety-sensor beam while the door is closing, it reverses and the sensor blinks. Arrow keys, Home and End work too (it's a `role="slider"`).
-- Carried through: the section dividers are the bottom hem of a steel roll-up door that rolls up as you scroll, and the work photo sits behind a roll-up door that opens when it scrolls into view.
-- Sections: header (logo mark, Español, number top right), hero (two buttons: Get a quote / Text a photo), What we fix (rows that pre-select the problem in the form), Our work (1 photo + big Facebook link), We speak English / Hablamos español / Falamos português + family, How it works, quote form, closing "We do it all." with all three contacts, Facebook.
-- Contact: the header number calls Jimmy (908) 374-8196. The quote form and "Text a photo" open a pre-written text to Jimmy's number, in the visitor's language. On a computer, a note appears after sending saying to call instead. The footer lists Jimmy, Jimmy Jr and Nancy as tap-to-call.
+- One page, `index.html`, bilingual EN/ES (Español/English toggle in the header; follows the browser language on first visit and remembers the choice).
+- Header: gold house mark + "J&J / Garage Doors LLC", the toggle, and Jimmy's number top right (the only number on the first screen).
+- Hero buttons: "Get a quote" (gold, jumps to the form) and "Text a photo" (outlined, opens a pre-written text to Jimmy).
+- Quote form: problem chips, home/business, town, name, optional details; composes a text to (908) 374-8196 in the visitor's language. If nothing opens (desktop), a line appears with Jimmy's number to call.
+- Footer: name, Elizabeth NJ, Jimmy's number, Facebook. No email (none exists).
 
 ## Assumptions I made
-- **Jimmy's number takes texts.** The brief says "Accepts texts: unknown", and the post caption says "llamenos" (call us). Both text buttons depend on it. If he doesn't text, swap the form's handoff to a call and change "Text a photo" to something else.
-- **The work photo is their install.** It's the other image in the same Facebook post as the flyer (two black doors with glass), not confirmed as J&J's job. The flyer's door renders look like stock/AI images, so I didn't use them.
-- **"Over 15 years"**: from Jimmy's Facebook bio, which is cut off: "J&J Garage Doors LLC honestly Reliable fare prices been doing residential and commercial over 15 yea…". "Honest" and "fair price" in the copy come from the same bio.
-- **"Family owned" and "Elizabeth, New Jersey"**: from the Facebook profile flyer (not in Muse's brief, which only had the 908 area code).
-- How it works says "Tell us what it's doing / We give you a price (honest answer, fair price) / We fix it (or install your new door)". I kept it free of promises nobody confirmed (free estimates, on-site visits, testing with the customer, same-day).
-- **Primary number**: Jimmy's, because the post caption names it. Nancy's role (office? scheduling?) is unknown.
-- Spanish copy is mine. I used "estimado" for quote and "motor (abridor)" for opener, as NJ Latino customers say them. Worth a read by a native speaker or Jimmy.
-- Logo: redrawn as an SVG mark (gold house with garage door) from the flyer, because the flyer's logo is low-res and sits on a photo. The favicon, iPhone icon and og image use the redraw.
+- **Jimmy's number takes texts.** The brief says "Accepts texts: unknown", and the post caption says "llamenos" (call us). The hero's second button, the form and the floating circle all depend on it. If he doesn't text, switch those to calls.
+- **The work photo is their install.** It's the other image in the same Facebook post as the flyer, not confirmed as J&J's job. It's now used twice (hero backdrop and Our work) because it's the only one.
+- **"Over 15 years"** comes from Jimmy's truncated Facebook bio ("…been doing residential and commercial over 15 yea…"). "Honest" and "fair price" come from the same bio.
+- **"Family owned" and "Elizabeth, New Jersey"** come from the Facebook profile flyer.
+- The H1 says "New Jersey" (their base, and the 908 area code); PA and NY are named lower down and in the close.
+- Spanish copy is mine ("estimado" for quote, "motor (abridor)" for opener). Worth a read by Jimmy or a native speaker.
+- Logo redrawn as an SVG mark from the flyer (the flyer's logo is low-res and sits on a photo).
 
 ## Placeholders and gaps
-- No email (none published; none invented). The footer has no email line.
-- No hours, no prices, no reviews, no street address: the page says nothing about them.
-- Only one work photo. "Photos wanted": jobs, before/afters, rolling steel doors (commercial).
-- The original flyer image (fbid 2922525571437007) couldn't be fetched; the service list comes from Muse's OCR, which the brief says is partly garbled. "Cables, Pulleys" may be truncated on the flyer.
+- No email, hours, prices, reviews or street address: the page says nothing about them.
+- Only one work photo. Photos wanted: jobs, before/afters, rolling steel doors (commercial).
+- The original flyer image couldn't be fetched; the service list comes from Muse's OCR, which the brief says is partly garbled ("Cables, Pulleys" may be truncated).
 - Facebook link goes to Jimmy's personal profile (no business page exists).
 
 ## Questions for the owner
 - Can customers text (908) 374-8196? Should texts go to someone else?
 - Is the two-black-door photo your work? Can you send 5–10 more job photos?
-- Who should customers call first: Jimmy, Jimmy Jr or Nancy? Should all three numbers be on the site?
+- Who should customers call first: Jimmy, Jimmy Jr or Nancy?
 - Hours? Emergency or same-day service? Free estimates? (I avoided saying any of these.)
 - Which towns do you go to most? Anything in PA/NY you don't cover?
-- Do you want a business Facebook page or Google Business Profile? (No Maps listing exists.)
-- Do you want Portuguese as a third page language?
+- Do you want a business Facebook page or Google Business Profile?
+- Portuguese as a third page language?
 
 ## Ideas not built (yours to pick)
-- **Runner-up world:** a commercial steel roll-up door as the hero (corrugated curtain you pull down and push up), slats as the page's motif throughout. Stronger for the commercial side, less warm for homeowners.
-- **Overdrive:** draw the torsion spring and cables above the door inside the garage, winding as the door lifts, with a "broken spring" moment where it goes slack. Ties the hero to their first service.
-- The steel slats on the dividers and photo door are CSS gradients with light falloff and rails; a canvas or raster version with real corrugation and rivets would read even more like steel.
+- **Runner-up signature (opt-in):** the old drag-to-lift garage door hero, or a commercial steel roll-up curtain you pull down and push up. Other worlds from the trade: a torsion spring that winds as you scroll, the safety-sensor beam as a section divider, a door-panel grid for the work gallery.
 - Before/after sliders as soon as Jimmy sends pairs.
-- Portuguese language option.
-- Desktop: the work photo is only 800×600 (all Facebook gives without login), so it's a little soft on big retina screens. A larger original from Jimmy fixes it.
+- A three-photo work row (4:5 cards) once there are more photos; then the hero and Our work can stop sharing a photo.
+- Atkinson Hyperlegible or a larger body size if Ellie decides the audience skews older (the brief doesn't say so, so the full calm motion is on).
 
 ## Impeccable review status
-Ran critique, audit, harden, optimize, adapt, polish, typeset, layout, colorize, clarify, distill, animate, delight, bolder, quieter and overdrive (as review agents), the detector, and the finish reviewer (2 rounds, the unattended limit). Skipped `live` (needs you in the browser) and `onboard` (no first-run flow). The last verdict was still **fix**. These are open:
-- **Steel slats** (dividers + photo door) are CSS gradients with falloff, rails and shadow. The reviewer wants real corrugation/end-locks, as a canvas or raster asset.
-- **Desktop services:** a small gap beside the last repair row ("Openers"); 7 repairs don't split evenly into two columns.
-- Fixed since that verdict, not re-scored: the step 3 filler line, the orange seam strokes, the driveway light cone (now visible from a quarter open) and motes on dark asphalt.
-- Detector ignores recorded in `.impeccable/config.json`: roll-door stripes (they're the product), system font (house rule), padding on ruled lists, and the type-scale check (it only counts body sizes).
+Ran the detector, the finish reviewer (verdict: fix) and a sweep of every mode except `live` and `onboard` (critique, audit, harden, optimize, adapt, polish, typeset, layout, colorize, clarify, distill, animate, delight, bolder, quieter, overdrive, extract). Applied: second "Family owned" pill → "Who you'll talk to"; Spanish H1 keeps "Lo hacemos todo." on one line; Facebook row text balanced and now "See more of our work on Facebook."; gold focus ring on the Facebook arrow (was 1.8:1); "fair price" / "homes and businesses" repeats trimmed; 320px header fix; `text-wrap:pretty` on copy; H1 bounce waits for Cal Sans (max 400ms); a service row flashes the chip it picks; dead CSS removed; lighter overlay low in the phone hero.
+Not applied: removing Jimmy's number from the footer (finishing rules allow the footer to repeat it). House-style conflicts kept on purpose: eyebrow pills (the craft floor bans them), and the #e6ecf5 field fill (1.2:1 on white, the house's chosen value).
+Detector ignores: band texture stripes (house style), flat-type-hierarchy (it only sees 14-22px UI sizes).
 
 ## Not verified
-- Real-device touch (tested with simulated touch in Chromium and WebKit/Playwright at 360, 390, 414, 430 and 844×390).
-- The real `sms:` handoff on iOS and Android, especially inside Facebook's in-app browser (link format `sms:+1…?&body=`; encoding checked for &, #, accents).
-- Frame rate on old Android phones.
+- Real-device touch and the real `sms:` handoff on iOS and Android, especially inside Facebook's in-app browser (link format `sms:+1…?&body=`; encoding checked in Chromium for &, #, accents and ¿).
+- Tested in Chromium and WebKit (Playwright) at 360, 390, 430 and 1440 wide, English and Spanish, reduced motion and no-JS.
 - Whether Jimmy's number receives texts at all.

@@ -112,19 +112,23 @@ section{padding:64px 0}
   .tel svg{width:15px;height:15px}
 }
 @media (max-width:379px){.tel svg{display:none}}
+@media (max-width:359px){:root{--gutter:12px}.brand .mark{display:none}}
 
 /* ---------- Hero: J&J's own job photo under a navy overlay ---------- */
 .hero{padding:0;position:relative;background:var(--deep);color:var(--on-dark);overflow:hidden;isolation:isolate}
 .hero-art{position:absolute;inset:0;z-index:-2}
 .hero-art img{width:100%;height:100%;object-fit:cover;object-position:68% 45%}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(13,33,56,.86) 0%,rgba(13,33,56,.74) 55%,rgba(13,33,56,.9) 100%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(13,33,56,.86) 0%,rgba(13,33,56,.78) 58%,rgba(13,33,56,.7) 100%)}
 .hero-copy{position:relative;display:grid;gap:20px;justify-items:start;padding-top:56px;padding-bottom:72px}
 .hero h1{color:#fff;font-size:clamp(40px,11.4vw,78px);line-height:1.02;max-width:12ch}
 /* H1 bounce-in (after lpmr.co.uk): each letter slides in from 50px right with a slight overshoot, 20ms apart */
 .hero h1 .w{display:inline-block;white-space:nowrap}
 .hero h1 .c{display:inline-block;opacity:0;transform:translateX(50px);animation:letter-in 1s cubic-bezier(.34,1.56,.64,1) forwards;animation-delay:calc(var(--i) * 20ms)}
 @keyframes letter-in{to{opacity:1;transform:none}}
+.hero h1 .accent{display:block}
+html[data-lang="es"] .hero h1{max-width:15ch}
 .promise{font-size:clamp(17px,4.7vw,20px);line-height:1.5;color:var(--on-dark-soft);max-width:32ch}
+.promise,.lede,.claims li,.who,.area{text-wrap:pretty}
 .promise b{color:var(--on-dark);font-weight:600}
 .actions{display:grid;gap:12px;width:100%;margin-top:4px}
 
@@ -139,11 +143,10 @@ section{padding:64px 0}
 .rows{list-style:none;margin:32px 0 0;padding:0;display:grid;gap:10px}
 .row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:10px 12px 10px 22px;background:rgba(255,255,255,.06);border-radius:18px;color:var(--on-dark);text-decoration:none;font:400 20px/1.2 var(--display)}
 .row:hover,.row:focus-visible{outline:none;background:rgba(255,255,255,.06);box-shadow:none}
-.arrow{width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center;background:rgba(13,33,56,.07);color:var(--ink);transition:background-color .2s,color .2s}
+.arrow{width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center;transition:background-color .2s,color .2s}
 .arrow svg{width:18px;height:18px}
 .row .arrow{background:rgba(255,255,255,.1);color:var(--on-dark)}
 .row:focus-visible .arrow{background:var(--gold);color:var(--ink);outline:3px solid var(--gold);outline-offset:3px}
-.both{margin-top:24px;font-size:17px}
 
 /* ---------- Work ---------- */
 .work{display:grid;gap:20px;grid-template-areas:'head' 'shot' 'fb'}
@@ -155,9 +158,10 @@ section{padding:64px 0}
 .fb{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:76px;padding:14px 16px 14px 22px;border-radius:20px;background:var(--navy);color:var(--on-dark);text-decoration:none;font:400 clamp(19px,5.2vw,22px)/1.2 var(--display)}
 .fb:hover,.fb:focus-visible{outline:none;box-shadow:none}
 .fb .lbl{display:flex;align-items:center;gap:14px}
+.fb .lbl>span{text-wrap:balance}
 .fb .lbl svg{width:28px;height:28px;flex:none;color:var(--gold)}
 .fb .arrow{background:rgba(255,255,255,.12);color:var(--on-dark)}
-.fb:focus-visible .arrow{background:var(--gold);color:var(--ink);outline:3px solid var(--focus);outline-offset:3px}
+.fb:focus-visible .arrow{background:var(--gold);color:var(--ink);outline:3px solid var(--gold);outline-offset:3px}
 
 /* ---------- How it works ---------- */
 .steps{list-style:none;margin:36px 0 0;padding:0;display:grid;gap:24px;counter-reset:s}
@@ -170,7 +174,7 @@ section{padding:64px 0}
 .ask .wrap{display:grid;gap:28px}
 form{background:var(--card);border-radius:var(--r-card);padding:clamp(20px,5vw,32px);display:grid;gap:22px;max-width:620px}
 .field{display:grid;gap:8px;min-width:0}
-.field label,.field legend,.label{font:400 17px/1.2 var(--display);color:var(--ink);padding:0}
+.field label,.field legend{font:400 17px/1.2 var(--display);color:var(--ink);padding:0}
 .field legend{margin-bottom:10px}
 .field small{font:400 14px/1 var(--text);color:var(--soft);margin-left:4px}
 fieldset{border:0;margin:0;padding:0;min-width:0}
@@ -183,6 +187,9 @@ input[type=text]:focus,textarea:focus{outline:none;border-color:var(--focus)}
 .chips label{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border-radius:var(--pill);background:var(--field);border:2px solid transparent;font:16px/1 var(--text);color:var(--ink);cursor:pointer;margin:0;transition:border-color .15s,background-color .15s,color .15s}
 .chips input:focus-visible+label{border-color:var(--focus);outline:3px solid var(--focus);outline-offset:2px}
 .chips input:checked+label{background:var(--ink);color:#fff}
+/* a service row just picked this chip: one gold flash so the visitor sees it */
+.chips label.just{animation:pick .9s ease-out}
+@keyframes pick{from{background:var(--gold);color:var(--ink)}}
 .err{display:none;font-size:15px;color:var(--error)}
 .field.bad .err{display:block}
 .field.bad input[type=text],.field.bad textarea,.field.bad input[type=text]:focus{border-color:var(--error)}
@@ -302,7 +309,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="wrap hero-copy">
     <p class="eyebrow"><span class="en">Family owned · Elizabeth, NJ</span><span class="es" lang="es">Negocio familiar · Elizabeth, NJ</span></p>
     <h1 id="h1"><span class="en">Garage doors in New Jersey? <span class="accent">We do it all.</span></span><span class="es" lang="es">¿Puertas de garaje en New Jersey? <span class="accent">Lo hacemos todo.</span></span></h1>
-    <p class="promise"><span class="en">For homes and businesses. We fix your door like it's on <b>our own house</b>, at a fair price.</span><span class="es" lang="es">Para casas y negocios. Arreglamos tu puerta como si fuera de <b>nuestra propia casa</b>, a un precio justo.</span></p>
+    <p class="promise"><span class="en">For homes and businesses. We fix your door like it's on <b>our own house</b>.</span><span class="es" lang="es">Para casas y negocios. Arreglamos tu puerta como si fuera de <b>nuestra propia casa</b>.</span></p>
     <div class="actions">
       <a class="btn btn-primary" href="#quote"><span class="en">Get a quote</span><span class="es" lang="es">Pide un estimado</span></a>
       <a class="btn btn-ghost" id="heroSms" data-sms href="sms:+19083748196?&amp;body=Hi%20J%26J!%20Here's%20a%20photo%20of%20my%20garage%20door%3A%20"><svg aria-hidden="true"><use href="#i-chat"/></svg><span class="en">Text a photo</span><span class="es" lang="es">Manda una foto</span></a>
@@ -313,12 +320,12 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <section class="on-paper" aria-labelledby="h-fam">
   <div class="wrap split">
     <div class="head rise">
-      <p class="eyebrow"><span class="en">Family owned</span><span class="es" lang="es">Negocio familiar</span></p>
+      <p class="eyebrow"><span class="en">Who you'll talk to</span><span class="es" lang="es">Con quién hablas</span></p>
       <h2 id="h-fam"><span class="en">Jimmy, Jimmy Jr and Nancy.</span><span class="es" lang="es">Jimmy, Jimmy Jr y Nancy.</span></h2>
       <p class="lede"><span class="en">We tell you honestly what's wrong with your door, and we charge a fair price to fix it.</span><span class="es" lang="es">Te decimos con honestidad qué tiene tu puerta, y te cobramos un precio justo por arreglarla.</span></p>
     </div>
     <ul class="claims">
-      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19 20 6l16 13"/><path d="M8 16v19h24V16"/><path d="M13 22h14M13 27h14M13 32h14"/></svg><span><span class="en">Homes and businesses</span><span class="es" lang="es">Casas y negocios</span><small><span class="en">Residential and commercial doors.</span><span class="es" lang="es">Puertas residenciales y comerciales.</span></small></span></li>
+      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19 20 6l16 13"/><path d="M8 16v19h24V16"/><path d="M13 22h14M13 27h14M13 32h14"/></svg><span><span class="en">Homes and businesses</span><span class="es" lang="es">Casas y negocios</span></span></li>
       <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="8" width="30" height="27" rx="4"/><path d="M5 16h30M13 4v7M27 4v7M14 25l4 4 8-8"/></svg><span><span class="en">Over 15 years on doors</span><span class="es" lang="es">Más de 15 años con puertas</span></span></li>
       <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h20v14H13l-6 5v-5H5z"/><path d="M29 15h6v13h-2v5l-6-5h-8v-3"/></svg><span><span class="en">We speak English, Spanish and Portuguese</span><span class="es" lang="es">Hablamos inglés, español y portugués</span></span></li>
     </ul>
@@ -351,7 +358,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <h2 id="h-work" class="rise"><span class="en">Our work</span><span class="es" lang="es">Nuestro trabajo</span></h2>
       <figure class="shot rise"><img src="img/work-01.webp" width="800" height="600" loading="lazy" decoding="async" alt="Two black garage doors with long glass windows, side by side on a gray house" data-alt-es="Dos puertas de garaje negras con ventanas largas, lado a lado en una casa gris"></figure>
       <a class="fb rise" href="https://facebook.com/profile.php?id=100010387785429" rel="noopener">
-        <span class="lbl"><svg aria-hidden="true"><use href="#i-fb"/></svg><span><span class="en">Click to see more of our work.</span><span class="es" lang="es">Mira más de nuestro trabajo en Facebook.</span></span></span>
+        <span class="lbl"><svg aria-hidden="true"><use href="#i-fb"/></svg><span><span class="en">See more of our work on Facebook.</span><span class="es" lang="es">Mira más de nuestro trabajo en Facebook.</span></span></span>
         <span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
       </a>
     </div>
@@ -441,7 +448,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <footer>
   <div class="wrap">
     <span>J&amp;J Garage Doors LLC · Elizabeth, NJ · <span class="nw">Jimmy (908) 374-8196</span></span>
-    <nav aria-label="Facebook">
+    <nav aria-label="Social">
       <a href="https://facebook.com/profile.php?id=100010387785429" rel="noopener">Facebook</a>
     </nav>
   </div>
@@ -465,6 +472,8 @@ var restoreH1=function(){};
   var h=document.getElementById('h1');
   if(!h||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   var span=h.querySelector('.'+lang()),plain=span.innerHTML,i=0,last=null,done=false;
+  // hide the heading until Cal Sans is in (max 400ms), so the letters don't bounce in one font and land in another
+  h.style.visibility='hidden';
   h.setAttribute('aria-label',span.textContent.replace(/\s+/g,' ').trim());
   function split(node,into){
     [].slice.call(node.childNodes).forEach(function(n){
@@ -479,10 +488,16 @@ var restoreH1=function(){};
       }else if(n.nodeType===1){var copy=n.cloneNode(false);split(n,copy);into.appendChild(copy)}
     });
   }
-  var frag=document.createDocumentFragment();split(span,frag);span.textContent='';span.appendChild(frag);
+  function run(){
+    if(done)return;
+    var frag=document.createDocumentFragment();split(span,frag);span.textContent='';span.appendChild(frag);
+    h.style.visibility='';
+    if(last)last.addEventListener('animationend',restoreH1);
+  }
   // once the last letter lands (or the language changes), put the plain heading back so kerning and text selection return
-  restoreH1=function(){if(done)return;done=true;span.innerHTML=plain;h.removeAttribute('aria-label')};
-  if(last)last.addEventListener('animationend',restoreH1);
+  restoreH1=function(){if(done)return;done=true;span.innerHTML=plain;h.style.visibility='';h.removeAttribute('aria-label')};
+  var font=document.fonts&&document.fonts.load?document.fonts.load('400 1em "Cal Sans"'):Promise.resolve();
+  Promise.race([font,new Promise(function(r){setTimeout(r,400)})]).then(run,run);
 })();
 
 /* ===== Language: English / Spanish ===== */
@@ -511,10 +526,12 @@ var restoreH1=function(){};
   var form=document.getElementById('qform');if(!form)return;
   [].forEach.call(document.querySelectorAll('[data-pick]'),function(a){
     a.addEventListener('click',function(){
-      var box=document.getElementById('n-'+a.dataset.pick);if(box)box.checked=true;
+      var box=document.getElementById('n-'+a.dataset.pick);
+      if(box){box.checked=true;var lbl=box.nextElementSibling;lbl.classList.remove('just');void lbl.offsetWidth;lbl.classList.add('just')}
       document.getElementById('f-need').classList.remove('bad');
     });
   });
+  form.addEventListener('animationend',function(e){e.target.classList.remove('just')});
   var L={
     en:{hi:"Hi J&J! I need help with a garage door.",need:"Problem",prop:"Where",home:"My home",biz:"My business",town:"Town",name:"Name",det:"Details",
       v:{spring:"Broken spring",track:"Off track",bent:"Bent track",noisy:"Noisy",cable:"Cables / pulleys",sensor:"Safety sensors",opener:"Opener",new:"New door",rolling:"Steel rolling door"}},
