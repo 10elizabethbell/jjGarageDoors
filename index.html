@@ -1,760 +1,517 @@
 <!doctype html>
-<html lang="en" data-lang="en" class="no-js">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>J&amp;J Garage Doors LLC · Elizabeth, NJ</title>
-<meta name="description" content="Garage door repairs, service, installation and sales for homes and businesses across New Jersey, Pennsylvania and New York. Family owned, from Elizabeth, NJ. We speak English, Spanish and Portuguese.">
-<meta name="theme-color" content="#1a2330">
+<title>J&amp;J Garage Doors LLC · Garage door repair and installation · Elizabeth, NJ</title>
+<meta name="description" content="Garage door repairs, service, installation and sales for homes and businesses across New Jersey, Pennsylvania and New York. Family owned, from Elizabeth, NJ. We speak English, Spanish and Portuguese. Call (908) 374-8196.">
+<meta name="theme-color" content="#f4f6fb">
 <meta property="og:type" content="website">
-<meta property="og:title" content="J&amp;J Garage Doors LLC">
-<meta property="og:description" content="Garage doors? We do it all. Repairs, service, installation and sales across NJ, PA and NY. Hablamos español.">
+<meta property="og:title" content="J&amp;J Garage Doors LLC · Garage doors in New Jersey? We do it all.">
+<meta property="og:description" content="Repairs, service, installation and sales for homes and businesses across NJ, PA and NY. Family owned, from Elizabeth, NJ. Hablamos español.">
 <meta property="og:url" content="https://10elizabethbell.github.io/jjGarageDoors/">
 <meta property="og:image" content="https://10elizabethbell.github.io/jjGarageDoors/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<script>(function(){var l=null;try{l=localStorage.getItem("jj-lang")}catch(e){}if(!l)l=(navigator.language||"").toLowerCase().indexOf("es")===0?"es":"en";var d=document.documentElement;d.className=d.className.replace("no-js","js");d.lang=l;d.setAttribute("data-lang",l)})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap">
+<link rel="preload" as="image" href="img/work-01.webp" fetchpriority="high">
+<!-- language first, before paint: saved choice, else the browser's language -->
+<script>(function(){var l=null;try{l=localStorage.getItem("jj-lang")}catch(e){}if(l!=="en"&&l!=="es")l=(navigator.language||"").toLowerCase().indexOf("es")===0?"es":"en";var d=document.documentElement;d.lang=l;d.setAttribute("data-lang",l)})();</script>
 <style>
-/* ---------- tokens ---------- */
+/* ---------- Tokens ---------- */
 :root{
-  --ground:#1a2330;      /* slate night: the driveway after dark */
-  --ground-2:#202b3a;
-  --panel:#273447;
-  --line:rgba(242,239,230,.14);
-  --ink:#f4f1e8;
-  --ink-2:#bcc5d2;
-  --gold:#f3b324;        /* J&J logo gold */
-  --gold-deep:#d99a0f;
-  --on-gold:#1a2330;
-  --focus:#8fd0ff;       /* form outline accent: stands apart from the gold fill */
-  --err:#ffb4a6;
-  --r:10px;
-  --wrap:1180px;
-  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  /* off-white paper, two night navies, J&J's logo gold */
+  --paper:#f4f6fb;       /* page ground */
+  --card:#ffffff;
+  --field:#e6ecf5;       /* inputs and chips on the white form card */
+  --ink:#0d2138;         /* headings, text on gold */
+  --body:#2a3a4c;        /* running text on light */
+  --soft:#4a5868;        /* secondary text on light */
+  --navy:#183a63;        /* services, close */
+  --deep:#0d2138;        /* how it works, footer (line texture) */
+  --on-dark:#f4f7fb;
+  --on-dark-soft:#c9d4e3;
+  --gold:#f3b324;        /* the logo gold: fills only; text on it is --ink */
+  --gold-2:#ffc845;
+  --gold-ink:#7a5400;    /* gold as text on light (6.3:1) */
+  --line:rgba(13,33,56,.12);
+  --focus:#1f5fa8;       /* form hover/focus outline, distinct from the gold fill */
+  --error:#b3261e;
+  --texture:repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px);
+  --display:"Cal Sans","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --text:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  --r-card:24px;--r-field:10px;--pill:999px;
+  --gutter:20px;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;overscroll-behavior-y:none;scroll-behavior:smooth}
-body{margin:0;background:var(--ground);color:var(--ink);font:400 17px/1.55 var(--font);overflow-x:hidden}
-::selection{background:var(--gold);color:var(--on-gold)}
-img{max-width:100%;display:block}
+[hidden]{display:none!important}
+html[data-lang="es"] .en,html:not([data-lang="es"]) .es{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;background:var(--paper)}
+body{margin:0;font:16px/1.7 var(--text);color:var(--body);background:var(--paper)}
+::selection{background:var(--gold);color:var(--ink)}
+img,svg{display:block}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-html[data-lang="es"] .en, html:not([data-lang="es"]) .es{display:none !important}
-.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left))}
-h1,h2,h3{font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:.95;margin:0;text-wrap:balance}
-h2{font-size:clamp(34px,9.5vw,64px)}
-.gold{color:var(--gold)}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+.on-navy :focus-visible,.on-deep :focus-visible,.hero :focus-visible,footer :focus-visible{outline-color:var(--gold)}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 var(--gutter)}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:400;line-height:1.08;letter-spacing:-.005em;color:var(--ink);text-wrap:balance}
+h2{font-size:clamp(30px,7.6vw,48px)}
+p{margin:0}
+section{scroll-margin-top:12px}
 
-/* ---------- header ---------- */
-.top{position:relative;z-index:5}
-.top .wrap{display:flex;align-items:center;gap:8px;min-height:68px}
-.brand{display:flex;align-items:center;gap:9px;text-decoration:none;min-height:44px;flex:none}
-.brand svg{width:40px;height:40px;flex:none}
-.brand b{display:block;font-weight:900;font-size:21px;line-height:1;letter-spacing:-.01em}
-.brand small{display:block;font-size:11px;font-weight:800;letter-spacing:.05em;color:var(--gold);margin-top:3px;white-space:nowrap}
-.lang{flex:none;margin-left:auto;min-height:44px;min-width:44px;padding:0 8px;border:0;background:none;color:var(--ink-2);font:inherit;font-size:15px;font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(188,197,210,.45)}
-.lang:hover{color:var(--ink)}
-.phone{display:flex;align-items:center;gap:6px;min-height:44px;padding:0 2px;font-weight:800;font-size:16px;text-decoration:none;white-space:nowrap;font-variant-numeric:tabular-nums}
-.phone svg{width:16px;height:16px;color:var(--gold);flex:none}
-.phone:hover{color:var(--gold)}
-@media (max-width:429px){
-  .top .wrap{gap:2px;padding:0 12px}
-  .brand svg{width:34px;height:34px}.brand b{font-size:18px}.brand small{font-size:11px;letter-spacing:.02em}
+/* ---------- Bands ---------- */
+section{padding:64px 0}
+.on-paper{background:var(--paper)}
+.on-navy{background:var(--navy);color:var(--on-dark-soft)}
+.on-deep{background-color:var(--deep);background-image:var(--texture);color:var(--on-dark-soft)}
+.on-navy h2,.on-deep h2,.on-navy h3,.on-deep h3{color:var(--on-dark)}
+.accent{color:var(--gold-ink)}
+.on-navy .accent,.on-deep .accent,.hero .accent{color:var(--gold)}
+.head{display:grid;gap:16px;justify-items:start;max-width:640px}
+.lede{font-size:clamp(17px,4.6vw,19px);color:var(--soft);max-width:40ch}
+.on-navy .lede,.on-deep .lede{color:var(--on-dark-soft)}
+
+/* Eyebrow: a few key headings only. A label, not a button. */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:500 14px/1 var(--text);letter-spacing:.02em;color:var(--ink);background:rgba(13,33,56,.06);padding:9px 14px;border-radius:var(--pill)}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);flex:none}
+.hero .eyebrow,.on-navy .eyebrow,.on-deep .eyebrow{color:var(--on-dark);background:rgba(255,255,255,.12)}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 26px;border-radius:var(--pill);font:400 18px/1 var(--display);text-decoration:none;cursor:pointer;border:2px solid transparent;transition:background-color .2s,color .2s,border-color .2s,transform .12s}
+.btn:active{transform:scale(.98)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-primary{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.btn-ghost{background:transparent;color:var(--on-dark);border-color:rgba(244,247,251,.7)}
+
+/* ---------- Header ---------- */
+.top{background:var(--paper);color:var(--ink)}
+.top .wrap{display:flex;align-items:center;gap:10px;min-height:64px;padding-top:max(8px,env(safe-area-inset-top))}
+.brand{display:flex;align-items:center;gap:9px;min-height:44px;text-decoration:none;line-height:1;flex:none}
+.brand .mark{width:36px;height:36px;border-radius:10px;background:var(--ink);display:grid;place-items:center;flex:none}
+.brand .mark svg{width:26px;height:26px}
+.brand b{display:block;font:400 21px/1 var(--display);letter-spacing:.01em}
+.brand small{display:block;font:600 10.5px/1 var(--text);letter-spacing:.08em;white-space:nowrap;text-transform:uppercase;color:var(--soft);margin-top:4px}
+.lang{margin-left:auto;flex:none;min-height:44px;min-width:44px;padding:0 6px;border:0;background:none;color:var(--soft);font:500 15px/1 var(--text);cursor:pointer;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(74,88,104,.45)}
+.tel{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:0 2px;font:400 17px/1 var(--display);text-decoration:none;white-space:nowrap;flex:none}
+.tel svg{width:17px;height:17px;flex:none;color:var(--gold-ink)}
+@media (max-width:400px){
+  :root{--gutter:16px}
+  .top .wrap{gap:6px}
+  .brand{gap:7px}
+  .brand .mark{width:32px;height:32px;border-radius:9px}
+  .brand .mark svg{width:23px;height:23px}
+  .brand b{font-size:19px}
+  .brand small{font-size:9.5px;letter-spacing:.06em}
   .lang{font-size:14px;padding:0 4px}
-  .phone{font-size:15px;gap:4px}.phone svg{display:none}
+  .tel{font-size:16px;gap:5px}
+  .tel svg{width:15px;height:15px}
 }
-@media (max-width:374px){.brand b{font-size:16px}.brand svg{width:30px;height:30px}.brand{gap:6px}.phone{font-size:14px}}
+@media (max-width:379px){.tel svg{display:none}}
 
-/* ---------- buttons ---------- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:0 14px;border-radius:var(--r);border:2px solid var(--gold);font:800 16px/1.1 var(--font);text-decoration:none;text-align:center;cursor:pointer;transition:background .18s,color .18s,transform .12s}
-.btn:active{transform:translateY(1px)}
-.btn-fill{background:var(--gold);color:var(--on-gold)}
-.btn-fill:hover{background:#ffc845;border-color:#ffc845}
-.btn-line{background:transparent;color:var(--ink)}
-.btn-line:hover{background:rgba(243,179,36,.12)}
-.btn svg{width:18px;height:18px;flex:none}
+/* ---------- Hero: J&J's own job photo under a navy overlay ---------- */
+.hero{padding:0;position:relative;background:var(--deep);color:var(--on-dark);overflow:hidden;isolation:isolate}
+.hero-art{position:absolute;inset:0;z-index:-2}
+.hero-art img{width:100%;height:100%;object-fit:cover;object-position:68% 45%}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(13,33,56,.86) 0%,rgba(13,33,56,.74) 55%,rgba(13,33,56,.9) 100%)}
+.hero-copy{position:relative;display:grid;gap:20px;justify-items:start;padding-top:56px;padding-bottom:72px}
+.hero h1{color:#fff;font-size:clamp(40px,11.4vw,78px);line-height:1.02;max-width:12ch}
+/* H1 bounce-in (after lpmr.co.uk): each letter slides in from 50px right with a slight overshoot, 20ms apart */
+.hero h1 .w{display:inline-block;white-space:nowrap}
+.hero h1 .c{display:inline-block;opacity:0;transform:translateX(50px);animation:letter-in 1s cubic-bezier(.34,1.56,.64,1) forwards;animation-delay:calc(var(--i) * 20ms)}
+@keyframes letter-in{to{opacity:1;transform:none}}
+.promise{font-size:clamp(17px,4.7vw,20px);line-height:1.5;color:var(--on-dark-soft);max-width:32ch}
+.promise b{color:var(--on-dark);font-weight:600}
+.actions{display:grid;gap:12px;width:100%;margin-top:4px}
 
-/* ---------- hero ---------- */
-.hero{padding:6px 0 0}
-.hero h1{font-size:clamp(40px,11.4vw,96px);font-size:clamp(40px,min(11.4vw,17svh),96px);line-height:.9;letter-spacing:-.03em}
-.hero h1 span{display:block}
-.promise{margin:16px 0 0;font-size:clamp(17px,4.6vw,20px);line-height:1.45;color:var(--ink-2);max-width:34em}
-.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
-@media (max-width:359px){.actions{grid-template-columns:1fr}}
-.scene{position:relative;margin:22px -18px 0;height:300px;height:clamp(250px,calc(100svh - 470px),420px);
-  background:linear-gradient(#222d3c,#1d2734 74%,#28323f 74%,#1f2833);overflow:hidden}
-.scene canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:grab;-webkit-user-select:none;user-select:none}
-.scene canvas.drag{cursor:grabbing}
-.hint{display:flex;align-items:center;justify-content:center;gap:8px;margin:0;padding:10px 0 2px;font-size:15px;font-weight:700;color:var(--ink-2)}
-.hint svg{width:16px;height:16px;color:var(--gold)}
-#door:focus-visible{outline:3px solid var(--gold);outline-offset:-4px}
-.no-js .scene-wrap{display:none}
-@media (orientation:landscape) and (max-height:500px){.scene{margin:22px auto 0;max-width:62%;border-radius:12px}}
-@media (min-width:1024px){
-  .hero{padding:40px 0 10px}
-  .hero .wrap{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:56px;align-items:center}
-  .actions{display:flex;gap:12px}.actions .btn{padding:0 26px;min-width:200px}
-  .scene{margin:0;height:540px;border-radius:14px}
-  .hero h1{font-size:clamp(56px,6vw,86px)}.hero h1 .gold{white-space:nowrap}
-}
+/* ---------- About: family, years, languages ---------- */
+.claims{list-style:none;margin:28px 0 0;padding:0;display:grid}
+.claims li{display:flex;align-items:center;gap:16px;padding:16px 0;font:400 clamp(20px,5.4vw,24px)/1.15 var(--display);color:var(--ink)}
+.claims li+li{border-top:1px solid var(--line)}
+.claims svg{width:40px;height:40px;flex:none;color:var(--gold-ink)}
+.claims small{display:block;margin-top:6px;font:400 16px/1.4 var(--text);color:var(--soft)}
 
-/* ---------- divider: the bottom hem of a roll-up door ---------- */
-.hem{position:relative;height:64px;overflow:hidden;margin-top:34px;pointer-events:none}
-.hem i{position:absolute;left:0;right:0;bottom:0;height:120px;will-change:transform;
-  box-shadow:0 10px 18px -6px rgba(0,0,0,.55);
-  background:
-    linear-gradient(90deg,#0f151e 0,#0f151e 10px,rgba(0,0,0,.45) 10px,rgba(0,0,0,0) 22%,rgba(255,255,255,.07) 50%,rgba(0,0,0,0) 78%,rgba(0,0,0,.45) calc(100% - 10px),#0f151e calc(100% - 10px)),
-    linear-gradient(#1b2431,#1b2431) bottom/100% 9px no-repeat,
-    linear-gradient(var(--gold),var(--gold)) bottom 9px left 0/100% 4px no-repeat,
-    repeating-linear-gradient(180deg,#5d6b7e 0,#8e9bad 3px,#6f7d90 6px,#4a5768 10px,#3a4555 11px,#5d6b7e 12px)}
-.hem i::after{content:"";position:absolute;left:50%;bottom:9px;width:56px;height:8px;margin-left:-28px;background:#141b26;border-radius:0 0 4px 4px}
-
-/* ---------- sections ---------- */
-section{padding:56px 0}
-.sec-head{margin-bottom:26px}
-.sub{margin:14px 0 0;color:var(--ink-2);font-size:18px;max-width:36em}
-
-/* services */
-.svc-groups{display:grid;gap:34px}
-.svc-groups h3{font-size:15px;letter-spacing:.1em;color:var(--gold);margin:0 0 6px;font-weight:900}
-.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
-.row{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:62px;padding:8px 0;border-bottom:1px solid var(--line);text-decoration:none;font-size:clamp(20px,5.6vw,26px);font-weight:800;letter-spacing:-.01em}
-.row:hover,.row:focus-visible{outline:none;background:none;box-shadow:none}
-.arrow{flex:none;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--panel);color:var(--ink);transition:background .18s,color .18s}
+/* ---------- Service rows on navy: only the arrow changes on hover ---------- */
+.rows{list-style:none;margin:32px 0 0;padding:0;display:grid;gap:10px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:10px 12px 10px 22px;background:rgba(255,255,255,.06);border-radius:18px;color:var(--on-dark);text-decoration:none;font:400 20px/1.2 var(--display)}
+.row:hover,.row:focus-visible{outline:none;background:rgba(255,255,255,.06);box-shadow:none}
+.arrow{width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center;background:rgba(13,33,56,.07);color:var(--ink);transition:background-color .2s,color .2s}
 .arrow svg{width:18px;height:18px}
-.row:hover .arrow,.row:focus-visible .arrow{background:var(--gold);color:var(--on-gold)}
-.row:focus-visible .arrow{outline:3px solid var(--gold);outline-offset:3px}
-.both{margin:22px 0 0;color:var(--ink-2);font-size:18px}
-@media (min-width:1024px){.svc-groups{gap:48px}.rows{display:grid;grid-template-columns:1fr 1fr;column-gap:56px;border-top:0}.rows li:nth-child(-n+2){border-top:1px solid var(--line)}.both{font-size:24px;font-weight:800;color:var(--ink);margin-top:26px}}
+.row .arrow{background:rgba(255,255,255,.1);color:var(--on-dark)}
+.row:focus-visible .arrow{background:var(--gold);color:var(--ink);outline:3px solid var(--gold);outline-offset:3px}
+.both{margin-top:24px;font-size:17px}
 
-/* work */
-.work-grid{display:grid;gap:22px}
-.bay{position:relative;margin:0;border-radius:6px 6px 0 0;overflow:hidden;background:#11171f;border:6px solid #d9dde3;border-bottom:0;aspect-ratio:4/3}
-.bay img{width:100%;height:100%;object-fit:cover;-webkit-user-drag:none;user-select:none}
-.roll{position:absolute;left:0;right:0;top:0;height:100%;will-change:transform;transform:translateY(-100%);
-  background:
-    radial-gradient(120% 90% at 50% 40%,rgba(255,255,255,.08),rgba(0,0,0,0) 55%,rgba(0,0,0,.4)),
-    linear-gradient(#1b2431,#1b2431) bottom/100% 10px no-repeat,
-    linear-gradient(var(--gold),var(--gold)) bottom 10px left 0/100% 4px no-repeat,
-    repeating-linear-gradient(180deg,#5d6b7e 0,#8e9bad 3px,#6f7d90 7px,#4a5768 12px,#384354 13px,#5d6b7e 14px)}
-.js .roll{transform:none}
-.roll::after{content:"";position:absolute;left:50%;bottom:10px;width:64px;height:9px;margin-left:-32px;background:#141b26;border-radius:0 0 4px 4px}
-.fb{display:flex;align-items:center;gap:14px;padding:18px 18px;min-height:76px;border-radius:var(--r);background:var(--gold);color:var(--on-gold);text-decoration:none;font-weight:900;font-size:19px;line-height:1.2}
-.fb svg{width:30px;height:30px;flex:none}
-.fb .go{margin-left:auto;width:22px;height:22px}
-.fb:hover{background:#ffc845}
-@media (min-width:1024px){.work-grid{grid-template-columns:1.6fr 1fr;align-items:stretch;gap:28px}
-  .fb{flex-direction:column;align-items:flex-start;justify-content:space-between;padding:34px;font-size:clamp(30px,2.6vw,40px);line-height:1.1;letter-spacing:-.02em}
-  .fb svg{width:52px;height:52px}.fb .go{margin-left:0;width:40px;height:40px}}
+/* ---------- Work ---------- */
+.work{display:grid;gap:20px;grid-template-areas:'head' 'shot' 'fb'}
+.work h2{grid-area:head;margin-bottom:12px}
+.shot{grid-area:shot}
+.fb{grid-area:fb}
+.shot{margin:0;border-radius:var(--r-card);overflow:hidden;background:var(--navy);aspect-ratio:4/3}
+.shot img{width:100%;height:100%;object-fit:cover}
+.fb{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:76px;padding:14px 16px 14px 22px;border-radius:20px;background:var(--navy);color:var(--on-dark);text-decoration:none;font:400 clamp(19px,5.2vw,22px)/1.2 var(--display)}
+.fb:hover,.fb:focus-visible{outline:none;box-shadow:none}
+.fb .lbl{display:flex;align-items:center;gap:14px}
+.fb .lbl svg{width:28px;height:28px;flex:none;color:var(--gold)}
+.fb .arrow{background:rgba(255,255,255,.12);color:var(--on-dark)}
+.fb:focus-visible .arrow{background:var(--gold);color:var(--ink);outline:3px solid var(--focus);outline-offset:3px}
 
-/* languages + family */
-.langs{background:var(--ground-2)}
-.slabs{margin:0;font-weight:900;text-transform:uppercase;letter-spacing:-.03em;line-height:1;font-size:clamp(34px,10.6vw,92px)}
-.slabs span{display:block}
-.slabs span:nth-child(2){color:var(--gold)}
-.slabs span:nth-child(3){color:var(--ink-2)}
-.family{display:grid;gap:18px;margin-top:40px}
-.family p{margin:0;font-size:18px;max-width:34em}
-.family .who{text-transform:none;font-size:clamp(24px,6.4vw,40px);font-weight:800;line-height:1.3;letter-spacing:-.01em}
-@media (min-width:1024px){.family{grid-template-columns:1fr 1fr;gap:56px}}
+/* ---------- How it works ---------- */
+.steps{list-style:none;margin:36px 0 0;padding:0;display:grid;gap:24px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start;counter-increment:s}
+.steps li::before{content:counter(s);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--ink);font:400 20px/1 var(--display)}
+.steps b{display:block;font:400 21px/1.2 var(--display);color:var(--on-dark);margin-top:4px}
+.steps span{display:block;margin-top:4px}
 
-/* how */
-.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
-.steps li{display:grid;grid-template-columns:40px 1fr;gap:4px 14px;padding:18px 0;border-top:1px solid var(--line)}
-.steps li::before{counter-increment:s;content:counter(s);grid-row:span 2;color:var(--gold);font-weight:900;font-size:36px;line-height:1}
-.steps b{font-size:21px;font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:1.1;align-self:end}
-.steps li>span{color:var(--ink-2)}
-@media (min-width:1024px){.steps{grid-template-columns:repeat(3,1fr);gap:32px}}
-
-/* quote form */
-.quote{background:var(--ground-2)}
-.form{display:grid;gap:22px;max-width:640px}
-.field{display:grid;gap:8px}
-.label{font-weight:800;font-size:17px}
-.label em{font-style:normal;font-weight:500;color:var(--ink-2)}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{position:relative}
-.chip input{position:absolute;opacity:0;width:1px;height:1px}
-.chip>span{display:flex;align-items:center;min-height:46px;padding:8px 15px;border-radius:8px;background:var(--panel);border:2px solid transparent;font-weight:700;font-size:16px;cursor:pointer;transition:background .15s,border-color .15s}
-.chip input:checked + span{background:var(--gold);color:var(--on-gold)}
-@keyframes pick{0%,60%{border-color:var(--focus);transform:scale(1.04)}}
-.chip>span.picked{animation:pick .7s ease-out}
-@media (prefers-reduced-motion:reduce){.chip>span.picked{animation:none}}
-.chip:hover>span,.chip input:focus-visible + span{border-color:var(--focus)}
-input[type=text],textarea{width:100%;min-height:52px;padding:12px 14px;border-radius:8px;border:2px solid #3a4a60;background:#151d28;color:var(--ink);font:500 17px/1.4 var(--font);transition:border-color .15s}
+/* ---------- Form ---------- */
+.ask .wrap{display:grid;gap:28px}
+form{background:var(--card);border-radius:var(--r-card);padding:clamp(20px,5vw,32px);display:grid;gap:22px;max-width:620px}
+.field{display:grid;gap:8px;min-width:0}
+.field label,.field legend,.label{font:400 17px/1.2 var(--display);color:var(--ink);padding:0}
+.field legend{margin-bottom:10px}
+.field small{font:400 14px/1 var(--text);color:var(--soft);margin-left:4px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+input[type=text],textarea{width:100%;font:16px/1.4 var(--text);color:var(--ink);background:var(--field);border:2px solid transparent;border-radius:var(--r-field);padding:13px 14px;min-height:52px;caret-color:var(--focus);transition:border-color .15s}
 textarea{min-height:110px;resize:vertical}
-input[type=text]:hover,textarea:hover,input[type=text]:focus,textarea:focus{border-color:var(--focus);outline:none}
-::placeholder{color:#8794a6}
-.err{display:none;color:var(--err);font-weight:700;font-size:15px}
+input::placeholder,textarea::placeholder{color:var(--soft)}
+input[type=text]:focus,textarea:focus{outline:none;border-color:var(--focus)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips input{position:absolute;width:1px;height:1px;opacity:0;margin:0}
+.chips label{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border-radius:var(--pill);background:var(--field);border:2px solid transparent;font:16px/1 var(--text);color:var(--ink);cursor:pointer;margin:0;transition:border-color .15s,background-color .15s,color .15s}
+.chips input:focus-visible+label{border-color:var(--focus);outline:3px solid var(--focus);outline-offset:2px}
+.chips input:checked+label{background:var(--ink);color:#fff}
+.err{display:none;font-size:15px;color:var(--error)}
 .field.bad .err{display:block}
-.form .btn{width:100%}
-.form .btn:hover,.form .btn:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
-.note{margin:-8px 0 0;color:var(--ink-2);font-size:15px}
-@media (min-width:1024px){.form{max-width:none;grid-template-columns:1fr 1fr;column-gap:28px}.form>.field:nth-child(-n+2),.form>.field:nth-child(5),.form .btn,.form .note{grid-column:1/-1}.form .btn{width:auto;min-width:280px;justify-self:start}}
+.field.bad input[type=text],.field.bad textarea,.field.bad input[type=text]:focus{border-color:var(--error)}
+form .btn-primary{width:100%}
+form .btn-primary:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.after{font-size:15px;color:var(--soft);margin-top:-8px}
+.sent{color:var(--ink);font-weight:600}
+.sent a{white-space:nowrap;display:inline-block;padding:11px 0;margin:-11px 0}
+@media (max-width:380px){.chips label{padding:0 14px}}
 
-/* close + footer */
-.close{padding:50px 0 40px}
-.hem-close{margin-top:0}
-.close h2{font-size:clamp(48px,15vw,128px);line-height:.88}
-.close .tag{margin:14px 0 0;font-weight:800;color:var(--ink-2);font-size:18px}
-.people{list-style:none;margin:34px 0 0;padding:0;display:grid;gap:10px}
-.people a{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px;padding:0 16px;border-radius:var(--r);background:var(--panel);text-decoration:none;font-weight:800;font-size:18px}
-.people a span{font-variant-numeric:tabular-nums;color:var(--gold)}
-.people a:hover{background:#30405a}
-.area{margin:30px 0 0;color:var(--ink-2)}
-.foot{margin-top:36px;padding-top:22px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center;color:var(--ink-2);font-size:15px}
-.foot a{min-height:44px;display:inline-flex;align-items:center;font-weight:700;color:var(--ink);text-underline-offset:4px}
-.foot a:hover{color:var(--gold)}
-@media (min-width:1024px){.people{grid-template-columns:repeat(3,1fr)}}
+/* ---------- Close ---------- */
+.close .who{margin-top:14px;font-size:clamp(18px,5vw,20px);color:var(--on-dark-soft)}
+.bigtel{display:inline-flex;align-items:center;gap:12px;margin-top:28px;font:400 clamp(30px,9vw,52px)/1 var(--display);text-decoration:none;color:var(--on-dark);min-height:56px;white-space:nowrap}
+.bigtel svg{width:.8em;height:.8em;flex:none;color:var(--gold)}
+.callers{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:0 24px}
+.callers a{display:inline-flex;align-items:center;min-height:44px;color:var(--on-dark);text-decoration:none;font-size:17px;white-space:nowrap}
+.callers a span{color:var(--on-dark-soft);margin-right:6px}
+.area{margin-top:22px;max-width:44ch}
+
+/* ---------- Footer ---------- */
+footer{background-color:var(--deep);background-image:var(--texture);color:var(--on-dark-soft);padding:48px 0 calc(96px + env(safe-area-inset-bottom));font-size:16px}
+footer .wrap{display:grid;gap:14px}
+.nw{white-space:nowrap}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 22px}
+footer a{display:inline-flex;align-items:center;min-height:44px;color:var(--on-dark);text-decoration:none}
+
+/* ---------- Floating text circle (one circle, never a bottom bar) ---------- */
+.float{position:fixed;z-index:15;right:calc(16px + env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--ink);box-shadow:0 10px 28px rgba(8,22,40,.3);transform:translateY(120px);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.float.on{transform:none}
+.float svg{width:26px;height:26px}
+.float:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:50%}
+
+/* ---------- Motion: one fade-up, only for things below the first screen ---------- */
+.js .rise{transition:opacity .4s ease-out,transform .4s ease-out}
+.js .rise.below{opacity:0;transform:translateY(12px)}
+
+/* ---------- Desktop ---------- */
+@media (min-width:760px){
+  :root{--gutter:40px}
+  .top .wrap{min-height:76px;gap:18px}
+  .brand b{font-size:24px}
+  .tel{font-size:20px}
+  section{padding:96px 0}
+  .hero-copy{padding-top:96px;padding-bottom:112px}
+  .promise{max-width:40ch}
+  .actions{grid-auto-flow:column;justify-content:start;width:auto}
+  .actions .btn{min-width:220px}
+  .rows{grid-template-columns:repeat(2,1fr);gap:12px 16px}
+}
+@media (min-width:1024px){
+  /* the photo keeps close to its own size on the right; navy holds the words on the left */
+  .hero-art{left:auto;width:62%}
+  .hero-art img{object-position:50% 50%}
+  .hero::after{background:linear-gradient(90deg,var(--deep) 38%,rgba(13,33,56,.82) 52%,rgba(13,33,56,.42) 78%,rgba(13,33,56,.5) 100%)}
+  .hero-copy{padding-top:120px;padding-bottom:136px}
+  .split{display:grid;grid-template-columns:1fr 1fr;column-gap:64px;align-items:start}
+  .split .claims{margin-top:0}
+  .rows{grid-template-columns:repeat(3,1fr)}
+  .work{grid-template-columns:1.35fr 1fr;grid-template-rows:1fr auto 1fr;grid-template-areas:'shot .' 'shot head' 'shot fb';column-gap:56px;row-gap:12px}
+  .work h2{align-self:end}
+  .work .fb{align-self:start}
+  .ask .wrap{grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
+  .ask .head{position:sticky;top:40px}
+  .close .wrap{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:end}
+  .how .steps{grid-template-columns:repeat(3,1fr);gap:40px}
+  .steps b{font-size:22px}
+}
+/* hover styles only where there is a real pointer, so taps don't leave them stuck on */
+@media (hover:hover){
+.tel:hover{color:var(--gold-ink)}
+.lang:hover{color:var(--ink)}
+.btn-primary:hover{background:var(--gold-2);border-color:var(--gold-2)}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+.row:hover .arrow,.fb:hover .arrow{background:var(--gold);color:var(--ink)}
+input[type=text]:hover,textarea:hover{border-color:var(--focus)}
+.chips label:hover{border-color:var(--focus)}
+form .btn-primary:hover{outline:3px solid var(--focus);outline-offset:3px}
+.sent a:hover{color:var(--focus)}
+.bigtel:hover,.callers a:hover{color:var(--gold)}
+footer a:hover{color:var(--gold)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rise,.float,.btn{transition:none}
+  .js .rise.below{opacity:1;transform:none}
+  .hero h1 .c{animation:none;opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
 <!--
-THESIS: J&J's own black-and-gold job flyer, made physical: the page is a stack of heavy caps slabs, and the hero is a real garage door you lift with your finger. Refuses the stock contractor template (hero photo, icon cards, testimonials carousel).
-OWN-WORLD: slate-night ground (#1a2330, never black), logo gold #f3b324 as the only accent fill, warm-white ink; heavy system caps stacked like flyer type; corrugated roll-up-door slats with a gold hem as dividers and photo reveals.
-STORY: a homeowner or business with a stuck, noisy or broken door sees a family crew that does it all, in their language, and texts or calls Jimmy.
-FIRST VIEWPORT (phone): header (gold house mark, name, Español, number top-right), "GARAGE DOORS? / WE DO IT ALL." slab, promise, two buttons (Get a quote / Text a photo), then the lit garage door scene filling the rest.
-FORM: candidate 3 of 7 (the trade flyer), raised by the manifesto page's total type commitment. Seed 8815d4a1.
+THESIS: A family garage-door crew's site that earns trust through calm order (after lpmr.co.uk): their own slogan "We do it all." over one of their own doors, the services as plain rows, and an easy way to text Jimmy a photo, in English or Spanish.
+OWN-WORLD: Off-white paper, night navy (#183a63) and deep navy (#0d2138, faint diagonal lines) bands, J&J's logo gold (#f3b324) as the one warm accent (fills only; #7a5400 when it has to be text on light). Cal Sans display, system body at 16/1.7.
+STORY: A homeowner or business with a stuck, noisy or broken door sees a family crew from Elizabeth that does it all, in their language, and texts or calls Jimmy.
+FIRST VIEWPORT: Paper header with the gold house mark and J&J wordmark left, Español toggle, tap-to-call number top right. Hero: J&J's two black doors under a navy overlay; eyebrow "Family owned · Elizabeth, NJ", "Garage doors in New Jersey? We do it all.", one promise line, two pill buttons (Get a quote, Text a photo).
+FORM: calm-photo band system with the client's one job photo; the earlier liftable-door world is in git history (e02df23..b527e9f).
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-mark" viewBox="0 0 64 64"><path d="M4 31 32 8l28 23" fill="none" stroke="#f3b324" stroke-width="5" stroke-linejoin="miter" stroke-linecap="square"/><path d="M12 26v31h40V26" fill="none" stroke="#f3b324" stroke-width="4"/><g fill="#f3b324"><rect x="18" y="33" width="28" height="4.5"/><rect x="18" y="39.5" width="28" height="4.5"/><rect x="18" y="46" width="28" height="4.5"/><rect x="18" y="52.5" width="28" height="4.5"/><rect x="28" y="17" width="3.4" height="3.4"/><rect x="32.6" y="17" width="3.4" height="3.4"/><rect x="28" y="21.6" width="3.4" height="3.4"/><rect x="32.6" y="21.6" width="3.4" height="3.4"/></g></symbol>
-  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></symbol>
-  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h13M13 6l6 6-6 6"/></symbol>
-  <symbol id="i-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M6 11l6-6 6 6"/></symbol>
-  <symbol id="i-sms" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M4 5h16v11H9l-5 4V5Z"/><circle cx="8.5" cy="10.5" r="1.2" fill="currentColor"/><circle cx="12" cy="10.5" r="1.2" fill="currentColor"/><circle cx="15.5" cy="10.5" r="1.2" fill="currentColor"/></symbol>
-  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M24 12a12 12 0 1 0-13.9 11.9v-8.4h-3V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h3.5l1.8 4.6-2.3 1.5a11 11 0 0 0 6 6l1.5-2.3L20 14.5V18a2 2 0 0 1-2.2 2A16 16 0 0 1 3 5.2 2 2 0 0 1 5 3z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M24 12a12 12 0 1 0-13.9 11.9v-8.4h-3V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></symbol>
 </svg>
-
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="J&amp;J Garage Doors LLC">
-      <svg aria-hidden="true"><use href="#i-mark"/></svg>
-      <span><b>J&amp;J</b><small>GARAGE DOORS</small></span>
-    </a>
-    <button class="lang" id="langBtn" type="button" data-en="Ver en español" data-es="View in English" aria-label="Ver en español"><span class="en" lang="es">Español</span><span class="es" lang="en">English</span></button>
-    <a class="phone" href="tel:+19083748196"><svg aria-hidden="true"><use href="#i-phone"/></svg>(908) 374-8196</a>
+    <a class="brand" href="#" aria-label="J&amp;J Garage Doors LLC, back to top"><span class="mark"><svg aria-hidden="true"><use href="#i-mark"/></svg></span><span><b>J&amp;J</b><small>Garage Doors LLC</small></span></a>
+    <button class="lang" id="langBtn" type="button"><span class="en" lang="es">Español</span><span class="es" lang="en">English</span></button>
+    <a class="tel" href="tel:+19083748196"><svg aria-hidden="true"><use href="#i-phone"/></svg>(908) 374-8196</a>
   </div>
 </header>
 
 <main id="top">
-  <section class="hero" aria-labelledby="hero-h">
-    <div class="wrap">
-      <div class="hero-copy">
-        <h1 id="hero-h"><span class="en"><span>Garage doors?</span><span class="gold">We do it all.</span></span><span class="es" lang="es"><span>¿Puertas de garaje?</span><span class="gold">Lo hacemos todo.</span></span></h1>
-        <p class="promise"><span class="en">A family crew from Elizabeth, New Jersey. We fix your door like it's on our own house, at a fair price.</span><span class="es" lang="es">Somos una familia de Elizabeth, New Jersey. Arreglamos tu puerta como si fuera de nuestra propia casa, a un precio justo.</span></p>
-        <div class="actions">
-          <a class="btn btn-fill" href="#quote"><span class="en">Get a quote</span><span class="es" lang="es">Pide un estimado</span></a>
-          <a class="btn btn-line" id="heroSms" href="sms:+19083748196?&amp;body=Hi%20J%26J!%20Here's%20a%20photo%20of%20my%20garage%20door%3A"><svg aria-hidden="true"><use href="#i-sms"/></svg><span class="en">Text a photo</span><span class="es" lang="es">Manda foto</span></a>
-        </div>
-      </div>
-      <div class="scene-wrap">
-        <div class="scene" id="scene">
-          <canvas id="door" role="slider" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-en="A garage door at night. Drag it up or down." data-es="Una puerta de garaje de noche. Súbela o bájala con el dedo." aria-label="A garage door at night. Drag it up or down."></canvas>
-        </div>
-        <p class="hint"><svg aria-hidden="true"><use href="#i-up"/></svg><span class="en">Lift the door</span><span class="es" lang="es">Sube la puerta</span></p>
-      </div>
+<section class="hero" id="hero" aria-labelledby="h1">
+  <div class="hero-art" aria-hidden="true"><img src="img/work-01.webp" width="800" height="600" alt="" fetchpriority="high" decoding="async"></div>
+  <div class="wrap hero-copy">
+    <p class="eyebrow"><span class="en">Family owned · Elizabeth, NJ</span><span class="es" lang="es">Negocio familiar · Elizabeth, NJ</span></p>
+    <h1 id="h1"><span class="en">Garage doors in New Jersey? <span class="accent">We do it all.</span></span><span class="es" lang="es">¿Puertas de garaje en New Jersey? <span class="accent">Lo hacemos todo.</span></span></h1>
+    <p class="promise"><span class="en">For homes and businesses. We fix your door like it's on <b>our own house</b>, at a fair price.</span><span class="es" lang="es">Para casas y negocios. Arreglamos tu puerta como si fuera de <b>nuestra propia casa</b>, a un precio justo.</span></p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#quote"><span class="en">Get a quote</span><span class="es" lang="es">Pide un estimado</span></a>
+      <a class="btn btn-ghost" id="heroSms" data-sms href="sms:+19083748196?&amp;body=Hi%20J%26J!%20Here's%20a%20photo%20of%20my%20garage%20door%3A%20"><svg aria-hidden="true"><use href="#i-chat"/></svg><span class="en">Text a photo</span><span class="es" lang="es">Manda una foto</span></a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <div class="hem" aria-hidden="true"><i></i></div>
-
-  <section id="services" aria-labelledby="svc-h">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 id="svc-h"><span class="en">What we fix</span><span class="es" lang="es">Lo que arreglamos</span></h2>
-      </div>
-      <div class="svc-groups">
-        <div>
-          <h3><span class="en">Repairs &amp; service</span><span class="es" lang="es">Reparación y servicio</span></h3>
-          <ul class="rows">
-            <li><a class="row" href="#quote" data-pick="spring"><span><span class="en">Broken springs</span><span class="es" lang="es">Resortes rotos</span></span><i class="arrow"><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a></li>
-            <li><a class="row" href="#quote" data-pick="track"><span><span class="en">Off-track doors</span><span class="es" lang="es">Puertas fuera del riel</span></span><i class="arrow"><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a></li>
-            <li><a class="row" href="#quote" data-pick="bent"><span><span class="en">Bent tracks</span><span class="es" lang="es">Rieles doblados</span></span><i class="arrow"><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a></li>
-            <li><a class="row" href="#quote" data-pick="noisy"><span><span class="en">Noisy doors</span><span class="es" lang="es">Puertas ruidosas</span></span><i class="arrow"><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a></li>
-            <li><a class="row" href="#quote" data-pick="cable"><span><span class="en">Cables &amp; pulleys</span><span class="es" lang="es">Cables y poleas</span></span><i class="arrow"><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a></li>
-            <li><a class="row" href="#quote" data-pick="sensor"><span><span class="en">Child safety sensors</span><span class="es" lang="es">Sensores de seguridad</span></span><i class="arrow"><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a></li>
-            <li><a class="row" href="#quote" data-pick="opener"><span><span class="en">Openers</span><span class="es" lang="es">Motores (abridores)</span></span><i class="arrow"><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a></li>
-          </ul>
-        </div>
-        <div>
-          <h3><span class="en">Sales &amp; installation</span><span class="es" lang="es">Venta e instalación</span></h3>
-          <ul class="rows">
-            <li><a class="row" href="#quote" data-pick="new"><span><span class="en">New garage doors</span><span class="es" lang="es">Puertas de garaje nuevas</span></span><i class="arrow"><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a></li>
-            <li><a class="row" href="#quote" data-pick="rolling"><span><span class="en">Steel rolling doors</span><span class="es" lang="es">Cortinas de acero</span></span><i class="arrow"><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a></li>
-          </ul>
-          <p class="both"><span class="en">Homes and businesses.</span><span class="es" lang="es">Casas y negocios.</span></p>
-        </div>
-      </div>
+<section class="on-paper" aria-labelledby="h-fam">
+  <div class="wrap split">
+    <div class="head rise">
+      <p class="eyebrow"><span class="en">Family owned</span><span class="es" lang="es">Negocio familiar</span></p>
+      <h2 id="h-fam"><span class="en">Jimmy, Jimmy Jr and Nancy.</span><span class="es" lang="es">Jimmy, Jimmy Jr y Nancy.</span></h2>
+      <p class="lede"><span class="en">We tell you honestly what's wrong with your door, and we charge a fair price to fix it.</span><span class="es" lang="es">Te decimos con honestidad qué tiene tu puerta, y te cobramos un precio justo por arreglarla.</span></p>
     </div>
-  </section>
+    <ul class="claims">
+      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19 20 6l16 13"/><path d="M8 16v19h24V16"/><path d="M13 22h14M13 27h14M13 32h14"/></svg><span><span class="en">Homes and businesses</span><span class="es" lang="es">Casas y negocios</span><small><span class="en">Residential and commercial doors.</span><span class="es" lang="es">Puertas residenciales y comerciales.</span></small></span></li>
+      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="8" width="30" height="27" rx="4"/><path d="M5 16h30M13 4v7M27 4v7M14 25l4 4 8-8"/></svg><span><span class="en">Over 15 years on doors</span><span class="es" lang="es">Más de 15 años con puertas</span></span></li>
+      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h20v14H13l-6 5v-5H5z"/><path d="M29 15h6v13h-2v5l-6-5h-8v-3"/></svg><span><span class="en">We speak English, Spanish and Portuguese</span><span class="es" lang="es">Hablamos inglés, español y portugués</span></span></li>
+    </ul>
+  </div>
+</section>
 
-  <div class="hem" aria-hidden="true"><i></i></div>
-
-  <section id="work" aria-labelledby="work-h">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 id="work-h"><span class="en">Our work</span><span class="es" lang="es">Nuestro trabajo</span></h2>
-      </div>
-      <div class="work-grid">
-        <figure class="bay" id="bay">
-          <img src="img/work-01.webp" width="800" height="600" alt="Two black garage doors with long glass windows, installed side by side on a gray house" draggable="false" loading="lazy" decoding="async" data-es-alt="Dos puertas de garaje negras con ventanas largas, instaladas lado a lado en una casa gris">
-          <div class="roll" id="roll" aria-hidden="true"></div>
-        </figure>
-        <a class="fb" href="https://facebook.com/profile.php?id=100010387785429" rel="noopener"><svg aria-hidden="true"><use href="#i-fb"/></svg><span><span class="en">Click to see more of our work.</span><span class="es" lang="es">Mira más de nuestro trabajo en Facebook.</span></span><svg class="go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      </div>
+<section class="on-navy" id="services" aria-labelledby="h-svc">
+  <div class="wrap">
+    <div class="head rise">
+      <p class="eyebrow"><span class="en">Repairs · Service · Installation · Sales</span><span class="es" lang="es">Reparación · Servicio · Instalación · Venta</span></p>
+      <h2 id="h-svc"><span class="en">What we fix <span class="accent">and install.</span></span><span class="es" lang="es">Lo que arreglamos <span class="accent">e instalamos.</span></span></h2>
     </div>
-  </section>
+    <ul class="rows rise">
+      <li><a class="row" href="#quote" data-pick="spring"><span><span class="en">Broken springs</span><span class="es" lang="es">Resortes rotos</span></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+      <li><a class="row" href="#quote" data-pick="track"><span><span class="en">Off-track doors</span><span class="es" lang="es">Puertas fuera del riel</span></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+      <li><a class="row" href="#quote" data-pick="bent"><span><span class="en">Bent tracks</span><span class="es" lang="es">Rieles doblados</span></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+      <li><a class="row" href="#quote" data-pick="noisy"><span><span class="en">Noisy doors</span><span class="es" lang="es">Puertas ruidosas</span></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+      <li><a class="row" href="#quote" data-pick="cable"><span><span class="en">Cables and pulleys</span><span class="es" lang="es">Cables y poleas</span></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+      <li><a class="row" href="#quote" data-pick="sensor"><span><span class="en">Child safety sensors</span><span class="es" lang="es">Sensores de seguridad</span></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+      <li><a class="row" href="#quote" data-pick="opener"><span><span class="en">Openers</span><span class="es" lang="es">Motores (abridores)</span></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+      <li><a class="row" href="#quote" data-pick="new"><span><span class="en">New garage doors</span><span class="es" lang="es">Puertas de garaje nuevas</span></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+      <li><a class="row" href="#quote" data-pick="rolling"><span><span class="en">Steel rolling doors</span><span class="es" lang="es">Cortinas de acero</span></span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+    </ul>
+  </div>
+</section>
 
-  <section class="langs" aria-labelledby="fam-h">
-    <div class="wrap">
-      <p class="slabs" aria-label="We speak English, Spanish and Portuguese"><span lang="en">We speak English.</span><span lang="es">Hablamos español.</span><span lang="pt">Falamos português.</span></p>
-      <div class="family">
-        <h2 id="fam-h" class="who"><span class="en">Jimmy, Jimmy Jr and Nancy. Family owned, out of Elizabeth, New Jersey.</span><span class="es" lang="es">Jimmy, Jimmy Jr y Nancy. Un negocio familiar de Elizabeth, New Jersey.</span></h2>
-        <div>
-          <p><span class="en">We've been doing residential and commercial doors for over 15 years. We tell you honestly what's wrong with your door, and we charge a fair price to fix it.</span><span class="es" lang="es">Llevamos más de 15 años trabajando con puertas residenciales y comerciales. Te decimos con honestidad qué tiene tu puerta, y te cobramos un precio justo por arreglarla.</span></p>
-          <p style="margin-top:14px;color:var(--ink-2)"><span class="en">We work all over New Jersey, Pennsylvania and New York.</span><span class="es" lang="es">Trabajamos en todo New Jersey, Pennsylvania y New York.</span></p>
-        </div>
-      </div>
+<section class="on-paper" id="work" aria-labelledby="h-work">
+  <div class="wrap">
+    <div class="work">
+      <h2 id="h-work" class="rise"><span class="en">Our work</span><span class="es" lang="es">Nuestro trabajo</span></h2>
+      <figure class="shot rise"><img src="img/work-01.webp" width="800" height="600" loading="lazy" decoding="async" alt="Two black garage doors with long glass windows, side by side on a gray house" data-alt-es="Dos puertas de garaje negras con ventanas largas, lado a lado en una casa gris"></figure>
+      <a class="fb rise" href="https://facebook.com/profile.php?id=100010387785429" rel="noopener">
+        <span class="lbl"><svg aria-hidden="true"><use href="#i-fb"/></svg><span><span class="en">Click to see more of our work.</span><span class="es" lang="es">Mira más de nuestro trabajo en Facebook.</span></span></span>
+        <span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="how" aria-labelledby="how-h">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 id="how-h"><span class="en">How it works</span><span class="es" lang="es">Cómo funciona</span></h2>
-      </div>
-      <ol class="steps">
-        <li><b><span class="en">Tell us what it's doing</span><span class="es" lang="es">Dinos qué le pasa</span></b><span><span class="en">Call or text. A photo or short video of the door helps a lot.</span><span class="es" lang="es">Llama o escribe. Una foto o un video corto de la puerta ayuda mucho.</span></span></li>
-        <li><b><span class="en">We give you a price</span><span class="es" lang="es">Te damos un precio</span></b><span><span class="en">Honest answer, fair price.</span><span class="es" lang="es">Respuesta honesta, precio justo.</span></span></li>
-        <li><b><span class="en">We fix it</span><span class="es" lang="es">La arreglamos</span></b><span><span class="en">Or install your new door.</span><span class="es" lang="es">O instalamos tu puerta nueva.</span></span></li>
-      </ol>
-    </div>
-  </section>
+<section class="on-deep how" aria-labelledby="h-how">
+  <div class="wrap">
+    <h2 id="h-how" class="rise"><span class="en">How it <span class="accent">works.</span></span><span class="es" lang="es">Cómo <span class="accent">funciona.</span></span></h2>
+    <ol class="steps">
+      <li class="rise"><div><b><span class="en">Tell us what it's doing.</span><span class="es" lang="es">Dinos qué le pasa.</span></b><span><span class="en">Call or text. A photo or short video of the door helps a lot.</span><span class="es" lang="es">Llama o escribe. Una foto o un video corto de la puerta ayuda mucho.</span></span></div></li>
+      <li class="rise"><div><b><span class="en">We give you a price.</span><span class="es" lang="es">Te damos un precio.</span></b><span><span class="en">An honest answer and a fair price.</span><span class="es" lang="es">Una respuesta honesta y un precio justo.</span></span></div></li>
+      <li class="rise"><div><b><span class="en">We fix it.</span><span class="es" lang="es">La arreglamos.</span></b><span><span class="en">Or install your new door.</span><span class="es" lang="es">O instalamos tu puerta nueva.</span></span></div></li>
+    </ol>
+  </div>
+</section>
 
-  <section class="quote" id="quote" aria-labelledby="q-h">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 id="q-h"><span class="en">Get a quote</span><span class="es" lang="es">Pide un estimado</span></h2>
-      </div>
-      <form class="form" id="qform" novalidate>
-        <div class="field" id="f-need">
-          <span class="label" id="need-l"><span class="en">What's going on with the door?</span><span class="es" lang="es">¿Qué le pasa a la puerta?</span></span>
-          <div class="chips" role="group" aria-labelledby="need-l">
-            <label class="chip"><input type="checkbox" name="need" value="spring"><span><span class="en">Broken spring</span><span class="es" lang="es">Resorte roto</span></span></label>
-            <label class="chip"><input type="checkbox" name="need" value="track"><span><span class="en">Off track</span><span class="es" lang="es">Fuera del riel</span></span></label>
-            <label class="chip"><input type="checkbox" name="need" value="bent"><span><span class="en">Bent track</span><span class="es" lang="es">Riel doblado</span></span></label>
-            <label class="chip"><input type="checkbox" name="need" value="noisy"><span><span class="en">Noisy</span><span class="es" lang="es">Hace ruido</span></span></label>
-            <label class="chip"><input type="checkbox" name="need" value="cable"><span><span class="en">Cables / pulleys</span><span class="es" lang="es">Cables / poleas</span></span></label>
-            <label class="chip"><input type="checkbox" name="need" value="sensor"><span><span class="en">Safety sensors</span><span class="es" lang="es">Sensores</span></span></label>
-            <label class="chip"><input type="checkbox" name="need" value="opener"><span><span class="en">Opener</span><span class="es" lang="es">Motor</span></span></label>
-            <label class="chip"><input type="checkbox" name="need" value="new"><span><span class="en">New door</span><span class="es" lang="es">Puerta nueva</span></span></label>
-            <label class="chip"><input type="checkbox" name="need" value="rolling"><span><span class="en">Steel rolling door</span><span class="es" lang="es">Cortina de acero</span></span></label>
-          </div>
-          <span class="err" id="need-e" role="alert"><span class="en">Pick at least one, or describe it below.</span><span class="es" lang="es">Escoge al menos una, o descríbelo abajo.</span></span>
-        </div>
-        <div class="field">
-          <span class="label" id="prop-l"><span class="en">Where is the door?</span><span class="es" lang="es">¿Dónde está la puerta?</span></span>
-          <div class="chips" role="radiogroup" aria-labelledby="prop-l">
-            <label class="chip"><input type="radio" name="prop" value="home" checked><span><span class="en">My home</span><span class="es" lang="es">Mi casa</span></span></label>
-            <label class="chip"><input type="radio" name="prop" value="biz"><span><span class="en">My business</span><span class="es" lang="es">Mi negocio</span></span></label>
-          </div>
-        </div>
-        <div class="field" id="f-town">
-          <label class="label" for="town"><span class="en">Town</span><span class="es" lang="es">Ciudad o pueblo</span></label>
-          <input type="text" id="town" name="town" autocomplete="address-level2" aria-describedby="town-e" data-en-ph="e.g. Elizabeth, NJ" data-es-ph="ej. Elizabeth, NJ" placeholder="e.g. Elizabeth, NJ">
-          <span class="err" id="town-e" role="alert"><span class="en">Tell us the town so we know how far it is.</span><span class="es" lang="es">Dinos la ciudad para saber qué tan lejos queda.</span></span>
-        </div>
-        <div class="field" id="f-name">
-          <label class="label" for="name"><span class="en">Your name</span><span class="es" lang="es">Tu nombre</span></label>
-          <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-e">
-          <span class="err" id="name-e" role="alert"><span class="en">Add your name so we know who's texting.</span><span class="es" lang="es">Pon tu nombre para saber quién escribe.</span></span>
-        </div>
-        <div class="field">
-          <label class="label" for="det"><span class="en">Anything else? <em>(optional)</em></span><span class="es" lang="es">¿Algo más? <em>(opcional)</em></span></label>
-          <textarea id="det" name="det"></textarea>
-        </div>
-        <button class="btn btn-fill" type="submit"><svg aria-hidden="true"><use href="#i-sms"/></svg><span class="en">Text this to Jimmy</span><span class="es" lang="es">Mándaselo a Jimmy por texto</span></button>
-        <p class="note"><span class="en">Opens your messages with everything filled in. You can add a photo before you send.</span><span class="es" lang="es">Abre tus mensajes con todo escrito. Puedes agregar una foto antes de enviar.</span></p>
-        <p class="note" id="deskNote" hidden><span class="en">Nothing opened? Texting needs a phone. Call us at the numbers at the bottom of the page.</span><span class="es" lang="es">¿No se abrió nada? Para mandar texto necesitas un teléfono. Llámanos a los números al final de la página.</span></p>
-      </form>
+<section class="on-paper ask" id="quote" aria-labelledby="h-ask">
+  <div class="wrap">
+    <div class="head rise">
+      <p class="eyebrow"><span class="en">Repairs or a new door</span><span class="es" lang="es">Reparación o puerta nueva</span></p>
+      <h2 id="h-ask"><span class="en">Get a quote</span><span class="es" lang="es">Pide un estimado</span></h2>
+      <p class="lede"><span class="en">Not sure what's wrong? Describe it, and send a photo with the text.</span><span class="es" lang="es">¿No sabes qué tiene? Descríbelo y manda una foto con el texto.</span></p>
     </div>
-  </section>
+    <form id="qform" class="rise" novalidate>
+      <fieldset class="field" id="f-need">
+        <legend><span class="en">What's going on with the door?</span><span class="es" lang="es">¿Qué le pasa a la puerta?</span></legend>
+        <div class="chips">
+          <input type="checkbox" name="need" id="n-spring" value="spring" aria-describedby="e-need"><label for="n-spring"><span class="en">Broken spring</span><span class="es" lang="es">Resorte roto</span></label>
+          <input type="checkbox" name="need" id="n-track" value="track"><label for="n-track"><span class="en">Off track</span><span class="es" lang="es">Fuera del riel</span></label>
+          <input type="checkbox" name="need" id="n-bent" value="bent"><label for="n-bent"><span class="en">Bent track</span><span class="es" lang="es">Riel doblado</span></label>
+          <input type="checkbox" name="need" id="n-noisy" value="noisy"><label for="n-noisy"><span class="en">Noisy</span><span class="es" lang="es">Hace ruido</span></label>
+          <input type="checkbox" name="need" id="n-cable" value="cable"><label for="n-cable"><span class="en">Cables / pulleys</span><span class="es" lang="es">Cables / poleas</span></label>
+          <input type="checkbox" name="need" id="n-sensor" value="sensor"><label for="n-sensor"><span class="en">Safety sensors</span><span class="es" lang="es">Sensores</span></label>
+          <input type="checkbox" name="need" id="n-opener" value="opener"><label for="n-opener"><span class="en">Opener</span><span class="es" lang="es">Motor</span></label>
+          <input type="checkbox" name="need" id="n-new" value="new"><label for="n-new"><span class="en">New door</span><span class="es" lang="es">Puerta nueva</span></label>
+          <input type="checkbox" name="need" id="n-rolling" value="rolling"><label for="n-rolling"><span class="en">Steel rolling door</span><span class="es" lang="es">Cortina de acero</span></label>
+        </div>
+        <p class="err" id="e-need"><span class="en">Pick at least one, or describe it below.</span><span class="es" lang="es">Escoge al menos una, o descríbelo abajo.</span></p>
+      </fieldset>
+      <fieldset class="field">
+        <legend><span class="en">Where is the door?</span><span class="es" lang="es">¿Dónde está la puerta?</span></legend>
+        <div class="chips">
+          <input type="radio" name="prop" id="p-home" value="home" checked><label for="p-home"><span class="en">My home</span><span class="es" lang="es">Mi casa</span></label>
+          <input type="radio" name="prop" id="p-biz" value="biz"><label for="p-biz"><span class="en">My business</span><span class="es" lang="es">Mi negocio</span></label>
+        </div>
+      </fieldset>
+      <div class="field" id="f-town">
+        <label for="town"><span class="en">Town</span><span class="es" lang="es">Ciudad o pueblo</span></label>
+        <input type="text" id="town" name="town" autocomplete="address-level2" maxlength="60" aria-describedby="e-town" data-ph-en="e.g. Elizabeth, NJ" data-ph-es="ej. Elizabeth, NJ" placeholder="e.g. Elizabeth, NJ">
+        <p class="err" id="e-town"><span class="en">Tell us the town so we know how far it is.</span><span class="es" lang="es">Dinos la ciudad para saber qué tan lejos queda.</span></p>
+      </div>
+      <div class="field" id="f-name">
+        <label for="name"><span class="en">Your name</span><span class="es" lang="es">Tu nombre</span></label>
+        <input type="text" id="name" name="name" autocomplete="name" maxlength="60" aria-describedby="e-name">
+        <p class="err" id="e-name"><span class="en">Add your name so we know who's texting.</span><span class="es" lang="es">Pon tu nombre para saber quién escribe.</span></p>
+      </div>
+      <div class="field">
+        <label for="det"><span class="en">Anything else?</span><span class="es" lang="es">¿Algo más?</span> <small><span class="en">(optional)</span><span class="es" lang="es">(opcional)</span></small></label>
+        <textarea id="det" name="det" maxlength="600"></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-chat"/></svg><span class="en">Text this to Jimmy</span><span class="es" lang="es">Mándaselo a Jimmy por texto</span></button>
+      <p class="sent" id="sent" role="status" hidden><span class="en">Didn't open your messages? Call Jimmy at</span><span class="es" lang="es">¿No se abrieron tus mensajes? Llama a Jimmy al</span> <a href="tel:+19083748196">(908) 374-8196</a>.</p>
+      <p class="after"><span class="en">Opens your messages with this written out. You can add a photo before you send.</span><span class="es" lang="es">Abre tus mensajes con todo escrito. Puedes agregar una foto antes de enviar.</span></p>
+    </form>
+  </div>
+</section>
+
+<section class="on-navy close" id="close" aria-labelledby="h-close">
+  <div class="wrap">
+    <div class="rise">
+      <h2 id="h-close">J&amp;J Garage Doors LLC</h2>
+      <p class="who"><span class="en">We do it all. Repairs, service, installation and sales.</span><span class="es" lang="es">Lo hacemos todo. Reparación, servicio, instalación y venta.</span></p>
+      <p class="area"><span class="en">From Elizabeth, NJ. We work all over New Jersey, Pennsylvania and New York.</span><span class="es" lang="es">Desde Elizabeth, NJ. Trabajamos en todo New Jersey, Pennsylvania y New York.</span></p>
+    </div>
+    <div class="rise">
+      <a class="bigtel" href="tel:+19083748196"><svg aria-hidden="true"><use href="#i-phone"/></svg>(908) 374-8196</a>
+      <ul class="callers">
+        <li><a href="tel:+19084227210"><span>Jimmy Jr</span>(908) 422-7210</a></li>
+        <li><a href="tel:+19083748574"><span>Nancy</span>(908) 374-8574</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
 </main>
 
-<div class="hem hem-close" aria-hidden="true"><i></i></div>
-<footer class="close" aria-labelledby="close-h">
+<footer>
   <div class="wrap">
-    <h2 id="close-h"><span class="en">We do it <span class="gold">all.</span></span><span class="es" lang="es">Lo hacemos <span class="gold">todo.</span></span></h2>
-    <p class="tag"><span class="en">Repairs · Service · Installation · Sales</span><span class="es" lang="es">Reparación · Servicio · Instalación · Venta</span></p>
-    <ul class="people">
-      <li><a href="tel:+19083748196">Jimmy <span>(908) 374-8196</span></a></li>
-      <li><a href="tel:+19084227210">Jimmy Jr <span>(908) 422-7210</span></a></li>
-      <li><a href="tel:+19083748574">Nancy <span>(908) 374-8574</span></a></li>
-    </ul>
-    <p class="area"><span class="en">Elizabeth, NJ · Serving New Jersey, Pennsylvania and New York</span><span class="es" lang="es">Elizabeth, NJ · Servimos New Jersey, Pennsylvania y New York</span></p>
-    <div class="foot">
-      <span>J&amp;J Garage Doors LLC</span>
+    <span>J&amp;J Garage Doors LLC · Elizabeth, NJ · <span class="nw">Jimmy (908) 374-8196</span></span>
+    <nav aria-label="Facebook">
       <a href="https://facebook.com/profile.php?id=100010387785429" rel="noopener">Facebook</a>
-    </div>
+    </nav>
   </div>
 </footer>
 
+<a class="float" id="float" data-sms href="sms:+19083748196?&amp;body=Hi%20J%26J!%20Here's%20a%20photo%20of%20my%20garage%20door%3A%20" aria-label="Text J&amp;J"><svg aria-hidden="true"><use href="#i-chat"/></svg></a>
+
 <script>
-/* ---------- language ---------- */
+/* ===== Config ===== */
+var CONFIG = {
+  FLOAT: true,           // the floating text circle; false removes it
+  SMS: '+19083748196',   // Jimmy: the number in the post caption
+  SMS_BODY: {en:"Hi J&J! Here's a photo of my garage door: ", es:"¡Hola J&J! Les mando una foto de mi puerta de garaje: "}
+};
+document.documentElement.classList.add('js');
+function lang(){return document.documentElement.getAttribute('data-lang')==='es'?'es':'en'}
+
+/* ===== Hero H1 bounce-in: split the visible language into letters (JS only, so no-JS and reduced motion keep the plain heading) ===== */
+var restoreH1=function(){};
 (function(){
-  var root=document.documentElement, btn=document.getElementById('langBtn');
-  var SMS_EN="Hi J&J! Here's a photo of my garage door:", SMS_ES="¡Hola J&J! Les mando una foto de mi puerta de garaje:";
-  function apply(l){
-    root.lang=l; root.setAttribute('data-lang',l);
-    document.querySelectorAll('[data-en]').forEach(function(el){el.setAttribute('aria-label',el.getAttribute('data-'+l))});
-    document.querySelectorAll('[data-en-ph]').forEach(function(el){el.placeholder=el.getAttribute('data-'+l+'-ph')});
-    var img=document.querySelector('[data-es-alt]');
-    if(img){if(!img.dataset.enAlt)img.dataset.enAlt=img.alt; img.alt=l==='es'?img.dataset.esAlt:img.dataset.enAlt}
-    document.getElementById('heroSms').href='sms:+19083748196?&body='+encodeURIComponent(l==='es'?SMS_ES:SMS_EN);
-  }
-  apply(root.getAttribute('data-lang')||'en');
-  btn.addEventListener('click',function(){
-    var l=root.getAttribute('data-lang')==='es'?'en':'es';
-    try{localStorage.setItem('jj-lang',l)}catch(e){}
-    apply(l);
-  });
-})();
-
-/* ---------- the garage door (hero) ---------- */
-(function(){
-  /* tunables */
-  var AUTO_OPEN=0.62;        /* how far the door lifts by itself */
-  var AUTO_TIMES=[2.2,1.6,2.4,1.8]; /* rise, hold, lower, rest (s) */
-  var RESUME_AFTER=7;        /* seconds after a touch before it plays again */
-  var SPRING_K=9, SPRING_D=5.2; /* how the door chases its target */
-  var SEAM_K=140, SEAM_D=11, SEAM_KICK=0.022; /* section hinge wobble */
-  var MOTES_PHONE=55, MOTES_DESK=120;
-  var PUSH_R=70, PUSH=900;   /* dust push radius (css px) and strength */
-
-  var cv=document.getElementById('door'); if(!cv) return;
-  var ctx=cv.getContext('2d');
-  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var W=0,H=0,dpr=1,G={},motes=[];
-  var o=0, ov=0, target=0;          /* openness 0..1 and velocity */
-  var seams=[0,0,0,0], seamV=[0,0,0,0];
-  var dragging=false, grabO=0, grabY=0, lastY=0, lastT=0, dragV=0, lastTouch=-99, t0=performance.now();
-  var ptr={x:-999,y:-999,vx:0,vy:0,cx:null,cy:null,on:false};
-  var reversing=0, ledBlink=0, keyMove=0, lastAria=-1, bg=document.createElement('canvas');
-
-  function size(){
-    var r=cv.getBoundingClientRect(), w=Math.round(r.width), h=Math.round(r.height);
-    if(w===W&&h===H) return false;
-    W=w;H=h;dpr=Math.min(window.devicePixelRatio||1,2);
-    cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);
-    var ow=Math.min(W*0.74,H*1.2), oh=Math.min(H*0.64,ow*0.68);
-    var floor=H*0.8;
-    G={ow:ow,oh:oh,ox:(W-ow)/2,oy:floor-oh,floor:floor,trim:Math.max(5,ow*0.022)};
-    var n=W<600?MOTES_PHONE:MOTES_DESK; motes=[];
-    for(var i=0;i<n;i++) motes.push(newMote(true));
-    /* the wall and driveway never change: paint them once per size */
-    bg.width=cv.width;bg.height=cv.height;
-    var real=ctx; ctx=bg.getContext('2d'); ctx.setTransform(dpr,0,0,dpr,0,0); drawWall(); drawDrivewayBase(); ctx=real;
-    return true;
-  }
-  function newMote(any){
-    return {x:G.ox+Math.random()*G.ow, y:any?G.oy+Math.random()*(H-G.oy):G.floor+Math.random()*(H-G.floor),
-      r:0.6+Math.random()*1.5, ph:Math.random()*6.28, sp:0.25+Math.random()*0.6, vx:0, vy:0, dx:0, dy:0};
-  }
-
-  /* lit = how much garage light reaches a point */
-  function lit(x,y){
-    if(o<0.02) return 0;
-    var openBottom=G.floor, openTop=G.floor-G.oh*o;
-    if(y>=openTop&&y<=G.floor&&x>=G.ox&&x<=G.ox+G.ow) return 1;
-    if(y>G.floor){ /* spill on the driveway, fanning out */
-      var k=(y-G.floor)/(H-G.floor+1), spread=G.ow*0.5*(1+k*0.9)*Math.min(1,o*1.6);
-      var cx=W/2; if(Math.abs(x-cx)<spread) return o<0.15?0:(1-k*0.8)*Math.min(1,(o-0.15)*2)*(1-Math.abs(x-cx)/spread*0.8);
-    }
-    return 0;
-  }
-
-  function drawWall(){
-    var g=ctx.createLinearGradient(0,0,0,G.floor);
-    g.addColorStop(0,'#1f2937');g.addColorStop(1,'#283445');
-    ctx.fillStyle=g;ctx.fillRect(0,0,W,G.floor);
-    /* lap siding */
-    ctx.fillStyle='rgba(0,0,0,.22)';
-    var step=Math.max(11,H/30);
-    for(var y=step;y<G.floor;y+=step){ctx.fillRect(0,y,W,1.2)}
-    ctx.fillStyle='rgba(255,255,255,.035)';
-    for(var y2=step+1.5;y2<G.floor;y2+=step){ctx.fillRect(0,y2,W,1)}
-    /* sconces */
-    var sx=[G.ox-G.trim-Math.max(18,G.ow*0.09), G.ox+G.ow+G.trim+Math.max(18,G.ow*0.09)], sy=G.oy+G.oh*0.12;
-    for(var i=0;i<2;i++){
-      var rg=ctx.createRadialGradient(sx[i],sy,2,sx[i],sy,G.oh*0.7);
-      rg.addColorStop(0,'rgba(255,196,84,.42)');rg.addColorStop(.35,'rgba(255,180,60,.12)');rg.addColorStop(1,'rgba(255,180,60,0)');
-      ctx.fillStyle=rg;ctx.fillRect(sx[i]-G.oh*0.7,sy-G.oh*0.7,G.oh*1.4,G.oh*1.4);
-      /* lantern: wall plate, roof cap, lit glass with mullions, base */
-      var lw=Math.max(10,G.ow*0.042), lh=lw*1.55, cx=sx[i], top=sy-lh/2;
-      ctx.fillStyle='#0d131b';ctx.fillRect(cx-lw*0.22,top-lw*0.5,lw*0.44,lh+lw*0.9);
-      ctx.beginPath();ctx.moveTo(cx-lw*0.72,top);ctx.lineTo(cx,top-lw*0.55);ctx.lineTo(cx+lw*0.72,top);ctx.closePath();ctx.fill();
-      var gl=ctx.createLinearGradient(0,top,0,top+lh);
-      gl.addColorStop(0,'#fff1c4');gl.addColorStop(.6,'#ffcf6a');gl.addColorStop(1,'#e9a640');
-      ctx.fillStyle=gl;ctx.beginPath();ctx.moveTo(cx-lw/2,top);ctx.lineTo(cx+lw/2,top);ctx.lineTo(cx+lw*0.4,top+lh);ctx.lineTo(cx-lw*0.4,top+lh);ctx.closePath();ctx.fill();
-      ctx.fillStyle='rgba(13,19,27,.8)';ctx.fillRect(cx-0.7,top,1.4,lh);ctx.fillRect(cx-lw/2,top+lh*0.48,lw,1.2);
-      ctx.fillStyle='#0d131b';ctx.fillRect(cx-lw*0.5,top+lh,lw,Math.max(2.5,lw*0.18));
-    }
-  }
-  function drawDrivewayBase(){
-    var g=ctx.createLinearGradient(0,G.floor,0,H);
-    g.addColorStop(0,'#2d3746');g.addColorStop(1,'#1c2430');
-    ctx.fillStyle=g;ctx.fillRect(0,G.floor,W,H-G.floor);
-    ctx.fillStyle='rgba(0,0,0,.25)';ctx.fillRect(0,G.floor,W,2);
-  }
-  function drawDriveway(){
-    /* light spill */
-    if(o>0.01){
-      var a=Math.min(1,o*2.5), top=G.floor, spread0=G.ow/2, spread1=G.ow*0.95;
-      ctx.save();ctx.beginPath();
-      ctx.moveTo(W/2-spread0,top);ctx.lineTo(W/2+spread0,top);ctx.lineTo(W/2+spread1,H);ctx.lineTo(W/2-spread1,H);ctx.closePath();
-      var sg=ctx.createLinearGradient(0,top,0,H);
-      sg.addColorStop(0,'rgba(255,196,96,'+(0.62*a)+')');sg.addColorStop(.55,'rgba(255,190,80,'+(0.22*a)+')');sg.addColorStop(1,'rgba(255,190,80,0)');
-      ctx.fillStyle=sg;ctx.fill();ctx.restore();
-    }
-  }
-  function drawInside(){
-    var x=G.ox,y=G.oy,w=G.ow,h=G.oh,fy=y+h*0.7;
-    /* back wall, lit from the ceiling bulb */
-    var g=ctx.createLinearGradient(0,y,0,fy);
-    g.addColorStop(0,'#f6c25e');g.addColorStop(1,'#c7863a');
-    ctx.fillStyle=g;ctx.fillRect(x,y,w,fy-y);
-    /* floor plane: concrete coming toward you, brighter at the front */
-    var fg=ctx.createLinearGradient(0,fy,0,y+h);
-    fg.addColorStop(0,'#9a6a35');fg.addColorStop(1,'#d9a35a');
-    ctx.fillStyle=fg;ctx.fillRect(x,fy,w,y+h-fy);
-    ctx.fillStyle='rgba(70,40,12,.45)';ctx.fillRect(x,fy-1,w,2);
-    /* side walls in perspective */
-    ctx.fillStyle='rgba(120,70,20,.38)';
-    ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+w*0.1,y+h*0.08);ctx.lineTo(x+w*0.1,fy);ctx.lineTo(x,y+h);ctx.closePath();ctx.fill();
-    ctx.beginPath();ctx.moveTo(x+w,y);ctx.lineTo(x+w*0.9,y+h*0.08);ctx.lineTo(x+w*0.9,fy);ctx.lineTo(x+w,y+h);ctx.closePath();ctx.fill();
-    /* workbench and shelf on the back wall */
-    ctx.fillStyle='rgba(92,54,16,.5)';
-    ctx.fillRect(x+w*0.14,fy-h*0.2,w*0.24,h*0.03);ctx.fillRect(x+w*0.15,fy-h*0.17,w*0.015,h*0.17);ctx.fillRect(x+w*0.36,fy-h*0.17,w*0.015,h*0.17);
-    ctx.fillRect(x+w*0.62,y+h*0.3,w*0.22,h*0.025);
-    ctx.fillStyle='rgba(92,54,16,.32)';
-    ctx.fillRect(x+w*0.64,y+h*0.22,w*0.06,h*0.08);ctx.fillRect(x+w*0.72,y+h*0.245,w*0.09,h*0.055);
-    /* opener rail and motor */
-    ctx.fillStyle='rgba(60,36,10,.6)';ctx.fillRect(x+w*0.495,y,w*0.01,h*0.1);
-    ctx.fillRect(x+w*0.44,y+h*0.09,w*0.12,h*0.06);
-    /* bulb glow and corner falloff */
-    var bg2=ctx.createRadialGradient(x+w/2,y+h*0.16,1,x+w/2,y+h*0.16,h*0.75);
-    bg2.addColorStop(0,'rgba(255,250,225,.8)');bg2.addColorStop(.4,'rgba(255,240,200,.18)');bg2.addColorStop(1,'rgba(80,40,0,.25)');
-    ctx.fillStyle=bg2;ctx.fillRect(x,y,w,h);
-  }
-  function drawDoor(){
-    var x=G.ox,y=G.oy,w=G.ow,h=G.oh,n=4,sh=h/n,lift=h*o;
-    ctx.save();ctx.beginPath();ctx.rect(x,y,w,h);ctx.clip();
-    for(var i=0;i<n;i++){
-      var sy=y+i*sh-lift+seams[i];
-      if(sy+sh<y) continue;
-      var g=ctx.createLinearGradient(0,sy,0,sy+sh);
-      g.addColorStop(0,'#eef1f4');g.addColorStop(1,'#c9cfd7');
-      ctx.fillStyle=g;ctx.fillRect(x,sy,w,sh+0.5);
-      /* hinge line shadow */
-      ctx.fillStyle='rgba(20,28,40,.35)';ctx.fillRect(x,sy+sh-2.5,w,1.5);
-      /* raised panels */
-      var cols=w>420?4:3, pad=w*0.035, pw=(w-pad*(cols+1))/cols, ph=sh*0.62, py=sy+(sh-ph)/2;
-      for(var c=0;c<cols;c++){
-        var px=x+pad+c*(pw+pad);
-        if(i===0){ /* top section: windows lit from inside */
-          var wg=ctx.createLinearGradient(0,py,0,py+ph);
-          wg.addColorStop(0,'#ffd885');wg.addColorStop(1,'#e2a443');
-          ctx.fillStyle='#8b96a5';ctx.fillRect(px-1.5,py-1.5,pw+3,ph+3);
-          ctx.fillStyle=wg;ctx.fillRect(px,py,pw,ph);
-          ctx.fillStyle='rgba(120,74,20,.5)';ctx.fillRect(px+pw/2-0.75,py,1.5,ph);
-        }else{
-          ctx.fillStyle='rgba(255,255,255,.9)';ctx.fillRect(px,py,pw,2);ctx.fillRect(px,py,2,ph);
-          ctx.fillStyle='rgba(90,102,120,.42)';ctx.fillRect(px,py+ph-2,pw,2);ctx.fillRect(px+pw-2,py,2,ph);
-          ctx.fillStyle='rgba(150,160,175,.18)';ctx.fillRect(px+5,py+5,pw-10,ph-10);
-        }
-      }
-      if(i===n-1){ /* bottom seal + handle */
-        ctx.fillStyle='#232a33';ctx.fillRect(x,sy+sh-5,w,5);
-        ctx.fillStyle='#59616d';ctx.fillRect(x+w/2-w*0.04,sy+sh*0.55,w*0.08,3);
-      }
-    }
-    ctx.restore();
-    /* light leaking under a slightly open door */
-    if(o>0.003&&o<0.06){
-      var gy=G.floor-h*o;
-      ctx.fillStyle='rgba(255,200,100,'+(0.9-o*10)+')';ctx.fillRect(x,gy,w,Math.max(1,h*o));
-    }
-  }
-  function drawTrimAndSensors(){
-    var t=G.trim,x=G.ox,y=G.oy,w=G.ow,h=G.oh;
-    ctx.fillStyle='#d9dde3';
-    ctx.fillRect(x-t,y-t,w+2*t,t);ctx.fillRect(x-t,y,t,h);ctx.fillRect(x+w,y,t,h);
-    ctx.fillStyle='rgba(0,0,0,.25)';ctx.fillRect(x,y,w,3);
-    /* safety sensors */
-    var sy=G.floor-h*0.07, sz=Math.max(6,w*0.022);
-    var on=reversing>0?(Math.floor(ledBlink*8)%2===0):true;
-    [[x+2,0],[x+w-2-sz,1]].forEach(function(s){
-      ctx.fillStyle='#1b222c';ctx.fillRect(s[0],sy-sz/2,sz,sz);
-      ctx.fillStyle=on?(s[1]?'#7cff9a':'#ffb347'):'#3a2a1a';
-      ctx.beginPath();ctx.arc(s[0]+sz/2,sy-sz*0.15,Math.max(1.4,sz*0.16),0,6.283);ctx.fill();
+  var h=document.getElementById('h1');
+  if(!h||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var span=h.querySelector('.'+lang()),plain=span.innerHTML,i=0,last=null,done=false;
+  h.setAttribute('aria-label',span.textContent.replace(/\s+/g,' ').trim());
+  function split(node,into){
+    [].slice.call(node.childNodes).forEach(function(n){
+      if(n.nodeType===3){
+        n.textContent.split(/(\s+)/).forEach(function(part){
+          if(!part)return;
+          if(/^\s+$/.test(part)){into.appendChild(document.createTextNode(' '));return}
+          var w=document.createElement('span');w.className='w';w.setAttribute('aria-hidden','true');
+          for(var k=0;k<part.length;k++){var c=document.createElement('span');c.className='c';c.style.setProperty('--i',i++);c.textContent=part[k];w.appendChild(c);last=c}
+          into.appendChild(w);
+        });
+      }else if(n.nodeType===1){var copy=n.cloneNode(false);split(n,copy);into.appendChild(copy)}
     });
-    if(o>0.08){
-      ctx.strokeStyle=reversing>0?'rgba(255,90,70,.6)':'rgba(255,90,70,.16)';
-      ctx.setLineDash([3,5]);ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x+2+sz,sy);ctx.lineTo(x+w-2-sz,sy);ctx.stroke();ctx.setLineDash([]);
-    }
   }
-  function drawMotes(dt,t){
-    for(var i=0;i<motes.length;i++){
-      var m=motes[i];
-      m.ph+=dt*m.sp;
-      var bx=Math.sin(m.ph*0.9+i)*14*m.sp+Math.sin(t*0.37+i*0.7)*6;
-      var by=Math.cos(m.ph*0.7+i*1.3)*10*m.sp;
-      m.y-=dt*(4+m.sp*6);
-      if(m.y<G.floor-G.oh-10) {var nm=newMote(false); nm.y=G.floor+Math.random()*(H-G.floor); motes[i]=m=nm;}
-      /* pointer push, then spring back */
-      if(ptr.on){
-        var px=m.x+bx+m.dx-ptr.x, py=m.y+by+m.dy-ptr.y, d2=px*px+py*py;
-        if(d2<PUSH_R*PUSH_R&&d2>0.01){var d=Math.sqrt(d2),f=(1-d/PUSH_R)*PUSH*dt; m.vx+=px/d*f+ptr.vx*0.03; m.vy+=py/d*f+ptr.vy*0.03;}
-      }
-      m.vx+=(-38*m.dx-6.5*m.vx)*dt; m.vy+=(-38*m.dy-6.5*m.vy)*dt;
-      m.dx+=m.vx*dt; m.dy+=m.vy*dt;
-      var X=m.x+bx+m.dx, Y=m.y+by+m.dy, L=lit(X,Y);
-      if(L<=0.02) continue;
-      ctx.globalAlpha=Math.min(1,L)*(0.45+0.55*Math.abs(Math.sin(m.ph*1.7)));
-      ctx.fillStyle='#fff3cf';ctx.beginPath();ctx.arc(X,Y,m.r,0,6.283);ctx.fill();
-    }
-    ctx.globalAlpha=1;
-  }
-
-  /* auto cycle target */
-  function autoTarget(t){
-    var T=AUTO_TIMES, total=T[0]+T[1]+T[2]+T[3], s=t%total;
-    if(s<T[0]) return AUTO_OPEN*ease(s/T[0]);
-    s-=T[0]; if(s<T[1]) return AUTO_OPEN;
-    s-=T[1]; if(s<T[2]) return AUTO_OPEN*(1-ease(s/T[2]));
-    return 0;
-  }
-  function ease(p){return p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2}
-
-  var autoClock=0, lastNow=performance.now(), running=false, visible=true;
-  function frame(now){
-    var dt=Math.min(0.05,(now-lastNow)/1000); lastNow=now;
-    var t=(now-t0)/1000;
-    size();
-    /* pointer in scene coords, read every frame (page may scroll under the finger) */
-    if(ptr.cx!==null){var r=cv.getBoundingClientRect(); ptr.x=ptr.cx-r.left; ptr.y=ptr.cy-r.top;}
-    var prevV=ov;
-    if(dragging){
-      var r2=cv.getBoundingClientRect(), py=ptr.cy-r2.top;
-      var want=Math.max(-0.04,Math.min(1.04,grabO+(grabY-py)/G.oh));
-      ov=(want-o)/Math.max(dt,0.001); o=want;
-    }else{
-      var idle=(t-lastTouch)>RESUME_AFTER;
-      if(idle&&!reduce){autoClock+=dt; target=autoTarget(autoClock);}
-      if(reversing>0){reversing-=dt; target=Math.max(target,0.55);}
-      if(keyMove>0) keyMove-=dt;
-      if(idle||reversing>0||keyMove>0){ov+=(SPRING_K*(target-o)-SPRING_D*ov)*dt;}
-      else{ov*=Math.pow(0.04,dt);} /* a balanced door stays where you leave it */
-      o+=ov*dt;
-      if(o<0){o=0;ov=-ov*0.25;} if(o>1){o=1;ov=-ov*0.25;}
-      /* safety sensor: finger in the beam while it's closing */
-      if(ptr.on&&ov<-0.05&&o>0.08&&Math.abs(ptr.y-(G.floor-G.oh*0.07))<18&&ptr.x>G.ox&&ptr.x<G.ox+G.ow&&reversing<=0){
-        reversing=1.6; ledBlink=0; target=0.6; lastTouch=t-RESUME_AFTER+2.5;
-      }
-    }
-    ledBlink+=dt;
-    var pct=Math.round(Math.max(0,Math.min(1,o))*10)*10;
-    if(pct!==lastAria){lastAria=pct; var es=document.documentElement.getAttribute('data-lang')==='es'; cv.setAttribute('aria-valuenow',pct); cv.setAttribute('aria-valuetext',es?('Puerta '+pct+'% abierta'):('Door '+pct+'% open'));}
-    var acc=(ov-prevV);
-    for(var i=0;i<4;i++){ seamV[i]+=(-SEAM_K*seams[i]-SEAM_D*seamV[i])*dt - acc*SEAM_KICK*G.oh*(4-i)*0.25; seams[i]+=seamV[i]*dt; seams[i]=Math.max(-1.5,Math.min(1.5,seams[i])); }
-    ptr.vx*=0.85;ptr.vy*=0.85;
-
-    ctx.setTransform(dpr,0,0,dpr,0,0);
-    ctx.clearRect(0,0,W,H);
-    ctx.drawImage(bg,0,0,W,H);drawDriveway();drawInside();drawMotes(dt,t);drawDoor();drawTrimAndSensors();
-    if(reduce&&!dragging&&keyMove<=0&&Math.abs(ov)<0.002) running=false;
-    if(running) requestAnimationFrame(frame);
-  }
-  function start(){ if(!running&&visible){running=true;lastNow=performance.now();requestAnimationFrame(frame);} }
-  function stop(){ running=false; }
-
-  /* input */
-  function setPtr(x,y,type){
-    if(ptr.cx!==null){ptr.vx=(x-ptr.cx)*30;ptr.vy=(y-ptr.cy)*30;}
-    ptr.cx=x;ptr.cy=y;ptr.on=true;
-  }
-  cv.addEventListener('pointerdown',function(e){
-    e.preventDefault(); setPtr(e.clientX,e.clientY);
-    var r=cv.getBoundingClientRect(); ptr.x=e.clientX-r.left; ptr.y=e.clientY-r.top;
-    dragging=true; grabO=o; grabY=ptr.y; ov=0; cv.classList.add('drag');
-    lastTouch=(performance.now()-t0)/1000; reversing=0;
-    try{cv.setPointerCapture(e.pointerId)}catch(_){}
-    start();
-  });
-  cv.addEventListener('pointermove',function(e){ setPtr(e.clientX,e.clientY); if(dragging) lastTouch=(performance.now()-t0)/1000; });
-  function up(e){ if(dragging){dragging=false;cv.classList.remove('drag');lastTouch=(performance.now()-t0)/1000;} if(e&&e.pointerType!=='mouse'){ptr.on=false;ptr.cx=null;} }
-  cv.addEventListener('pointerup',up);cv.addEventListener('pointercancel',up);
-  cv.addEventListener('pointerleave',function(e){ if(!dragging&&e.pointerType==='mouse'){ptr.on=false;ptr.cx=null;} });
-  cv.addEventListener('touchmove',function(){},{passive:true});
-  /* keyboard: arrows lift and lower */
-  cv.tabIndex=0;
-  cv.addEventListener('keydown',function(e){
-    var k={ArrowUp:0.2,ArrowRight:0.2,ArrowDown:-0.2,ArrowLeft:-0.2,PageUp:0.5,PageDown:-0.5}[e.key];
-    if(e.key==='Home') k=-1; if(e.key==='End') k=1;
-    if(k){e.preventDefault(); lastTouch=(performance.now()-t0)/1000; target=Math.max(0,Math.min(1,o+k)); keyMove=1.2; start();}
-  });
-
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(function(es){visible=es[0].isIntersecting; visible?start():stop();}).observe(cv);
-  }
-  size();
-  if(reduce){ o=0.35; lastNow=performance.now(); running=false; frame(performance.now()); addEventListener('resize',function(){W=0;frame(performance.now())}); }
-  else start();
+  var frag=document.createDocumentFragment();split(span,frag);span.textContent='';span.appendChild(frag);
+  // once the last letter lands (or the language changes), put the plain heading back so kerning and text selection return
+  restoreH1=function(){if(done)return;done=true;span.innerHTML=plain;h.removeAttribute('aria-label')};
+  if(last)last.addEventListener('animationend',restoreH1);
 })();
 
-/* ---------- roll-up doors: dividers and the photo reveal ---------- */
+/* ===== Language: English / Spanish ===== */
 (function(){
-  var hems=[].slice.call(document.querySelectorAll('.hem i')), roll=document.getElementById('roll');
-  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var rollP=0, rollV=0, opened=false;
-  if(reduce){ if(roll) roll.style.transform='translateY(-100%)'; hems.forEach(function(h){h.style.transform='translateY(0)'}); return; }
-  if(roll&&'IntersectionObserver' in window){
-    new IntersectionObserver(function(es){ if(es[0].intersectionRatio>0.45) opened=true; },{threshold:[0,0.45,1]}).observe(roll.parentNode);
-  }else if(roll) opened=true;
-  /* run only while a divider or the photo bay is on screen */
-  var onScreen=0, raf=0, last=0;
-  function go(){ if(!raf){ last=performance.now(); raf=requestAnimationFrame(tick); } }
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ var was=e.target._on; e.target._on=e.isIntersecting; onScreen+=(e.isIntersecting?1:0)-(was?1:0); }); if(onScreen>0) go(); });
-    hems.forEach(function(h){io.observe(h.parentNode)}); if(roll) io.observe(roll.parentNode);
-  } else onScreen=1;
-  function tick(now){
-    raf=0;
-    var dt=Math.min(0.05,(now-last)/1000); last=now;
-    var vh=innerHeight, tops=hems.map(function(h){return h.parentNode.getBoundingClientRect().top});
-    hems.forEach(function(h,i){ var p=Math.max(0,Math.min(1,(vh-tops[i])/(vh*0.9))); h.style.transform='translateY('+(-56*p).toFixed(1)+'px)'; });
-    var settling=false;
-    if(roll){
-      var tgt=opened?1:0;
-      rollV+=(16*(tgt-rollP)-6*rollV)*dt; rollP+=rollV*dt;
-      settling=Math.abs(tgt-rollP)>0.002||Math.abs(rollV)>0.002;
-      roll.style.transform='translateY('+(-100*Math.max(0,Math.min(1.02,rollP))).toFixed(2)+'%)';
-    }
-    if(onScreen>0||settling) go();
+  var root=document.documentElement,btn=document.getElementById('langBtn');
+  var img=document.querySelector('[data-alt-es]'),altEn=img.alt;
+  function apply(l){
+    root.lang=l;root.setAttribute('data-lang',l);
+    btn.setAttribute('aria-label',l==='es'?'View in English':'Ver en español');
+    [].forEach.call(document.querySelectorAll('[data-ph-en]'),function(el){el.placeholder=el.getAttribute('data-ph-'+l)});
+    img.alt=l==='es'?img.getAttribute('data-alt-es'):altEn;
+    var href='sms:'+CONFIG.SMS+'?&body='+encodeURIComponent(CONFIG.SMS_BODY[l]);
+    [].forEach.call(document.querySelectorAll('[data-sms]'),function(a){a.href=href});
+    document.getElementById('float').setAttribute('aria-label',l==='es'?'Escríbele a J&J':'Text J&J');
   }
-  go();
+  apply(lang());
+  btn.addEventListener('click',function(){
+    var l=lang()==='es'?'en':'es';
+    try{localStorage.setItem('jj-lang',l)}catch(e){}
+    restoreH1();apply(l);
+  });
 })();
 
-/* ---------- services pick + quote form ---------- */
+/* ===== Quote form: service rows pre-pick the problem; submit composes a text to Jimmy ===== */
 (function(){
-  var form=document.getElementById('qform');
-  document.querySelectorAll('[data-pick]').forEach(function(a){
+  var form=document.getElementById('qform');if(!form)return;
+  [].forEach.call(document.querySelectorAll('[data-pick]'),function(a){
     a.addEventListener('click',function(){
-      var box=form.querySelector('input[name=need][value="'+a.dataset.pick+'"]'); if(box){ box.checked=true; var sp=box.nextElementSibling; sp.classList.remove('picked'); setTimeout(function(){sp.classList.add('picked')},450); setTimeout(function(){sp.classList.remove('picked')},1300); }
+      var box=document.getElementById('n-'+a.dataset.pick);if(box)box.checked=true;
       document.getElementById('f-need').classList.remove('bad');
     });
   });
@@ -764,24 +521,47 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     es:{hi:"¡Hola J&J! Necesito ayuda con una puerta de garaje.",need:"Problema",prop:"Dónde",home:"Mi casa",biz:"Mi negocio",town:"Ciudad",name:"Nombre",det:"Detalles",
       v:{spring:"Resorte roto",track:"Fuera del riel",bent:"Riel doblado",noisy:"Hace ruido",cable:"Cables / poleas",sensor:"Sensores",opener:"Motor",new:"Puerta nueva",rolling:"Cortina de acero"}}
   };
-  form.addEventListener('change',function(e){ if(e.target.name==='need') document.getElementById('f-need').classList.remove('bad'); });
-  form.addEventListener('input',function(e){ var f=e.target.closest('.field'); if(f&&e.target.value.trim()) f.classList.remove('bad'); if(e.target.id==='det'&&e.target.value.trim()) document.getElementById('f-need').classList.remove('bad'); });
+  function mark(id,bad){var f=document.getElementById(id);f.classList.toggle('bad',bad);var i=f.querySelector('input[type=text]');if(i)i.setAttribute('aria-invalid',bad?'true':'false')}
+  form.addEventListener('change',function(e){if(e.target.name==='need')document.getElementById('f-need').classList.remove('bad')});
+  form.addEventListener('input',function(e){
+    var f=e.target.closest('.field');if(f&&f.id&&e.target.value.trim())mark(f.id,false);
+    if(e.target.id==='det'&&e.target.value.trim())document.getElementById('f-need').classList.remove('bad');
+  });
   form.addEventListener('submit',function(e){
     e.preventDefault();
-    var l=document.documentElement.getAttribute('data-lang')==='es'?'es':'en', t=L[l];
-    var needs=[].slice.call(form.querySelectorAll('input[name=need]:checked')).map(function(i){return t.v[i.value]});
-    var town=form.town.value.trim(), name=form.name.value.trim(), det=form.det.value.trim();
+    var t=L[lang()];
+    var needs=[].map.call(form.querySelectorAll('input[name=need]:checked'),function(i){return t.v[i.value]});
+    var town=form.town.value.trim(),name=form.name.value.trim(),det=form.det.value.trim();
     var prop=form.querySelector('input[name=prop]:checked').value;
     var bad=[];
-    if(!needs.length&&!det) bad.push('f-need');
-    if(!town) bad.push('f-town');
-    if(!name) bad.push('f-name');
-    ['f-need','f-town','f-name'].forEach(function(id){var f=document.getElementById(id),b=bad.indexOf(id)>-1;f.classList.toggle('bad',b);var i=f.querySelector('input[type=text]');if(i)i.setAttribute('aria-invalid',b?'true':'false')});
-    if(bad.length){ var first=document.getElementById(bad[0]); first.scrollIntoView({block:'center'}); var inp=first.querySelector('input'); if(inp) inp.focus({preventScroll:true}); return; }
+    if(!needs.length&&!det)bad.push('f-need');
+    if(!town)bad.push('f-town');
+    if(!name)bad.push('f-name');
+    ['f-need','f-town','f-name'].forEach(function(id){mark(id,bad.indexOf(id)>-1)});
+    if(bad.length){var first=document.getElementById(bad[0]);first.scrollIntoView({block:'center'});var inp=first.querySelector('input');if(inp)inp.focus({preventScroll:true});return}
     var msg=t.hi+"\n"+(needs.length?t.need+": "+needs.join(", ")+"\n":"")+t.prop+": "+t[prop]+"\n"+t.town+": "+town+"\n"+t.name+": "+name+(det?"\n"+t.det+": "+det:"");
-    location.href='sms:+19083748196?&body='+encodeURIComponent(msg);
-    if(matchMedia('(hover:hover) and (pointer:fine)').matches) setTimeout(function(){document.getElementById('deskNote').hidden=false},900);
+    location.href='sms:'+CONFIG.SMS+'?&body='+encodeURIComponent(msg);
+    // if no messages app opened (desktop, some in-app browsers), say what to do instead
+    setTimeout(function(){document.getElementById('sent').hidden=false},900);
   });
+})();
+
+/* ===== Floating text circle: shows after the hero, hides while the form is on screen ===== */
+(function(){
+  var fl=document.getElementById('float');if(!fl)return;
+  if(!CONFIG.FLOAT||!('IntersectionObserver' in window)){fl.remove();return}
+  var pastHero=false,formIn=false;
+  function sync(){var on=pastHero&&!formIn;fl.classList.toggle('on',on);fl.tabIndex=on?0:-1;fl.setAttribute('aria-hidden',on?'false':'true')}
+  new IntersectionObserver(function(es){pastHero=!es[0].isIntersecting;sync()},{threshold:.15}).observe(document.getElementById('hero'));
+  new IntersectionObserver(function(es){formIn=es[0].isIntersecting;sync()},{rootMargin:'-15% 0px -15% 0px'}).observe(document.getElementById('qform'));
+  sync();
+})();
+
+/* ===== Fade-up: everything is visible at rest; only what starts below the first screen rises 12px in ===== */
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('below');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  [].forEach.call(document.querySelectorAll('.rise'),function(el){if(el.getBoundingClientRect().top>innerHeight){el.classList.add('below');io.observe(el)}});
 })();
 </script>
 </body>
