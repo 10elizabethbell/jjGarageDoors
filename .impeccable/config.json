@@ -20,6 +20,42 @@
         ],
         "createdAt": "2026-10-20T02:37:48.139Z",
         "reason": "agent: detector reads 14-22px UI sizes only; Cal Sans display runs 30-78px via clamp so the hierarchy is steep"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T12:05:57.546Z",
+        "reason": "agent: one-off values shipped in index.html (focus-ring 6px, compact mark 9px, fb row 20px, UI text 11-24px); DESIGN.md documents them as one-offs, not tokens"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T12:05:57.611Z",
+        "reason": "agent: one-off values shipped in index.html (focus-ring 6px, compact mark 9px, fb row 20px, UI text 11-24px); DESIGN.md documents them as one-offs, not tokens"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T12:05:57.685Z",
+        "reason": "agent: one-off values shipped in index.html (focus-ring 6px, compact mark 9px, fb row 20px, UI text 11-24px); DESIGN.md documents them as one-offs, not tokens"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T12:05:57.765Z",
+        "reason": "agent: one-off values shipped in index.html (focus-ring 6px, compact mark 9px, fb row 20px, UI text 11-24px); DESIGN.md documents them as one-offs, not tokens"
       }
     ]
   }

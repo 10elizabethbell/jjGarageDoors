@@ -6,12 +6,12 @@
 The business hasn't been contacted yet, so the whole page was rebuilt under the new house default (`calm-photo-style.md`, copied from DPG's `index.html`). Facts, the photo, both languages and the text-message wiring carried over.
 - **Gone:** the slate-night liftable garage-door canvas hero, the roll-up-door dividers and photo reveal, hinge wobble, dust, sensor beam, heavy system-font caps. (All in git history up to `b527e9f` if you ever want the drag-to-lift door back as an opt-in signature.)
 - **Look:** paper (#f4f6fb), night navy (#183a63) and deep navy (#0d2138, faint diagonal lines) bands, J&J's logo gold (#f3b324) as the only accent, used as a fill; gold as text on light is the darker #7a5400. Cal Sans headings, system body at 16/1.7, pill buttons, 24px cards.
-- **Hero:** J&J's own two-black-door photo under a navy overlay (phone: full-bleed, cropped to the right door; desktop: the photo sits on the right at near its real size and fades into navy on the left, so it never gets blown up soft). White text measured at 7:1 on phones and 9.7:1 on desktop by pixel sampling; the soft promise text is 4.7:1 at its worst spot.
+- **Hero:** J&J's own two-black-door photo under a navy overlay (phone: full-bleed, cropped to the right door; desktop: the photo sits on the right at near its real size and fades into navy on the left, so it never gets blown up soft). Measured by sampling the brightest photo pixel behind each element (final build): the H1 8.6:1, the promise line 5.4:1, the outlined button 6.8:1 on phones (360/390/320), and 10:1 or more on desktop.
 - **H1:** "Garage doors in New Jersey? We do it all." / "¿Puertas de garaje en New Jersey? Lo hacemos todo." The place is in the H1 and "We do it all" is their own flyer slogan. It bounces in letter by letter (only the language on screen), then the plain heading is restored. Reduced motion and no-JS show it at once.
 - **Motion:** the H1 bounce-in, one 12px fade-up for things below the first screen, and the floating gold text circle (hidden on the hero and while the quote form is on screen; it texts Jimmy in the visitor's language).
 - **New order:** hero → family (Jimmy, Jimmy Jr and Nancy; homes and businesses, over 15 years, three languages) → services as nine rows on navy (tap pre-picks the problem in the form) → our work (photo + big Facebook link) → how it works (3 steps) → quote form → close (name, Jimmy's number big, Jimmy Jr and Nancy) → footer.
 - **Icons:** favicon, iPhone icon and og image redone in the new navy (og image is the hero photo + headline).
-- Old `DESIGN.md` retired (it described the old build); old detector ignores cleared. **A new DESIGN.md was not written yet** (usage limit).
+- `DESIGN.md` and `.impeccable/design.json` rewritten from the new page; old detector ignores cleared.
 
 ## What's built
 - One page, `index.html`, bilingual EN/ES (Español/English toggle in the header; follows the browser language on first visit and remembers the choice).
