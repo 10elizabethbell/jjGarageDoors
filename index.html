@@ -557,9 +557,12 @@ var restoreH1=function(){};
     ['f-need','f-town','f-name'].forEach(function(id){mark(id,bad.indexOf(id)>-1)});
     if(bad.length){var first=document.getElementById(bad[0]);first.scrollIntoView({block:'center'});var inp=first.querySelector('input');if(inp)inp.focus({preventScroll:true});return}
     var msg=t.hi+"\n"+(needs.length?t.need+": "+needs.join(", ")+"\n":"")+t.prop+": "+t[prop]+"\n"+t.town+": "+town+"\n"+t.name+": "+name+(det?"\n"+t.det+": "+det:"");
+    // if no messages app opened (desktop, some in-app browsers), say what to do instead;
+    // if the page was hidden, Messages did open, so leave the note off
+    var left=false;function away(){if(document.hidden)left=true}
+    document.addEventListener('visibilitychange',away);
     location.href='sms:'+CONFIG.SMS+'?&body='+encodeURIComponent(msg);
-    // if no messages app opened (desktop, some in-app browsers), say what to do instead
-    setTimeout(function(){document.getElementById('sent').hidden=false},900);
+    setTimeout(function(){document.removeEventListener('visibilitychange',away);if(!left)document.getElementById('sent').hidden=false},1200);
   });
 })();
 
